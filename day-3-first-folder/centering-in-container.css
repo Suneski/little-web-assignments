@@ -47,20 +47,16 @@ table {
 	border-spacing: 0;
 }
 
+/*
+This is how I center the content
+*/
 
-
-h1 {
-	font-size: 4em;
-	background-color: rgb(147, 44, 44);
-	font-weight: bold;
-	font-family: cursive, sans-serif;
-	text-align: center;
-	max-width: 600px;
-	margin: 0 auto 0 auto;
+.container {
+  background-color: gray;
+  max-width: 600px;
+  margin: 0 auto 0 auto;
 }
 
-p {
-	text-align: center;
-	max-width: 600px;
-	margin: 0 auto;
+h1 {
+  border: solid 1px red;
 }

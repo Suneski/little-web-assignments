@@ -46,3 +46,101 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
+body {
+  font-family: arial, helvetica, sans-serif;
+}
+
+#outline {
+  border: 3px solid #CECFD5;
+  border-radius: 2%;
+  height: 640px;
+  width: 600px;
+  margin-top: 20px;
+  margin-left: 80px;
+  position: relative;
+}
+
+#circle {
+  background-color: #CECFD5;
+  height: 125px;
+  width: 125px;
+  border-radius: 100%;
+  position: absolute;
+  right: -40px;
+  top: 90px;
+}
+
+#two {
+  color: white;
+  width: 100px;
+  height: 100%;
+  font-size: 60px;
+  position: absolute;
+  text-align: center;
+  margin-left: 12.5px;
+  margin-top: 32.5px;
+}
+
+#lesson {
+  color: #54AF52;
+  font-weight: bold;
+  margin-top: 10%;
+  margin-left: 10%;
+  font-size: 40px;
+}
+
+#see-es-es {
+  color: #9698A5;
+  font-size: 35px;
+  font-weight: bold;
+  margin-top: 13%;
+  margin-left: 10%;
+}
+
+ul {
+  margin-top: 5%;
+}
+
+ul > li {
+  list-style-type: square;
+  color: #CECFD5;
+}
+
+li {
+  margin-left: 15%;
+  line-height: 1.7;
+  font-size: 30px;
+}
+
+.list-items {
+  border-bottom: 2px solid #CECFD5;
+  padding-bottom: 7px;
+}
+
+a {
+  text-decoration: none;
+  color: #2C83C8;
+}
+
+a:visited {
+  color: #2C83C8;
+}
+
+#share {
+  font-size: 30px;
+  font-weight: bold;
+  color: #9799A6;
+  margin-top: 15%;
+  margin-left: 10%;
+}
+
+img {
+  width: 50px;
+  margin-top: 5%;
+  padding-right: 15px;
+}
+
+#twitter {
+  margin-left: 10%;
+}

@@ -183,16 +183,25 @@ nav a {
 	background-color: turquoise;
 	clear: both;
 	height: 50px;
-	outline: solid 1px red;
+	outline: solid 1px blue;
 }
 
 .latest {
 	background-color: rgb(100, 107, 111);
+	margin: 0 auto;
+	overflow: auto;
+	width: 60%;
 }
 
 .wrapper {
-	border: solid 1px yellow;
+	background-color: yellow;
+	float: left;
 	height: 400px;
-	width: 45%;
-	margin: 0 auto;
+	outline: solid 1px red;
+	width: 40%;
+	margin: 5%;
+}
+
+.social-media {
+
 }

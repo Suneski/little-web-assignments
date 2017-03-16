@@ -119,12 +119,80 @@ nav a {
 
 .hero-messaging h1 {
 	font-size: 5em;
-	z-index: 3;
 	font-size: 50px;
 	font-weight: 100;
 	text-transform: uppercase;
 }
 
 .hero-messaging p {
+	font-family: "Open Sans",sans-serif;
+  font-weight: 100;
+	margin-top: 15px;
+}
 
+.recent-projects {
+	overflow: auto;
+	padding: 50px 0;
+}
+
+.projects-row {
+	margin: 0 auto;
+	width: 90%;
+}
+
+.project {
+	background-color: grey;
+	height: 200px;
+	outline: 1px solid red;
+	float: left;
+	width: 33.333%;
+}
+
+.projects-row {
+	width: 90%;
+	margin: 0 auto;
+}
+
+.story {
+	background-color: rgb(100, 107, 111);
+	padding: 50px;
+}
+
+.story-details {
+	border: solid 1px yellow;
+	height: 400px;
+	width: 50%;
+}
+
+.what-i-do {
+	margin: 0 auto;
+	overflow: auto;
+	padding: 40px;
+	width: 90%;
+}
+
+.particular-thing {
+	background-color: orange;
+	float: left;
+	height: 200px;
+	outline: solid 1px blue;
+	width: 25%;
+}
+
+.blank-row {
+	background-color: turquoise;
+	clear: both;
+	height: 50px;
+	outline: solid 1px red;
+}
+
+.latest {
+	background-color: rgb(100, 107, 111);
+}
+
+.wrapper {
+	border: solid 1px yellow;
+	height: 400px;
+	width: 45%;
+	margin: 0 auto;
 }

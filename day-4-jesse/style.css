@@ -1,0 +1,130 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+  height: 50px;
+	position: fixed;
+	left: 0;
+	right: 0;
+	top: 0;
+	z-index: 2;
+}
+
+nav li {
+	text-transform: uppercase;
+	font-family: "Open Sans",sans-serif;
+	float: left;
+	padding: 15px;
+}
+
+nav .logo {
+	width: 22px;
+	margin-top: 7px;
+	margin-left: 40px;
+}
+
+nav ul {
+	list-style-type: none;
+  float: right;
+	font-size: 20px;
+	font-weight: 100;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+.hero {
+	background-image: url("jesse-jump.jpg");
+	height: 700px;
+	position: relative;
+	z-index: 1;
+	background-size: cover;
+}
+
+.hero:after {
+	content: '';
+	background-color: rgba(0, 0, 0, 0.5);
+	position: absolute;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	z-index: -1;
+}
+
+.hero-messaging {
+	color: #fff;
+	font-family: serif;
+	padding-top: 150px;
+	text-align: center;
+	z-index: 4;
+	font-family: Merriweather, serif;
+	max-width: 0 auto;
+}
+
+.hero-messaging h1 {
+	font-size: 5em;
+	z-index: 3;
+	font-size: 50px;
+	font-weight: 100;
+	text-transform: uppercase;
+}
+
+.hero-messaging p {
+
+}

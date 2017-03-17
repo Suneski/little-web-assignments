@@ -49,8 +49,11 @@ table {
 
 
 
+/* ****************************************** */
 
+/*Navigation Bar*/
 
+/* ****************************************** */
 
 nav {
   background-color: rgba(0, 0, 0, 0.5);
@@ -93,6 +96,14 @@ nav ul {
 
 
 
+/* ****************************************** */
+
+/*     Hero: Jumping Jesse Image Area     */
+
+/* ****************************************** */
+
+
+
 .hero {
 	background-image: url("jesse-jump.jpg");
 	height: 700px;
@@ -115,7 +126,7 @@ nav ul {
 .hero-messaging {
 	color: #fff;
 	font-family: serif;
-	padding-top: 150px;
+	padding-top: 200px;
 	text-align: center;
 	z-index: 4;
 	font-family: Merriweather, serif;
@@ -130,22 +141,20 @@ nav ul {
 .hero-messaging p {
 	font-family: "Open Sans",sans-serif;
   font-weight: 100;
-	margin-top: 30px;
+  color: #fff;
 	font-size: 25px;
 	line-height: 1.5;
 }
 
 .hero-work {
-	border: 2px solid rgb(221, 199, 117);
+	outline: 2px solid rgb(221, 199, 117);
 	text-transform: uppercase;
 	font-size: 25px;
-	margin-top: 20px;
 	display: inline-block;
-	padding: 0px 40px;
+	padding: 1.4rem 4rem;
 	text-decoration: none;
 	color: white;
 	border-radius: 3px;
-	margin-bottom: 20px;
 }
 
 .hero-work:hover {
@@ -153,9 +162,20 @@ nav ul {
 	color: #86711F;
 }
 
+
+
+/* ****************************************** */
+
+/*     Recent Projects    */
+
+/* ****************************************** */
+
+
 .recent-projects {
 	overflow: auto;
 	padding: 50px 0;
+	width: 75%;
+	margin: 0 auto;
 }
 
 .projects-row {
@@ -164,17 +184,55 @@ nav ul {
 }
 
 .project {
-	background-color: grey;
-	height: 200px;
 	outline: 1px solid red;
 	float: left;
-	width: 33.333%;
+	width: 31.333%;
+	text-align: center;
+	margin: 1%;
 }
 
 .projects-row {
 	width: 90%;
 	margin: 0 auto;
 }
+
+.project h3 {
+	margin: 40px 0 20px 0;
+	font-size: 2em;
+	color: rgb(0, 148, 255);
+}
+
+.project p {
+	font-family: helvetica, verdana, sans-serif;
+	color: gray;
+	font-style: italic;
+	font-size: 1.2em;
+	font-weight: 100;
+	margin-top: 20px;
+}
+
+.project img {
+	max-width: 100%;
+}
+
+.project a {
+	text-decoration: none;
+	color: rgb(0, 148, 255);
+}
+
+
+.project:hover h3{
+	color: #E0CB77;
+}
+
+
+/* ****************************************** */
+
+/*     Story Area    */
+
+/* ****************************************** */
+
+
 
 .story {
 	background-color: rgb(100, 107, 111);

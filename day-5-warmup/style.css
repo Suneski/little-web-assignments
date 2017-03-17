@@ -53,8 +53,40 @@ table {
 
 
 
+header {
+  background-color: black;
+  padding-left: 15%;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  font-size: 35px;
+  color: white;
+}
 
+.columns {
+  width: 70%;
+  margin: 0 auto;
+}
 
-p {
-  color: red;
+#c1 {
+  background-color: pink;
+  width: 20%;
+  height: 700px;
+  float: left;
+}
+
+#c2 {
+  background-color: rgba(255, 245, 0, 0.62);
+  width: 80%;
+  height: 700px;
+  float: right;
+}
+
+footer {
+  clear: both;
+  background-color: black;
+  padding-left: 15%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  font-size: 18px;
+  color: white;
 }

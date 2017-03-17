@@ -51,11 +51,12 @@ table {
 
 
 
-
+header, footer {
+	background-color: black;
+	padding-left: 15%;
+}
 
 header {
-  background-color: black;
-  padding-left: 15%;
   padding-top: 50px;
   padding-bottom: 50px;
   font-size: 35px;
@@ -83,8 +84,6 @@ header {
 
 footer {
   clear: both;
-  background-color: black;
-  padding-left: 15%;
   padding-top: 20px;
   padding-bottom: 20px;
   font-size: 18px;

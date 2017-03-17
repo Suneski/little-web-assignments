@@ -54,6 +54,7 @@ h1 {
   font-weight: bold;
   font-size: 100px;
 	text-align: center;
+	margin-top: -30px;
 }
 
 #lifesaver {
@@ -75,7 +76,6 @@ h1 {
   border-radius: 3px;
   color: white;
   width: 40px;
-  text-align: center;
   padding: 2px;
 	display: inline-block;
 }
@@ -87,16 +87,16 @@ h1 {
 .article-title {
 	padding-top: 20px;
 	text-align: center;
-	font-size: 22px;
+	font-size: 28px;
 	font-family: Helvetica, Verdana, Arial, sans-serif;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 .authors {
 	text-align: center;
 	padding-top: 10px;
 	font-family: Arial, Helvetica, sans-serif;
-	font-size: 13px;
+	font-size: 15px;
 }
 
 .author-link {
@@ -107,7 +107,14 @@ h1 {
 
 .article {
 	text-align: left;
-	margin: 2% 10%;
+	padding-top: 20px;
 	line-height: 1.5;
 	font-family: Georgia, serif;
+	font-size: 20px;
+	width: 48%;
+	margin: 0 auto;
+}
+
+#second-article {
+	margin-top: 50px;
 }

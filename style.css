@@ -47,6 +47,10 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
+
 header {
 	color: white;
 	font-size: 20px;
@@ -54,6 +58,16 @@ header {
 	padding: 20px 0px;
 	text-align: center;
   width: 50%;
-  margin: 0 auto;
+  margin: 10px auto 0px auto;
+	border-radius: 5px;
 }
+
+li {
+	margin-top: 20px;
+	margin-left: 20px;
+}
+
+.work {
+	margin-top: 10px;
+	margin-left: 20px;
 }

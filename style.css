@@ -71,3 +71,8 @@ li {
 	margin-top: 10px;
 	margin-left: 20px;
 }
+
+.day {
+	font-weight: bold;
+	text-decoration: underline;
+}

@@ -101,3 +101,29 @@ table {
   background-color: salmon;
   float: left;
 }
+
+
+@media (max-width: 600px) {
+  .top-left, .top-right, .bottom-left, .bottom-middle, .bottom-right {
+    float: none;
+    width: 100%;
+  }
+}
+
+@media (max-width: 400px) {
+  .top-left {
+    background-color: green;
+  }
+  .top-right {
+    background-color: pink;
+  }
+  .bottom-left {
+    background-color: red;
+  }
+  .bottom-middle {
+    background-color: orange;
+  }
+  .bottom-right {
+    background-color: yellow;
+  }
+}

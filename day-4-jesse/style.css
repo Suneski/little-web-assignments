@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Merriweather|Open+Sans');
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -51,7 +53,7 @@ table {
 
 /* ****************************************** */
 
-/*Navigation Bar*/
+/*              Navigation Bar                */
 
 /* ****************************************** */
 
@@ -125,7 +127,6 @@ nav ul {
 
 .hero-messaging {
 	color: #fff;
-	font-family: serif;
 	padding-top: 200px;
 	text-align: center;
 	z-index: 4;
@@ -156,7 +157,6 @@ nav ul {
 	margin-top: 45px;
 	text-decoration: none;
 	color: white;
-	border-radius: 3px;
 	font-family: Merriweather, serif;
 }
 
@@ -180,18 +180,20 @@ nav ul {
 	margin: 0 auto;
 }
 
-.projects-row {
+/*.projects-row {
 	margin: 0 auto;
 	width: 90%;
-}
+}*/
 
 .project {
 	outline: 1px solid red;
 	float: left;
 	width: 28.333%;
 	text-align: center;
-	margin: 2.5%;
+	margin: 0 2% 50px 2%;
 }
+
+
 
 .project h3 {
 	margin: 30px 0 20px 0;
@@ -232,15 +234,33 @@ nav ul {
 
 
 .story {
-	background-color: rgb(100, 107, 111);
-	padding: 50px;
+	background: url("banner-working.jpg")  center right/cover no-repeat #272D35;
+	background-repeat: no-repeat;
+	color: #fff;
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+
+	background-size: cover;
+	height: auto;
 }
+
 
 .story-details {
 	border: solid 1px yellow;
 	height: 400px;
 	width: 50%;
 }
+
+
+
+
+
+
+
+
+
 
 .what-i-do {
 	margin: 0 auto;
@@ -286,4 +306,23 @@ footer {
 	overflow: auto;
 	padding: 40px;
 	height: 500px;
+}
+
+/* ****************************************** */
+
+/*                 Media Queries               */
+
+/* ****************************************** */
+
+@media (max-width: 1200px) {
+	.project {
+		width: 46%;
+	}
+}
+
+@media (max-width: 700px) {
+	.project {
+		float: none;
+		width: 96%;
+	}
 }

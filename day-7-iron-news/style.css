@@ -1,0 +1,181 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+.container {
+  width: 80%;
+  margin: 10px auto 0 auto;
+}
+
+/* ************************************* */
+/*        HEADER & NAVIGATION BAR        */
+/* ************************************* */
+
+header {
+  height: 24px;
+  background-color: black;
+  color: white;
+  font-size: 14px;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+header img {
+  margin: 2px;
+  border: 1px solid white;
+  float: left;
+}
+
+.title, .menu li, .login {
+  margin: 0 .5%;
+  float: left;
+}
+
+nav {
+  width: 75%;
+  padding: 5px .5%;
+  display: inline-block;
+}
+
+.title {
+  font-weight: bold;
+}
+
+.login {
+  float: right;
+  margin: 4px .5% 4px 0;
+}
+
+nav a, .login a {
+  text-decoration: none;
+  color: white;
+}
+
+/* ************************************* */
+/*               MAIN AREA               */
+/* ************************************* */
+
+.main-portion {
+  height: 1000px;
+  padding-top: 4px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.main-portion ol {
+  list-style-type: decimal;
+  color: black;
+  margin-left: 4%;
+}
+
+.main-internal {
+  width: 99%;
+  margin: 0 auto;
+}
+
+li img {
+  display: inline-block;
+}
+
+li p, h4 {
+  display: inline-block;
+}
+
+.url-link, .post-details {
+  font-size: 12px;
+  color: grey;
+}
+
+.post-details a {
+  text-decoration: none;
+  color: grey;
+}
+
+.post-details {
+  padding-top: 5px;
+}
+
+.main-portion li {
+  margin-top: 10px;
+}
+
+
+
+
+/* ************************************* */
+/*             MEDIA QUERIES             */
+/* ************************************* */
+
+@media (max-width: 750px) {
+  header {
+    height: 42px;
+  }
+
+  header img {
+    margin-top: 11px;
+    margin-bottom: 11px;
+  }
+
+  .title, .menu {
+    float: none;
+    width: 100%;
+  }
+
+  .title {
+    margin-top: 3.5px;
+  }
+
+  .menu {
+    font-size: 12px;
+  }
+
+  .login {
+    margin: 13px 1% 13px 0;
+  }
+}

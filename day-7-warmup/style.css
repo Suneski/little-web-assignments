@@ -50,48 +50,52 @@ table {
 
 
 
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
 header, footer {
   background-color: grey;
   color: white;
 }
 
 header {
-  height: 150px;
+  padding: 50px 0;
 }
 
-h1 {
+header h1 {
   font-size: 50px;
 }
 
-h2 {
-  font-size: 25px;
-}
-
 .columns {
-  width: 70%;
   margin: 0 auto;
 }
 
 #c1 {
   background-color: yellow;
-  width: 75%;
+  width: 660px;
   height: 400px;
   float: left;
 }
 
 #c2 {
   background-color: pink;
-  width: 25%;
+  width: 300px;
   height: 400px;
   float: right;
 }
 
 footer {
-  height: 100px;
+  padding: 35px 0;
   clear: both;
 }
 
-@media (max-width: 700px) {
+footer h2 {
+  font-size: 30px;
+}
+
+@media (max-width: 960px) {
   .columns {
     width: 100%;
   }

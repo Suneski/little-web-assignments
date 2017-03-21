@@ -74,14 +74,14 @@ nav a {
 }
 
 .nav-left {
-  width: 280px;
-  padding: 42px 10px;
+  width: 41.7%;
+  padding: 42px 1.65%;
   float: left;
   text-align: right;
 }
 
 .nav-image {
-  width: 70px;
+  width: 10%;
   height: 100px;
   float: left;
 }
@@ -92,8 +92,8 @@ nav img {
 }
 
 .nav-right {
-  width: 280px;
-  padding: 42px 10px;
+  width: 41.7%;
+  padding: 42px 1.65%;
   float: left;
   text-align: left;
 }
@@ -339,11 +339,9 @@ footer {
 }
 
 
-@media (max-width: 1160px) {
+@media (max-width: 670px) {
 
-
-  .rd-image, .wd-text {
-    float: none;
-    width: 100;
+  .nav-items {
+  	width: 100%;
   }
 }

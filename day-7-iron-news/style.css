@@ -103,8 +103,7 @@ nav a, .login a {
 /* ************************************* */
 
 .main-portion {
-  height: 1000px;
-  padding-top: 4px;
+  padding: 4px 12px;
   background-color: rgba(0, 0, 0, 0.1);
 }
 
@@ -114,16 +113,20 @@ nav a, .login a {
   margin-left: 4%;
 }
 
+.main-portion li {
+  margin-top: 10px;
+}
+
 .main-internal {
   width: 99%;
   margin: 0 auto;
 }
 
 li img {
-  display: inline-block;
+  outline: 1px solid red;
 }
 
-li p, h4 {
+li p, li img, h4 {
   display: inline-block;
 }
 
@@ -132,18 +135,20 @@ li p, h4 {
   color: grey;
 }
 
+.post-details {
+  padding-top: 5px;
+}
+
 .post-details a {
   text-decoration: none;
   color: grey;
 }
 
-.post-details {
-  padding-top: 5px;
-}
 
-.main-portion li {
-  margin-top: 10px;
-}
+
+
+
+
 
 
 
@@ -172,7 +177,7 @@ li p, h4 {
   }
 
   .menu {
-    font-size: 12px;
+    font-size: 11px;
   }
 
   .login {

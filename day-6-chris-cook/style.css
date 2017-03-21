@@ -1,0 +1,349 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+nav {
+  background-color: #333333;
+  width: 100%;
+  height: 100px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-family: 'Oswald',sans-serif;
+  font-size: 1em;
+  letter-spacing: 3px;
+  padding: 0 10px;
+  margin: 0 10px;
+}
+
+.nav-items {
+	width: 670px;
+  height: 100px;
+  margin: 0 auto;
+}
+
+.nav-left {
+  width: 280px;
+  padding: 42px 10px;
+  float: left;
+  text-align: right;
+}
+
+.nav-image {
+  width: 70px;
+  height: 100px;
+  float: left;
+}
+
+nav img {
+  width: 70px;
+  margin: 15px 0;
+}
+
+.nav-right {
+  width: 280px;
+  padding: 42px 10px;
+  float: left;
+  text-align: left;
+}
+
+/* ******************************* */
+/*           INTRO TEXT            */
+/* ******************************* */
+
+
+.introduction {
+  height: 216px;
+  padding: 60px 20px;
+  font-family: 'Oswald',sans-serif;
+  background-color: green;
+}
+
+.intro-text-box {
+  height: 186px;
+  background-color: grey;
+  text-align: center;
+}
+
+.greeting {
+  margin: 20px auto 10px auto;
+  height: 59px;
+  width: 660px;
+  font-size: 54px;
+  background-color: yellow;
+}
+
+.job-titles {
+  margin: 0 auto 15px auto;
+  height: 33px;
+  width: 660px;
+  font-size: 30px;
+  background-color: blue;
+}
+
+.short-bio {
+    margin: 0 auto;
+    height: 59px;
+    width: 660px;
+    font-size: 1.2em;
+    font-family: arial, sans-serif;
+    background-color: orange;
+}
+
+
+
+/* ************************************* */
+/*           RESPONSIVE DESIGN           */
+/* ************************************* */
+
+.responsive-design {
+  padding: 127.5px 0;
+  background-color: blue;
+  font-family: 'Oswald',sans-serif;
+  letter-spacing: 1px;
+}
+
+.rd-details {
+  height: 422px;
+  width: 1170px;
+  background-color: purple;
+  margin: 0 auto;
+}
+
+.rd-image {
+  height: 422px;
+  width: 570px;
+  float: left;
+  margin-left: 15px;
+  background-color: green;
+}
+
+.rd-image img {
+  width: 512px;
+  height: 412px;
+  padding: 5px 29px;
+}
+
+.rd-text {
+  float: left;
+  margin-right: 15px;
+  margin-top: 126.5px;
+  margin-bottom: 126.5px;
+  text-align: center;
+  width: 570px;
+  height: 180px;
+  background-color: yellow;
+}
+
+.rd-text-title {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.rd-text-paragraph {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  font-family: "Arial",Helvetica,sans-serif;
+  margin-bottom: 15px;
+}
+
+
+/* *********************************** */
+/*           WEB DEVELOPMENT           */
+/* *********************************** */
+
+.web-development {
+  height: 422px;
+  background-color: red;
+  padding: 44px 0;
+  font-family: 'Oswald',sans-serif;
+}
+
+.wd-details {
+  height: 422px;
+  width: 1155px;
+  padding-left: 15px;
+  background-color: pink;
+  margin: 0 auto;
+}
+
+.wd-image {
+  height: 422px;
+  width: 570px;
+  float: left;
+  background-color: green;
+}
+
+.wd-image img {
+  width: 512px;
+  height: 412px;
+  margin: 0 auto;
+  padding: 5px 29px;
+}
+
+.wd-text {
+  float: left;
+  margin-top: 126.5px;
+  margin-bottom: 126.5px;
+  text-align: center;
+  width: 570px;
+  height: 180px;
+  background-color: yellow;
+}
+
+.wd-text-title {
+  font-size: 30px;
+  margin-top: 20px;
+  margin-bottom: 10px;
+}
+
+.wd-text-paragraph {
+  font-size: 1.2em;
+  line-height: 1.8em;
+  font-family: "Arial",Helvetica,sans-serif;
+  margin-bottom: 15px;
+}
+
+
+/* *********************************** */
+/*             AUTO REGION             */
+/* *********************************** */
+
+.auto-region {
+  height: 224px;
+  padding: 90px 0;
+  background-color: yellow;
+}
+
+.ar-details {
+  width: 1170px;
+  height: 224px;
+  background-color: blue;
+  margin: 0 auto;
+  display: relative;
+}
+
+.quote-left {
+  width: 195px;
+  height: 138px;
+  float: left;
+  outline: 1px solid pink;
+}
+
+.quote-right {
+  width: 195px;
+  height: 138px;
+  display: inline-block;
+  outline: 1px solid pink;
+}
+
+.quote-left img, .quote-right img {
+  width: 128px;
+  padding: 0 33.5px;
+}
+
+.quote-details {
+  width: 750px;
+  height: 150px;
+  font-size: 1.2em;
+  line-height: 1.6em;
+  float: left;
+}
+
+.quote {
+  text-align: center;
+  margin: 0 15px;
+  font-family: "Arial",Helvetica,sans-serif;
+}
+
+.quote-author {
+  font-weight: bold;
+  text-align: center;
+}
+
+
+/* *********************************** */
+/*               FOOTER                */
+/* *********************************** */
+
+
+/* ************************************ */
+/*               CONTACT                */
+/* ************************************ */
+
+
+
+
+.contact {
+  height: 191px;
+  background-color: limegreen;
+}
+
+
+
+footer {
+  height: 179px;
+  background-color: #333333
+}
+
+
+@media (max-width: 1160px) {
+
+
+  .rd-image, .wd-text {
+    float: none;
+    width: 100;
+  }
+}

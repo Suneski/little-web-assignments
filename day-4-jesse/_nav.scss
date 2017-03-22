@@ -1,0 +1,38 @@
+nav {
+  background-color: rgba(0, 0, 0, 0.5);
+	overflow: auto;
+	padding: 17px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+}
+
+nav li {
+	float: left;
+	font-family: "Open Sans",sans-serif;
+	margin: 5px 10px 0 10px;
+	text-transform: uppercase;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+}
+
+nav .logo {
+  background-repeat: no-repeat;
+  background-size: 22px;
+  color: transparent;
+  float: left;
+  height: 34px;
+  margin: 0;
+}
+
+nav ul {
+	list-style-type: none;
+  float: right;
+	font-size: 20px;
+	font-weight: 100;
+}

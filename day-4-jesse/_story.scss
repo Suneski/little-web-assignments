@@ -1,0 +1,27 @@
+/* ****************************************** */
+
+/*     Story Area    */
+
+/* ****************************************** */
+
+
+
+.story {
+	background: url("banner-working.jpg")  center right/cover no-repeat #272D35;
+	background-repeat: no-repeat;
+	color: #fff;
+	display: block;
+	position: relative;
+	z-index: 1;
+	width: 100%;
+
+	background-size: cover;
+	height: auto;
+}
+
+
+.story-details {
+	border: solid 1px yellow;
+	height: 400px;
+	width: 50%;
+}

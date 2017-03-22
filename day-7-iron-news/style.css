@@ -53,6 +53,11 @@ table {
 .container {
   width: 80%;
   margin: 10px auto 0 auto;
+  font-family: Verdana, Geneva, sans-serif;
+}
+
+a {
+	text-decoration: none;
 }
 
 /* ************************************* */
@@ -64,7 +69,7 @@ header {
   background-color: black;
   color: white;
   font-size: 14px;
-  font-family: Verdana, Geneva, sans-serif;
+
 }
 
 header img {
@@ -94,7 +99,6 @@ nav {
 }
 
 nav a, .login a {
-  text-decoration: none;
   color: white;
 }
 
@@ -122,12 +126,12 @@ nav a, .login a {
   margin: 0 auto;
 }
 
-li img {
-  outline: 1px solid red;
-}
-
 li p, li img, h4 {
   display: inline-block;
+}
+
+.main-internal li {
+  font-size: 13px;
 }
 
 .url-link, .post-details {
@@ -144,11 +148,56 @@ li p, li img, h4 {
   color: grey;
 }
 
+.more-line {
+  list-style: none;
+  padding: 10px 0;
+}
 
+.more-text {
+	color: black;
+}
 
+/* ************************************ */
+/*                 FOOTER               */
+/* ************************************ */
 
+footer {
+  border-top: 2px solid black;
+  background-color: rgba(0, 0, 0, 0.1);
+  height: 100px;
+}
 
+.footer-menu {
+  font-size: 12px;
+  text-align: center;
+  padding: 20px 0 5px 0;
+}
 
+.footer-menu a {
+  color: black;
+}
+
+.search {
+  font-size: 14px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.search p {
+  padding: 23px 10px 23px 0;
+  display: inline-block;
+  float: left;
+}
+
+.search-bar {
+  margin: 20px 0;
+  height: 20px;
+  width: 80%;
+  border: 1px solid grey;
+  background-color: white;
+  display: inline;
+  float: left;
+}
 
 
 
@@ -156,6 +205,13 @@ li p, li img, h4 {
 /* ************************************* */
 /*             MEDIA QUERIES             */
 /* ************************************* */
+
+@media (max-width: 1045px) {
+	.search-bar {
+    width: 75%;
+    float: right;
+  }
+}
 
 @media (max-width: 750px) {
   header {
@@ -183,4 +239,18 @@ li p, li img, h4 {
   .login {
     margin: 13px 1% 13px 0;
   }
+
+  .search {
+    width: 98%;
+  }
+
+	.search p {
+	  padding-right: 2px;
+	}
+
+  .search-bar {
+    width: 80%;
+    float: right;
+  }
+
 }

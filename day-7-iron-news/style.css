@@ -213,6 +213,13 @@ footer {
   }
 }
 
+@media (max-width: 840px) {
+	.search-bar {
+    width: 70%;
+    float: right;
+  }
+}
+
 @media (max-width: 750px) {
   header {
     height: 42px;

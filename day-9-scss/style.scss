@@ -1,0 +1,8 @@
+@import 'reset';
+
+$paragraph-color: red;
+
+p {
+  color: $paragraph-color;
+  font-size: 20px;
+}

@@ -5,74 +5,111 @@ nav {
     outline: 1px solid grey;
     overflow: auto;
     .site-brand {
-      // width: 353.86px;
       width: 25%;
       height: 96px;
       float: left;
       background-color: orange;
     }
-    ul {
-      height: 72px;
+    .nav-menu {
       width: 710px;
+      height: 72px;
       margin: 12px 0;
       float: right;
       background-color: pink;
-      li {
-        height: 48px;
-        margin: 12px 5px;
-        outline: 1px solid red;
-        float: right;
+
+    }
+    li {
+      height: 48px;
+      margin: 12px 5px;
+      outline: 1px solid black;
+      float: left;
+      .top-link {
+        height: 42px;
+      }
+
+      .install {
+        width: 88.5px;
+      }
+      .learn-sass {
+        width: 115.58px;
+      }
+      .blog {
+        width: 69.92px;
+      }
+      .documentation {
+        width: 153.78px;
+      }
+      .get-involved {
+        width: 130.78px;
+      }
+      .libsass {
+        width: 88.69px;
       }
     }
   }
 }
 
 
-.install {
-  width: 88.5px;
-}
-.learn-sass {
-  width: 115.58px;
-}
-.blog {
-  width: 69.92px;
-}
-.documentation {
-  width: 153.78px;
-}
-.get-involved {
-  width: 130.78px;
-}
-.libsass {
-  width: 88.69px;
-}
+
+
+
+
+
 
 @media (max-width: 1040px) {
-  .nav-menu {
-    width: 534px;
-    margin: 0;
+
+
+  nav .sass-nav .site-brand {
+      width: 20%;
+    }
+
+
+  nav .sass-nav .nav-menu {
+    float: right;
+    width: auto;
+    .install {
+      width: 74.38px;
+    }
+    .learn-sass {
+      width: 94.69px;
+    }
+    .blog {
+      width: 60.45px;
+    }
+    .documentation {
+      width: 123.34px;
+    }
+    .get-involved {
+      width: 106.08px;
+    }
+    .libsass {
+      width: 74.52px;
+    }
   }
 
-  ul li div {
-    height: 42px;
-  }
-  .install {
-    width: 74.38px;
+}
 
+
+
+
+
+@media (max-width: 790px) {
+  nav .sass-nav .nav-menu {
+    width: 60px;
+    height: 60px;
+    margin: 18px 10px 18px 0;
+    li {
+      width: 0;
+      height: 0;
+      div {
+        width: 0;
+        height: 0;
+        float: none;
+        margin: .5px;
+      }
+    }
   }
-  .learn-sass {
-    width: 94.69px;
-  }
-  .blog {
-    width: 60.45px;
-  }
-  .documentation {
-    width: 123.34px;
-  }
-  .get-involved {
-    width: 106.08px;
-  }
-  .libsass {
-    width: 74.52px;
+  nav .sass-nav .site-brand {
+    width: 150px;
   }
 }

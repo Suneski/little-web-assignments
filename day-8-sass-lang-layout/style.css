@@ -68,33 +68,30 @@ table {
   background-color: black; }
 
 nav {
-  padding: 48px 5%;
+  padding: 48px 3%;
   background-color: lightgreen; }
   nav .sass-nav {
     outline: 1px solid grey;
     overflow: auto; }
     nav .sass-nav .site-brand {
-      width: 353.86px;
+      width: 25%;
       height: 96px;
       float: left;
       background-color: orange; }
     nav .sass-nav ul {
       height: 72px;
-      width: 1125.95px;
+      width: 710px;
       margin: 12px 0;
-      float: left;
+      float: right;
       background-color: pink; }
       nav .sass-nav ul li {
         height: 48px;
         margin: 12px 5px;
         outline: 1px solid red;
         float: right; }
-        nav .sass-nav ul li div {
-          background-color: black; }
 
 .install {
-  width: 88.5px;
-  height: 48px; }
+  width: 88.5px; }
 
 .learn-sass {
   width: 115.58px; }
@@ -110,6 +107,25 @@ nav {
 
 .libsass {
   width: 88.69px; }
+
+@media (max-width: 1040px) {
+  .nav-menu {
+    width: 534px;
+    margin: 0; }
+  ul li div {
+    height: 42px; }
+  .install {
+    width: 74.38px; }
+  .learn-sass {
+    width: 94.69px; }
+  .blog {
+    width: 60.45px; }
+  .documentation {
+    width: 123.34px; }
+  .get-involved {
+    width: 106.08px; }
+  .libsass {
+    width: 74.52px; } }
 
 .page-header {
   height: 108px;

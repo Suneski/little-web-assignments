@@ -1,4 +1,31 @@
 .column-area {
-  height: 360px;
-  background-color:
+  height: 336px;
+  margin: 0 auto;
+  padding: 12px 50px;
+  background-color: beige;
+  ul {
+    padding: 0px 10px;
+    li {
+      width: 31%;
+      margin: 0 1%;
+      float: left;
+      outline: 1px solid red;
+      .top-portion {
+        height: 72px;
+        background-color: grey;
+      }
+      .bottom-portion {
+        height: 96px;
+        background-color: rgb(139, 255, 115);
+      }
+    }
+  }
 }
+
+
+//
+// @media (max-width: 767px) {
+//   .column-area ul li {
+//         width: 100%;
+//         padding: 0;
+// }

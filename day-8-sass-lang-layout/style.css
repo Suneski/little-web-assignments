@@ -119,3 +119,24 @@ nav {
     height: inherit;
     margin: 0 auto;
     background-color: lightblue; }
+
+.body {
+  padding: 32px 0;
+  background-color: #ff9e9e;
+  overflow: auto; }
+  .body .body-container {
+    width: 1512px;
+    padding: 64px 0;
+    background-color: #bdff9e;
+    margin: 0 auto;
+    overflow: auto; }
+    .body .body-container .hero-image-space, .body .body-container .introduction {
+      height: 259px;
+      float: left; }
+    .body .body-container .hero-image-space {
+      width: 745px;
+      padding-right: 32px;
+      background-color: #2f8fff; }
+    .body .body-container .introduction {
+      width: 735px;
+      background-color: #00702d; }

@@ -44,3 +44,25 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.top-bar {
+  background-color: lightblue;
+  padding: 13.5px 0;
+  overflow: auto; }
+  .top-bar .sass-stickers {
+    width: 408.66px;
+    margin: 0 auto; }
+    .top-bar .sass-stickers .need-more-sass {
+      background-color: red;
+      width: 200.75px;
+      height: 21px;
+      float: left; }
+    .top-bar .sass-stickers .buy-stickers {
+      background-color: blue;
+      width: 207.91px;
+      height: 21px;
+      float: left; }
+
+.pop-stripe {
+  height: 4px;
+  background-color: black; }

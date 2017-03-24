@@ -1,0 +1,52 @@
+nav {
+  padding: 48px 5%;
+  background-color: lightgreen;
+  .sass-nav {
+    outline: 1px solid grey;
+    overflow: auto;
+    .site-brand {
+      width: 353.86px;
+      height: 96px;
+      float: left;
+      background-color: orange;
+    }
+    ul {
+      height: 72px;
+      width: 1125.95px;
+      margin: 12px 0;
+      float: left;
+      background-color: pink;
+      li {
+        height: 48px;
+        margin: 12px 5px;
+        outline: 1px solid red;
+        float: right;
+        div {
+          background-color: black;
+
+        }
+      }
+    }
+  }
+}
+
+
+.install {
+  width: 88.5px;
+  height: 48px;
+}
+.learn-sass {
+  width: 115.58px;
+}
+.blog {
+  width: 69.92px;
+}
+.documentation {
+  width: 153.78px;
+}
+.get-involved {
+  width: 130.78px;
+}
+.libsass {
+  width: 88.69px;
+}

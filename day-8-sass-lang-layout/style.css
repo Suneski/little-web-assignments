@@ -110,3 +110,12 @@ nav {
 
 .libsass {
   width: 88.69px; }
+
+.page-header {
+  height: 108px;
+  background-color: violet; }
+  .page-header .superpowers {
+    width: 1512px;
+    height: inherit;
+    margin: 0 auto;
+    background-color: lightblue; }

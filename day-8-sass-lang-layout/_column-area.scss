@@ -2,7 +2,6 @@
   height: 336px;
   margin: 0 auto;
   padding: 12px 50px;
-  background-color: beige;
   ul {
     padding: 0px 10px;
     li {
@@ -23,9 +22,15 @@
 }
 
 
-//
-// @media (max-width: 767px) {
-//   .column-area ul li {
-//         width: 100%;
-//         padding: 0;
-// }
+
+@media (max-width: 767px) {
+  // .column-area {
+  //   height: 0;
+  //   padding: 12px 50px;
+  // }
+  .column-area ul li {
+    width: 100%;
+    // margin: 12px 50px;
+    margin-bottom: 20px;
+  }
+}

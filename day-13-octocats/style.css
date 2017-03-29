@@ -44,3 +44,55 @@ q:before, q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0; }
+
+.octocat {
+  float: left;
+  margin: 1.15%;
+  width: 31%;
+  font-family: sans-serif; }
+  .octocat .big-image {
+    width: 95%;
+    padding: 2.5%;
+    outline: solid 2px #d7d7d7; }
+  .octocat .image-footer {
+    overflow: auto;
+    padding: 10px 0 5px 8px;
+    border-bottom: solid 2px #d7d7d7;
+    font-size: 14px;
+    position: relative; }
+    .octocat .image-footer .triangle {
+      position: absolute;
+      display: inline-block;
+      top: -9px;
+      right: 2px;
+      font-size: 22px;
+      color: #878787; }
+    .octocat .image-footer .image-number {
+      display: inline-block;
+      color: #d7d7d7;
+      line-height: 20px;
+      font-size: 100%;
+      font-weight: bold; }
+    .octocat .image-footer .image-caption {
+      float: right; }
+      .octocat .image-footer .image-caption span, .octocat .image-footer .image-caption a {
+        font-weight: bold; }
+      .octocat .image-footer .image-caption span {
+        color: #878787;
+        line-height: 20px; }
+      .octocat .image-footer .image-caption a {
+        text-decoration: none;
+        color: black; }
+      .octocat .image-footer .image-caption .authors {
+        float: right;
+        padding-left: 10px; }
+        .octocat .image-footer .image-caption .authors li a img {
+          width: 20px; }
+
+@media (max-width: 939px) {
+  .octocat {
+    width: 47.5%; } }
+
+@media (max-width: 616px) {
+  .octocat {
+    width: 97.7%; } }

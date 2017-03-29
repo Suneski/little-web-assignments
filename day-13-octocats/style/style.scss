@@ -1,1 +1,72 @@
 @import 'reset';
+
+.octocat {
+  float: left;
+  margin: 1.15%;
+  width: 31%;
+  font-family: sans-serif;
+  .big-image {
+    width: 95%;
+    padding: 2.5%;
+
+    outline: solid 2px rgb(215, 215, 215);
+  }
+  .image-footer {
+    overflow: auto;
+    padding: 10px 0 5px 8px;
+    border-bottom: solid 2px rgb(215, 215, 215);
+    font-size: 14px;
+    position: relative;
+
+    .triangle {
+    position: absolute;
+    display: inline-block;
+    top: -9px;
+    right: 2px;
+    font-size: 22px;
+    color: rgb(135, 135, 135);
+    }
+    .image-number {
+        display: inline-block;
+        color: rgb(215, 215, 215);
+        line-height: 20px;
+        font-size: 100%;
+        font-weight: bold;
+    }
+    .image-caption {
+      float: right;
+      span, a {
+        font-weight: bold;
+      }
+      span {
+        color: rgb(135, 135, 135);
+        line-height: 20px;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      .authors {
+        float: right;
+        padding-left: 10px;
+        li a img {
+          width: 20px;
+        }
+      }
+    }
+  }
+}
+
+
+
+@media (max-width: 939px) {
+  .octocat {
+    width: 47.5%;
+  }
+}
+
+@media (max-width: 616px) {
+  .octocat {
+    width: 97.7%;
+  }
+}

@@ -27,17 +27,17 @@ var context = canvas.getContext('2d');
 // context.fillStyle = 'green';
 // context.fill();
 
-//PACMAN shutting mouth
+// PACMAN shutting mouth
 
-// var mouthSize = 1;
-//
-// setInterval(function() {
-//   context.beginPath();
-//
-//   context.fillStyle = 'blue';
-//   context.arc(200, 200, 50, mouthSize, (Math.PI * 2) - mouthSize);
-//   context.lineTo(200, 200);
-//   context.fill();
-//
-//   mouthSize -= 0.05;
-// }, 40);
+var mouthSize = 1;
+
+setInterval(function() {
+  context.beginPath();
+
+  context.fillStyle = 'blue';
+  context.arc(200, 200, 50, mouthSize, (Math.PI * 2) - mouthSize);
+  context.lineTo(200, 200);
+  context.fill();
+
+  mouthSize -= 0.05;
+}, 40);

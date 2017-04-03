@@ -1,3 +1,5 @@
+// alert('hi');
+
 var clickMe = document.querySelector('#click-me');
 var countDisplay = document.querySelector('#count-display');
 
@@ -155,6 +157,10 @@ for (var i = 0; i < books.length; i++) {
 
   pageTotal += books[i].pageCount;
 }
+
+
+
+
 
 var pageAvg = pageTotal / books.length;
 console.log(pageAvg);

@@ -9,10 +9,19 @@ for (var i = 0; i < kitties.length; i++) {
 
   names.appendChild(newItem);
 
+  newItem.addEventListener('click', function(evt) {
+    evt.target.classList.toggle('toggled');
+  });
+
 };
 
 
+var theButton = document.querySelector('#add-thing');
+var ol = document.querySelector('ol');
 
-names.addEventListener('click', function() {
-  newItem.classList.toggle('toggled');
+theButton.addEventListener('click', function() {
+  var li = document.createElement('li');
+  li.textContent = 'new';
+
+  ol.appendChild(li);
 });

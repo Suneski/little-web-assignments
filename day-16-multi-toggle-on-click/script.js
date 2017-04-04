@@ -19,7 +19,7 @@ ol.addEventListener('click', function(evt) {
 
 theButton.addEventListener('click', function() {
   var li = document.createElement('li');
-  li.textContent = '=^.^=';
+  li.textContent = '=^..^=';
 
   ol.appendChild(li);
 });

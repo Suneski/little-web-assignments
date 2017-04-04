@@ -1,11 +1,6 @@
 var names = document.querySelector('.names');
 var kitties = ['Rocky', 'Henry', 'Tasuki', 'Kairi', 'Kefka'];
 
-
-
-var newItem = document.createElement('li');
-
-
 for (var i = 0; i < kitties.length; i++) {
 
   var newItem = document.createElement('li');

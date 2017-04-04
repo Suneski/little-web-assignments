@@ -64,7 +64,16 @@ li {
 	float: left;
 }
 
+ol {
+	/*border: solid 1px black;*/
+	overflow: auto;
+}
+
 .toggled {
 	border-color: darkgreen;
 	background-color: lightgreen;
+}
+
+button {
+	margin: 10px;
 }

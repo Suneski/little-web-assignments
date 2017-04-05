@@ -7,5 +7,6 @@ ol.addEventListener('click', function(evt) {
   if (evt.target.tagName === 'LI') {
     li.classList.remove('toggled');
     evt.target.classList.add('toggled');
+    console.log(evt);
   }
 });

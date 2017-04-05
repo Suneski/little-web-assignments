@@ -47,7 +47,6 @@ table {
   border-spacing: 0; }
 
 nav {
-  background-color: rgba(0, 0, 0, 0.5);
   overflow: auto;
   padding: 17px 40px;
   position: fixed;
@@ -55,6 +54,9 @@ nav {
   left: 0;
   right: 0;
   z-index: 2; }
+
+nav.opaque {
+  background-color: rgba(0, 0, 0, 0.5); }
 
 nav li {
   float: left;

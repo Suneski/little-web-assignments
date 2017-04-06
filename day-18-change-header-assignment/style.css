@@ -1,10 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Revalia|Russo+One');
-
+@import url("https://fonts.googleapis.com/css?family=Revalia|Russo+One|Press+Start+2P|Roboto");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -18,230 +16,194 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-	line-height: 1;
-}
+  line-height: 1; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
+  content: '';
+  content: none; }
+
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-
-a {
-	color: white;
-	text-decoration: none;
-}
-
-a:hover {
-	color: grey;
-}
-
-body {
-	min-height: 1400px;
-}
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 nav {
-  /*background-color: black;*/
   height: 50px;
-	width: 100%;
-	font-family: 'Revalia', cursive;
-	color: white;
-	position: fixed;
-}
+  width: 100%;
+  font-family: 'Revalia', cursive;
+  position: fixed;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+  nav .pokeball {
+    width: 40px;
+    padding: 5px;
+    float: left;
+    opacity: 0.7; }
+  nav a {
+    color: rgba(255, 255, 255, 0.9);
+    text-decoration: none; }
+  nav a:hover {
+    color: grey; }
+  nav .nav-title {
+    color: rgba(255, 255, 255, 0.9);
+    float: left;
+    font-size: 20px;
+    padding: 15px 0 15px 10px; }
+  nav .nav-list {
+    float: right; }
+    nav .nav-list li {
+      float: left;
+      font-size: 16px;
+      padding: 17px; }
 
-.pokeball {
-	width: 40px;
-	padding: 5px;
-	float: left;
-}
+@media (max-width: 1165px) {
+  nav .nav-title {
+    font-size: 15px;
+    padding-top: 17.5px; }
+  nav .nav-list a {
+    font-size: 12px;
+    padding-top: 19px; } }
 
-.nav-title {
-	float: left;
-	font-size: 20px;
-	padding: 15px 0 15px 10px;
-}
-
-.nav-list {
-	float: right;
-}
-
-.nav-list li {
-	float: left;
-	font-size: 16px;
-	padding: 17px;
-}
-
-.header-img {
-	background-image: url('images/ghosts.gif');
-	background-size: cover;
-	height: 700px;
-}
-
-h1,h2 {
-	text-align: center;
+h1, h2 {
+  text-align: center;
   color: white;
-	font-family: 'Russo One', sans-serif;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
+  font-family: 'Russo One', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
 
 h1 {
-	padding-top: 200px;
-	font-size: 100px;
-}
+  padding-top: 200px;
+  font-size: 80px; }
 
 h2 {
-	padding-top: 20px;
-	font-size: 40px;
+  padding-top: 20px;
+  font-size: 30px; }
 
-}
+header {
+  background-image: url("images/ghosts.gif");
+  background-size: cover;
+  height: 700px; }
 
-
-
-.from-ashes{
-	background-image: url('images/missingno.gif');
-	background-size: cover;
-	height: 700px;
-}
-
-
-
+.from-ashes {
+  background-image: url("images/missingno.gif");
+  background-size: cover;
+  height: 700px; }
 
 .snorlax-blocks {
-	background-image: url('images/snorlax.png');
-	background-size: cover;
-	height: 700px;
-	background-position:center center;
-}
-
-
-
-
+  background-image: url("images/snorlax.png");
+  background-size: cover;
+  height: 700px;
+  background-position: center center; }
 
 .graveyard {
-	background-image: url('images/graveyard.gif');
-	background-size: cover;
-	height: 700px;
-	background-position:center center;
-}
+  background-image: url("images/graveyard.gif");
+  background-size: cover;
+  height: 700px;
+  background-position: center center; }
 
+@media (max-width: 1460px) {
+  h1 {
+    font-size: 60px; }
+  h2 {
+    font-size: 25px; } }
 
+@media (max-width: 1250px) {
+  h1 {
+    font-size: 50px; }
+  h2 {
+    font-size: 20px; } }
 
+@media (max-width: 1165px) {
+  h1 {
+    font-size: 30px; }
+  h2 {
+    font-size: 20px; } }
 
+.pop-up-header {
+  text-align: center;
+  color: #c12727;
+  font-family: 'Press Start 2P', cursive;
+  font-weight: bold;
+  font-size: 20px; }
 
+.pop-up-img {
+  width: 100px;
+  padding: 10px 0;
+  margin: 0 auto;
+  display: block; }
+
+.pop-up-details {
+  text-align: center;
+  font-family: 'Roboto', sans-serif; }
 
 .team-rocket {
-	right: 20px;
-	bottom: 35px;
-	width: 200px;
-	border: 1px solid rgb(161, 161, 161);
-	background-color: white;
-	padding: 5px;
-	position: fixed;
-	display: none;
-	z-index: 12;
-	border-radius: 3px;
-}
-
-.wanted {
-	text-align: center;
-	color: red;
-	font-family: sans-serif;
-	font-weight: bold;
-	font-size: 20px;
-}
-
-.grunts {
-	width: 100px;
-	padding: 10px 0;
-	margin: 0 auto;
-	display: block;
-}
-
-.contact-jenny {
-	text-align: center;
-	font-family: sans-serif;
-}
+  right: 10px;
+  bottom: 10px;
+  width: 200px;
+  border: 1px solid #a1a1a1;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px;
+  position: fixed;
+  display: none;
+  border-radius: 3%; }
 
 .red {
-	right: 20px;
-	bottom: 35px;
-	width: 200px;
-	border: 1px solid rgb(161, 161, 161);
-	background-color: white;
-	padding: 5px;
-	position: fixed;
-	display: none;
-	border-radius: 3px;
-}
-
-.red-pic {
-	width: 100px;
-	padding: 10px 0;
-	margin: 0 auto;
-	display: block;
-}
+  right: 10px;
+  bottom: 10px;
+  width: 200px;
+  border: 1px solid #a1a1a1;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 5px;
+  position: fixed;
+  display: none;
+  border-radius: 3%; }
 
 .giratina-warning {
-	right: 20px;
-	bottom: 35px;
-	width: 250px;
-	border: 1px solid rgb(161, 161, 161);
-	background-color: white;
-	padding: 10px;
-	position: fixed;
-	display: none;
-	border-radius: 3px;
-}
+  right: 10px;
+  bottom: 35px;
+  width: 250px;
+  border: 1px solid #a1a1a1;
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 10px;
+  position: fixed;
+  display: none;
+  border-radius: 3%; }
 
 .giratina-gif {
-	width: 200px;
-	padding: 10px 25px;
-}
+  width: 200px;
+  padding: 10px 25px; }
 
 .with-bold {
-	margin-top: 10px;
-	font-weight: bold;
-	text-align: center;
-}
-
+  margin-top: 10px;
+  font-weight: bold;
+  text-align: center;
+  font-family: 'Press Start 2P', cursive; }
 
 footer {
-	color: white;
-	background-color: black;
-	font-size: 15px;
-	padding: 7px 10px;
-	overflow: auto;
-	font-family: cursive;
-}
-
-.credits {
-	float: left;
-}
-
-.copyright {
-	float: right;
-}
+  color: white;
+  background-color: black;
+  font-size: 15px;
+  padding: 7px 10px;
+  overflow: auto;
+  font-family: cursive; }
+  footer .credits {
+    float: left; }
+  footer .copyright {
+    float: right; }

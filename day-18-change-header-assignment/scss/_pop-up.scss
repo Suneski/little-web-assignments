@@ -1,0 +1,75 @@
+$pop-up-background: rgba(255, 255, 255, 0.75);
+$pop-up-border: rgb(161, 161, 161);
+$pop-up-right: 10px;
+$pop-up-position: fixed;
+$pop-up-display: none;
+$pop-up-border-radius: 3%;
+$pop-up-font-family: sans-serif;
+
+.pop-up-header {
+	text-align: center;
+	color: rgb(193, 39, 39);
+	font-family: 'Press Start 2P', cursive;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.pop-up-img {
+	width: 100px;
+	padding: 10px 0;
+	margin: 0 auto;
+	display: block;
+}
+
+.pop-up-details {
+	text-align: center;
+	font-family: 'Roboto', sans-serif;;
+}
+
+.team-rocket {
+	right: $pop-up-right;
+	bottom: 10px;
+	width: 200px;
+	border: 1px solid $pop-up-border;
+	background-color: $pop-up-background;
+	padding: 5px;
+	position: $pop-up-position;
+	display: $pop-up-display;
+	border-radius: $pop-up-border-radius;
+}
+
+.red {
+	right: $pop-up-right;
+	bottom: 10px;
+	width: 200px;
+	border: 1px solid $pop-up-border;
+	background-color: $pop-up-background;
+	padding: 5px;
+	position: $pop-up-position;
+	display: $pop-up-display;
+	border-radius: $pop-up-border-radius;
+}
+
+.giratina-warning {
+	right: $pop-up-right;
+	bottom: 35px;
+	width: 250px;
+	border: 1px solid $pop-up-border;
+	background-color: $pop-up-background;
+	padding: 10px;
+	position: $pop-up-position;
+	display: $pop-up-display;
+	border-radius: $pop-up-border-radius;
+}
+
+.giratina-gif {
+	width: 200px;
+	padding: 10px 25px;
+}
+
+.with-bold {
+	margin-top: 10px;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Press Start 2P', cursive;
+}

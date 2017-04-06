@@ -3,7 +3,7 @@ var teamRocket = document.querySelector('.team-rocket');
 var red = document.querySelector('.red')
 var giratina = document.querySelector('.giratina-warning');
 
-var topOfPage = true;
+var topOfPage = false;
 
 window.addEventListener('scroll', function() {
   console.log(window.scrollY);
@@ -33,7 +33,5 @@ window.addEventListener('scroll', function() {
     giratina.style.display = 'block'
     topOfPage = false;
   }
-
-
 
 });

@@ -23,12 +23,14 @@ var display = document.querySelector('#display').src=imageArray[0];
 
 playButton.addEventListener('click', function() {
   function animate() {
-    currentImageIndex += 1;
-    display = document.querySelector('#display').src=imageArray[currentImageIndex];
-
+    if (currentImageIndex < imageArray.length) {
+      currentImageIndex += 1;
+    }
     if (currentImageIndex === imageArray.length - 1) {
       currentImageIndex = 0;
     }
+
+    display = document.querySelector('#display').src=imageArray[currentImageIndex];
   }
   intervalId = setInterval(animate, 500);
 

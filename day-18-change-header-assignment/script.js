@@ -1,6 +1,7 @@
 var nav = document.querySelector('nav');
 var teamRocket = document.querySelector('.team-rocket');
 var red = document.querySelector('.red')
+var giratina = document.querySelector('.giratina-warning');
 
 var topOfPage = true;
 
@@ -20,14 +21,19 @@ window.addEventListener('scroll', function() {
     topOfPage = false;
   }
 
-  else if (window.scrollY > 800 && topOfPage === false) {
+  else if (window.scrollY > 800 && window.scrollY <= 1500 && topOfPage === false) {
     teamRocket.style.display = 'none';
+    giratina.style.display = 'none'
     red.style.display = 'block';
     topOfPage = true;
   }
 
-  else if (window.scrollY < 800 && topOfPage === true) {
+  else if (window.scrollY > 1500 && topOfPage === true) {
+    red.style.display = 'none';
+    giratina.style.display = 'block'
     topOfPage = false;
   }
+
+
 
 });

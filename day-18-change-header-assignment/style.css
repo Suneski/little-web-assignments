@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Revalia|Russo+One');
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -53,8 +55,133 @@ body {
 }
 
 nav {
-  background-color: black;
+  /*background-color: black;*/
   height: 50px;
 	width: 100%;
+	font-family: 'Revalia', cursive;
+	color: white;
 	position: fixed;
+}
+
+.pokeball {
+	width: 40px;
+	padding: 5px;
+	float: left;
+}
+
+.nav-title {
+	float: left;
+	font-size: 20px;
+	padding: 15px 0 15px 10px;
+}
+
+.nav-list {
+	float: right;
+}
+
+.nav-list li {
+	float: left;
+	font-size: 16px;
+	padding: 17px;
+}
+
+.nav-list li:hover {
+	color: grey;
+}
+
+
+
+.header-img {
+	background-image: url('images/ghosts.gif');
+	background-size: cover;
+	height: 700px;
+}
+
+h1,h2 {
+	text-align: center;
+  color: white;
+	font-family: 'Russo One', sans-serif;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+h1 {
+	padding-top: 200px;
+	font-size: 100px;
+}
+
+h2 {
+	padding-top: 20px;
+	font-size: 40px;
+
+}
+
+
+
+.from-ashes{
+	background-image: url('images/lavendar-town.png');
+	background-size: cover;
+	height: 700px;
+}
+
+
+
+
+.snorlax-blocks {
+	background-image: url('images/snorlax.png');
+	background-size: cover;
+	height: 700px;
+	background-position:center center;
+}
+
+
+.team-rocket {
+	right: 20px;
+	bottom: 20px;
+	width: 200px;
+	border: 1px solid rgb(161, 161, 161);
+	background-color: white;
+	padding: 5px;
+	position: fixed;
+	display: none;
+	z-index: 12;
+	border-radius: 3px;
+}
+
+.wanted {
+	text-align: center;
+	color: red;
+	font-family: sans-serif;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+.grunts {
+	width: 100px;
+	padding: 10px 0;
+	margin: 0 auto;
+	display: block;
+}
+
+.contact-jenny {
+	text-align: center;
+	font-family: sans-serif;
+}
+
+.red {
+	right: 20px;
+	bottom: 20px;
+	width: 200px;
+	border: 1px solid rgb(161, 161, 161);
+	background-color: white;
+	padding: 5px;
+	position: fixed;
+	display: none;
+	border-radius: 3px;
+}
+
+.red-pic {
+	width: 100px;
+	padding: 10px 0;
+	margin: 0 auto;
+	display: block;
 }

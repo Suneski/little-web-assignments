@@ -1,0 +1,12 @@
+#link {
+  background-image: url('link.png');
+  background-position-x: -120px;
+  background-position-y: -650px;
+  height: 128px;
+  width: 120px;
+  margin-left: 20px;
+}
+
+button {
+  margin: 10px;
+}

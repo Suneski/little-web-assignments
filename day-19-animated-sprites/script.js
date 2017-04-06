@@ -4,27 +4,32 @@ var startButton = document.querySelector('#start-button');
 
 var positionX = 0;
 var positionY = -650;
-var direction = 'left';
+// var direction = 'left';
 
 window.addEventListener('keydown', function(evt) {
   console.log(evt.keyCode);
 
   if (evt.keyCode === 37) {
-    direction = 'left';
+    // direction = 'left';
     positionY = -650;
   }
   else if (evt.keyCode === 39) {
-    direction = 'right';
+    // direction = 'right';
     positionY = -910;
   }
   else if (evt.keyCode === 38) {
-    direction = 'up';
+    // direction = 'up';
     positionY = -780;
   }
   else if (evt.keyCode === 40) {
-    direction = 'down';
+    // direction = 'down';
     positionY = -520;
   }
+});
+
+stopButton.addEventListener('click', function() {
+  console.log('stop', intervalId);
+  clearInterval(intervalId);
 });
 
 startButton.addEventListener('click', function() {
@@ -32,10 +37,7 @@ startButton.addEventListener('click', function() {
   intervalId = setInterval(animate, 50);
 });
 
-stopButton.addEventListener('click', function() {
-  console.log('stop', intervalId);
-  clearInterval(intervalId);
-});
+
 
 function animate() {
   positionX -= 120;

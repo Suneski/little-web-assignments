@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Macondo');
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -51,7 +53,12 @@ body {
   margin-top: 20px;
 }
 
-
+h1 {
+	font-size: 40px;
+	text-align: center;
+	margin-bottom: 10px;
+	font-family: 'Macondo', cursive;
+}
 
 #frame {
   border: 2px solid black;

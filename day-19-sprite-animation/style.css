@@ -1,5 +1,22 @@
+.background {
+  background-image: url('heian-jingu.jpg');
+  width: 576px;
+  height: 324px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: relative;
+}
+
+.shrine {
+  height: 500px;
+}
+
+
 #ami {
   background-image: url('ami.png');
+  position: absolute;
+  bottom: 10px;
+  left: 40px;
   height: 110px;
   width: 50px;
   margin-left: 0px;

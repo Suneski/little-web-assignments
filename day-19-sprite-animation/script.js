@@ -82,4 +82,4 @@ function animate() {
 }
 
 
-var intervalId = setInterval(animate, 200);
+var intervalId = setInterval(animate, 100);

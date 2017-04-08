@@ -1,9 +1,12 @@
 var ami = document.querySelector('#ami');
 
-var stopButton = document.querySelector('#stop-button');
-var startButton = document.querySelector('#start-button');
+var punch = document.querySelector('#punch');
+var upperCut = document.querySelector('#upper-cut');
+var highKick = document.querySelector('#high-kick');
+var lowKick = document.querySelector('#low-kick');
 
 var positionX = -52;
+var positionY = 0;
 var width = 50;
 
 function animate() {
@@ -69,17 +72,35 @@ function animate() {
   }
 
 
+  ami.style.width = width + 'px';
+
+  ami.style.backgroundPositionX = positionX + 'px';
+  ami.style.backgroundPositionY = positionY + 'px';
+}
 
 
 
+
+punch.addEventListener('click', function() {
+
+  positionX = 0;
+  positionY = -470;
+  ami.style.outline = 1 + 'px' + ' solid green';
+
+  if (positionX = 0) {
+    width = 60;
+    positionX -= 50;
+  }
 
   ami.style.width = width + 'px';
 
   ami.style.backgroundPositionX = positionX + 'px';
   ami.style.backgroundPositionY = positionY + 'px';
 
+});
 
-}
+
+
 
 
 var intervalId = setInterval(animate, 100);

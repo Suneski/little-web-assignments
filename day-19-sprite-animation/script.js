@@ -1,70 +1,85 @@
-var red = document.querySelector('#red');
+var ami = document.querySelector('#ami');
 
-// var positionX = -2450;
-// var positionY = 0;
-//
-// window.addEventListener('keydown', function(evt) {
-//   console.log(evt.keyCode);
-// });
-//
-// function animate() {
-//   positionX = -390;
-//   positionY = -420;
-//
-//   red.style.backgroundPositionX = positionX + 'px';
-//   red.style.backgroundPositionY = positionY + 'px';
-// }
-//
-//
-// var intervalId = setInterval(animate, 50);
-
-var red = document.querySelector('#red');
 var stopButton = document.querySelector('#stop-button');
 var startButton = document.querySelector('#start-button');
 
-var positionX = -10;
-var positionY = 0;
-// var direction = 'left';
-
-window.addEventListener('keydown', function(evt) {
-  console.log(evt.keyCode);
-
-  if (evt.keyCode === 37) {
-    // direction = 'left';
-    // positionY = -650;
-  }
-  else if (evt.keyCode === 39) {
-    // direction = 'right';
-    // positionY = -910;
-  }
-  else if (evt.keyCode === 38) {
-    // direction = 'up';
-    // positionY = -780;
-  }
-  else if (evt.keyCode === 40) {
-    // direction = 'down';
-    // positionY = -520;
-  }
-});
-
-// stopButton.addEventListener('click', function() {
-//   console.log('stop', intervalId);
-//   clearInterval(intervalId);
-// });
-//
-// startButton.addEventListener('click', function() {
-//   console.log('start', intervalId);
-//   intervalId = setInterval(animate, 50);
-// });
-
-
+var positionX = -52;
+var width = 50;
 
 function animate() {
-  positionX -= 160;
-  positionY -= 0;
-  red.style.backgroundPositionX = positionX + 'px';
-  red.style.backgroundPositionY = positionY + 'px';
+
+  //POSITION 2
+
+  if (positionX <= -52) {
+    width = 46;
+    positionX -= 48;
+    // ami.style.outline = 1 + 'px' + ' solid blue';
+  }
+
+  //POSITION 3
+
+  if (positionX < -146) {
+    width = 42;
+    positionX -= 2;
+    // ami.style.outline = 1 + 'px' + ' solid green';
+  }
+
+  //POSITION 4
+
+  if (positionX < -150) {
+    width = 32;
+    positionX += 10;
+    // ami.style.outline = 1 + 'px' + ' solid orange';
+  }
+
+  //POSITION 5
+
+  if (positionX < -222) {
+    width = 40;
+    positionX += 10;
+    // ami.style.outline = 1 + 'px' + ' solid purple';
+  }
+
+  //POSITION 6
+
+  if (positionX < -230) {
+    width = 42;
+    positionX -= 10;
+    // ami.style.outline = 1 + 'px' + ' solid black';
+  }
+
+  //POSITION 7
+
+  if (positionX < -265) {
+    width = 50;
+    positionX -= 12;
+    // ami.style.outline = 1 + 'px' + ' solid red';
+  }
+
+  //POSITION 8
+
+  if (positionX < -315) {
+    width = 50;
+    positionX -= 2;
+    // ami.style.outline = 1 + 'px' + ' solid green';
+  }
+
+  if (positionX < -367) {
+    positionX = -52;
+  }
+
+
+
+
+
+
+  ami.style.width = width + 'px';
+
+  ami.style.backgroundPositionX = positionX + 'px';
+  ami.style.backgroundPositionY = positionY + 'px';
+
+
 }
 
 
-var intervalId = setInterval(animate, 70);
+var intervalId = setInterval(animate, 200);

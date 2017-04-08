@@ -1,10 +1,8 @@
-#red {
-  background-image: url('surfing-pikachu.png');
-  height: 210px;
-  width: 160px;
-  margin-left: 20px;
-}
-
-button {
-  margin: 10px;
+#ami {
+  background-image: url('ami.png');
+  height: 110px;
+  width: 50px;
+  margin-left: 0px;
+  background-position-x: -52px;
+  /*outline: 1px solid red;*/
 }

@@ -1,0 +1,10 @@
+#red {
+  background-image: url('surfing-pikachu.png');
+  height: 210px;
+  width: 160px;
+  margin-left: 20px;
+}
+
+button {
+  margin: 10px;
+}

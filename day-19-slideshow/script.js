@@ -66,7 +66,7 @@ playButton.addEventListener('click', function() {
     display = document.querySelector('#display').src=imageArray[currentImageIndex].image;
     text.textContent = imageArray[currentImageIndex].text;
   }
-  intervalId = setInterval(animate, 500);
+  intervalId = setInterval(animate, 1000);
 
   playButton.style.display = 'none';
   stopButton.style.display = 'inline-block';

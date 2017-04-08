@@ -74,14 +74,9 @@ header {
   text-align: center;
 }
 
-#title {
-  font-size: 60px;
-}
-
 #estimated-read-time {
   color: grey;
   text-align: center;
-  margin-top: 10px;
 }
 
 
@@ -114,9 +109,10 @@ h4 {
   margin-left: 15px;
 }
 
-img {
+.yum {
   margin: 10px auto 20px auto;
   display: block;
+	width: 400px;
   border: 2px solid black;
   border-radius: 5px;
 }

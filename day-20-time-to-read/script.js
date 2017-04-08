@@ -10,11 +10,11 @@ var social = document.querySelector('.social');
 window.addEventListener('scroll', function() {
   console.log(window.scrollY);
 
-  if (window.scrollY >= 480) {
+  if (window.scrollY >= 620) {
     social.style.display='block';
   }
 
-  else if (window.scrollY < 480) {
+  else if (window.scrollY < 620) {
     social.style.display='none';
   }
 

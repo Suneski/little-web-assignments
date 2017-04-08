@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+
+
+
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.container {
+  line-height: 1.5;
+  width: 75%;
+  margin: 0 auto;
+}
+
+
+
+
+
+header {
+  text-align: center;
+}
+
+#title {
+  font-size: 60px;
+}
+
+#estimated-read-time {
+  color: grey;
+  text-align: center;
+  margin-top: 10px;
+}
+
+
+h1 {
+  font-size: 40px;
+}
+
+.container h2, h3, h4, p {
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 25px;
+  text-decoration: underline;
+}
+
+h3 {
+  font-size: 22px;
+}
+
+h4 {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.container p {
+  text-align: justify;
+  text-justify: inter-word;
+  font-size: 15px;
+  margin-left: 15px;
+}
+
+img {
+  margin: 10px auto 20px auto;
+  display: block;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+
+.social {
+  position: fixed;
+  right: 0;
+  bottom: 0;
+  height: 444px;
+  width: 84px;
+  padding: 0 15px;
+  display: none;
+  /*outline: 2px solid rgba(0, 0, 0, 0.41);*/
+}
+
+li {
+  margin: 4px 0;
+}
+
+
+.facebook, .twitter, .google, .pinterest, .rss {
+  height: 84px;
+  width: 84px;
+  background-image: url('social-icons.png');
+}
+
+.facebook:hover {
+  background-position: 0 -168px;
+  border-radius: 100%;
+}
+
+.twitter {
+  background-position: -672px 0px;
+}
+
+.twitter:hover {
+  background-position: -672px -168px;
+  border-radius: 100%;
+}
+
+.google {
+  background-position: -252px 0px;
+}
+
+.google:hover {
+  background-position: -252px -168px;
+  border-radius: 100%;
+}
+
+.pinterest {
+  background-position: -420px 0px;
+}
+
+.pinterest:hover {
+  background-position: -420px -168px;
+  border-radius: 100%;
+}
+
+.rss {
+  background-position: -504px 0px;
+}
+
+.rss:hover {
+  background-position: -504px -168px;
+  border-radius: 100%;
+}

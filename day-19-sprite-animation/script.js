@@ -58,7 +58,7 @@ function animate() {
   //POSITION 7
 
   if (positionX < -262) {
-    width = 50;
+    width = 53;
     positionX -= 4;
     // ami.style.outline = 3 + 'px' + ' solid red';
   }
@@ -66,7 +66,7 @@ function animate() {
   //POSITION 8
 
   if (positionX < -306) {
-    width = 50;
+    width = 55;
     positionX -= 10;
     // ami.style.outline = 3 + 'px' + ' solid green';
   }
@@ -90,12 +90,13 @@ function animate() {
   //POSITION 10
 
   if (positionX < -464) {
-    width = 40;
+    width = 45;
     positionX += 13;
     // ami.style.outline = 3 + 'px' + ' solid red';
   }
 
   if (positionX < -500) {
+    width = 48;
     positionX = -52;
   }
 
@@ -113,15 +114,21 @@ function animate() {
 punch.addEventListener('click', function() {
 
   positionX = 0;
-  positionY = -470;
-  ami.style.outline = 1 + 'px' + ' solid green';
+  positionY = -475;
+  // width = 60;
 
-  if (positionX = 0) {
-    width = 60;
-    positionX -= 50;
+
+  if (positionX <= 0) {
+    positionX -= 0;
+    ami.style.outline = 1 + 'px' + ' solid green';
   }
 
-  ami.style.width = width + 'px';
+  if (positionX < 60) {
+    positionX -= 10;
+  }
+
+
+
 
   ami.style.backgroundPositionX = positionX + 'px';
   ami.style.backgroundPositionY = positionY + 'px';
@@ -132,4 +139,4 @@ punch.addEventListener('click', function() {
 
 
 
-var intervalId = setInterval(animate, 200);
+var intervalId = setInterval(animate, 1000);

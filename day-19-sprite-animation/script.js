@@ -15,62 +15,91 @@ function animate() {
 
   if (positionX <= -52) {
     width = 46;
-    positionX -= 48;
+    positionX -= 48; // to 100
     // ami.style.outline = 1 + 'px' + ' solid blue';
   }
 
   //POSITION 3
 
-  if (positionX < -146) {
+  if (positionX < -100) {
     width = 42;
-    positionX -= 2;
+    positionX += 2; // to 46
     // ami.style.outline = 1 + 'px' + ' solid green';
   }
 
   //POSITION 4
 
-  if (positionX < -150) {
+  if (positionX < -148) {
     width = 32;
-    positionX += 10;
+    ami.style.left = 50 + 'px';
     // ami.style.outline = 1 + 'px' + ' solid orange';
   }
 
+
   //POSITION 5
 
-  if (positionX < -222) {
+  if (positionX < -192) {
     width = 40;
-    positionX += 10;
+    positionX += 16;
+    ami.style.left = 40 + 'px';
     // ami.style.outline = 1 + 'px' + ' solid purple';
   }
 
+
+
   //POSITION 6
 
-  if (positionX < -230) {
+  if (positionX < -222) {
     width = 42;
     positionX -= 10;
-    // ami.style.outline = 1 + 'px' + ' solid black';
+    // ami.style.outline = 1 + 'px' + ' solid blue';
   }
 
   //POSITION 7
 
-  if (positionX < -265) {
+  if (positionX < -262) {
     width = 50;
-    positionX -= 12;
-    // ami.style.outline = 1 + 'px' + ' solid red';
+    positionX -= 4;
+    // ami.style.outline = 3 + 'px' + ' solid red';
   }
 
   //POSITION 8
 
-  if (positionX < -315) {
+  if (positionX < -306) {
     width = 50;
-    positionX -= 2;
-    // ami.style.outline = 1 + 'px' + ' solid green';
+    positionX -= 10;
+    // ami.style.outline = 3 + 'px' + ' solid green';
   }
 
-  if (positionX < -367) {
+  //POSITION 9
+
+  if (positionX < -360) {
+    width = 50;
+    positionX -= 1;
+    // ami.style.outline = 3 + 'px' + ' solid orange';
+  }
+
+  //POSITION 9
+
+  if (positionX < -415) {
+    width = 36;
+    positionX += 6;
+    // ami.style.outline = 3 + 'px' + ' solid purple';
+  }
+
+  //POSITION 10
+
+  if (positionX < -464) {
+    width = 40;
+    positionX += 13;
+    // ami.style.outline = 3 + 'px' + ' solid red';
+  }
+
+  if (positionX < -500) {
     positionX = -52;
   }
 
+  console.log(positionX);
 
   ami.style.width = width + 'px';
 
@@ -103,4 +132,4 @@ punch.addEventListener('click', function() {
 
 
 
-var intervalId = setInterval(animate, 100);
+var intervalId = setInterval(animate, 200);

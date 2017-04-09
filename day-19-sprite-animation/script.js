@@ -139,4 +139,4 @@ punch.addEventListener('click', function() {
 
 
 
-var intervalId = setInterval(animate, 1000);
+var intervalId = setInterval(animate, 100);

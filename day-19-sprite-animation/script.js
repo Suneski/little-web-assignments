@@ -1,5 +1,7 @@
 var ami = document.querySelector('#ami');
 
+var rain = document.querySelector('.rain');
+
 var punch = document.querySelector('#punch');
 var upperCut = document.querySelector('#upper-cut');
 var highKick = document.querySelector('#high-kick');
@@ -9,13 +11,111 @@ var positionX = -52;
 var positionY = 0;
 var width = 50;
 
+
+
+
+
+punch.addEventListener('click', function() {
+
+  positionY = -475;
+  positionX = 0;
+
+
+  ami.style.outline = 1 + 'px' + ' solid blue';
+
+
+  ami.style.width = width + 'px';
+
+  ami.style.backgroundPositionX = positionX + 'px';
+  ami.style.backgroundPositionY = positionY + 'px';
+
+
+
+  if (positionY <= 0) {
+    positionX -= 60;
+    width = 60;
+  }
+
+});
+
+
+
+
+
+// upperCut.addEventListener('click', function() {
+//
+//   positionX = -206;
+//   positionY = -475;
+//   width = 70;
+//
+//   ami.style.outline = 1 + 'px' + ' solid green';
+//
+//
+//   if (positionX === -206) {
+//     positionX -= 206;
+//     console.log(ami.style.width);
+//     console.log(positionX);
+//   }
+//
+//   if (positionX < -280) {
+//     positionX -= 10;
+//     console.log(positionX);
+//   }
+//
+// });
+//
+//
+//
+//
+//
+// highKick.addEventListener('click', function() {
+//
+//   positionX = 0;
+//   positionY = -610;
+//   width = 60;
+//
+//   ami.style.outline = 1 + 'px' + ' solid red';
+//
+// });
+//
+//
+//
+//
+//
+// lowKick.addEventListener('click', function() {
+//
+//   positionX = -650;
+//   positionY = -475;
+//   width = 55;
+//
+//   ami.style.outline = 1 + 'px' + ' solid orange';
+//
+// });
+
+
+
+
+
+
+
+
+
+
+
+var left = 50;
+
+
 function animate() {
+
+  var height;
 
   //POSITION 2
 
   if (positionX <= -52) {
     width = 46;
     positionX -= 48; // to 100
+    left += 2;
+
     // ami.style.outline = 1 + 'px' + ' solid blue';
   }
 
@@ -24,6 +124,7 @@ function animate() {
   if (positionX < -100) {
     width = 42;
     positionX += 2; // to 46
+    left += 2;
     // ami.style.outline = 1 + 'px' + ' solid green';
   }
 
@@ -31,7 +132,7 @@ function animate() {
 
   if (positionX < -148) {
     width = 32;
-    ami.style.left = 50 + 'px';
+    left += 10;
     // ami.style.outline = 1 + 'px' + ' solid orange';
   }
 
@@ -41,7 +142,7 @@ function animate() {
   if (positionX < -192) {
     width = 40;
     positionX += 16;
-    ami.style.left = 40 + 'px';
+    left -= 9;
     // ami.style.outline = 1 + 'px' + ' solid purple';
   }
 
@@ -52,6 +153,7 @@ function animate() {
   if (positionX < -222) {
     width = 42;
     positionX -= 10;
+    left += 1;
     // ami.style.outline = 1 + 'px' + ' solid blue';
   }
 
@@ -60,6 +162,7 @@ function animate() {
   if (positionX < -262) {
     width = 53;
     positionX -= 4;
+    left += 1;
     // ami.style.outline = 3 + 'px' + ' solid red';
   }
 
@@ -68,6 +171,7 @@ function animate() {
   if (positionX < -306) {
     width = 55;
     positionX -= 10;
+    left += 1;
     // ami.style.outline = 3 + 'px' + ' solid green';
   }
 
@@ -76,6 +180,7 @@ function animate() {
   if (positionX < -360) {
     width = 50;
     positionX -= 1;
+    left += 1;
     // ami.style.outline = 3 + 'px' + ' solid orange';
   }
 
@@ -84,6 +189,7 @@ function animate() {
   if (positionX < -415) {
     width = 36;
     positionX += 6;
+    left += 1;
     // ami.style.outline = 3 + 'px' + ' solid purple';
   }
 
@@ -92,48 +198,44 @@ function animate() {
   if (positionX < -464) {
     width = 45;
     positionX += 13;
+    left += 1.5;
     // ami.style.outline = 3 + 'px' + ' solid red';
   }
 
   if (positionX < -500) {
     width = 48;
     positionX = -52;
+    left -= 10;
+    console.log(left);
   }
 
-  console.log(positionX);
+  if (left > 245) {
+    clearInterval(intervalId);
+    left === 245;
+    positionY = -1055;
+    positionX = -672;
+    width = 60;
+    height = 145;
+    ami.style.bottom = 0 + 'px';
+    rain.style.display = 'block';
+  }
+
+
+  ami.style.left = left + 'px';
 
   ami.style.width = width + 'px';
+  ami.style.height = height + 'px';
 
   ami.style.backgroundPositionX = positionX + 'px';
   ami.style.backgroundPositionY = positionY + 'px';
+
+
 }
 
 
 
 
-punch.addEventListener('click', function() {
 
-  positionX = 0;
-  positionY = -475;
-  // width = 60;
-
-
-  if (positionX <= 0) {
-    positionX -= 0;
-    ami.style.outline = 1 + 'px' + ' solid green';
-  }
-
-  if (positionX < 60) {
-    positionX -= 10;
-  }
-
-
-
-
-  ami.style.backgroundPositionX = positionX + 'px';
-  ami.style.backgroundPositionY = positionY + 'px';
-
-});
 
 
 

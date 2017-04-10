@@ -64,7 +64,7 @@ var authors = [
 function countOfAuthorsWhoLivedOver60Years(arr)
 {
 
-  sum = 0;
+  var sum = 0;
 
   for (var i = 0; i < arr.length; i++) {
     if (arr[i].deathYear - arr[i].birthYear > 60) {

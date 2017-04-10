@@ -14,10 +14,6 @@ var imageArray = [
     text: 'At the Mansion'
   },
   {
-    image: 'images/cherry-blossom-rem.png',
-    text: 'Under the Cherry Blossoms'
-  },
-  {
     image: 'images/demon-mode.jpg',
     text: 'Psycho Demon Maid'
   },
@@ -34,12 +30,24 @@ var imageArray = [
     text: 'Guardian Mode'
   },
   {
+    image: 'images/rem-mad.jpg',
+    text: 'That Face She Makes When She is About to Straight Up Kill You'
+  },
+  {
     image: 'images/pissed.png',
     text: 'Armed with Morningstar'
   },
   {
     image: 'images/red-eye.jpg',
     text: 'Rage Boiling'
+  },
+  {
+    image: 'images/spinning.jpg',
+    text: 'Spinning Through Battle'
+  },
+  {
+    image: 'images/through-blood.jpg',
+    text: 'Fighting Through Mabeasts'
   },
   {
     image: 'images/smile.jpg',

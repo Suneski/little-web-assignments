@@ -58,12 +58,15 @@ table {
   font-family: 'Russo One', sans-serif;
   padding-top: 300px;
   font-size: 200px;
-  font-weight: bold;
-  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
+  font-weight: bold; }
 
 .home a {
   text-decoration: none;
   color: white; }
+
+.home a:hover {
+  color: rgba(255, 255, 255, 0.75);
+  text-shadow: none; }
 
 .home .characters {
   background-image: url("images/datwerkers.gif"); }

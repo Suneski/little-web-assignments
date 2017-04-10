@@ -67,7 +67,7 @@ playButton.addEventListener('click', function() {
     if (currentImageIndex < imageArray.length) {
       currentImageIndex += 1;
     }
-    if (currentImageIndex === imageArray.length - 1) {
+    if (currentImageIndex === imageArray.length) {
       currentImageIndex = 0;
     }
 

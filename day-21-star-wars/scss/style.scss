@@ -1,0 +1,72 @@
+@import 'reset';
+
+.characters, .planets, .ships {
+  background-position: center;
+  height: 500px;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+.home {
+  div {
+    text-align: center;
+    color: white;
+    font-family: 'Russo One', sans-serif;
+    padding-top: 300px;
+    font-size: 200px;
+    font-weight: bold;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+  }
+  a {
+    text-decoration: none;
+    color: white;
+  }
+  .characters {
+    background-image: url('images/datwerkers.gif');
+  }
+  .planets {
+    background-image: url('images/alderaan.gif');
+  }
+  .ships {
+    background-image: url('images/xwings.gif');
+    background-position: center;
+  }
+}
+
+h2 {
+  font-size: 50px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+div {
+  font-size: 25px;
+}
+
+li {
+  outline: 1px solid rgba(19, 19, 19, 0.10);
+  background-color: rgba(255, 255, 255, 0.3);
+  width: 42%;
+  margin: 4%;
+  float: left;
+  color: white;
+  text-align: center;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.characters-page {
+  background: url('images/googly.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.ships-page {
+  background: url('images/falcon.gif') no-repeat center center fixed;
+  background-size: cover;
+}
+
+.planets-page {
+  background: url('images/yavin.gif') no-repeat center center fixed;
+  background-size: cover;
+}

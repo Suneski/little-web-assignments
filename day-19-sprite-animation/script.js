@@ -15,28 +15,28 @@ var width = 50;
 
 
 
-punch.addEventListener('click', function() {
-
-  positionY = -475;
-  positionX = 0;
-
-
-  ami.style.outline = 1 + 'px' + ' solid blue';
-
-
-  ami.style.width = width + 'px';
-
-  ami.style.backgroundPositionX = positionX + 'px';
-  ami.style.backgroundPositionY = positionY + 'px';
-
-
-
-  if (positionY <= 0) {
-    positionX -= 60;
-    width = 60;
-  }
-
-});
+// punch.addEventListener('click', function() {
+//
+//   positionY = -475;
+//   positionX = 0;
+//
+//
+//   ami.style.outline = 1 + 'px' + ' solid blue';
+//
+//
+//   ami.style.width = width + 'px';
+//
+//   ami.style.backgroundPositionX = positionX + 'px';
+//   ami.style.backgroundPositionY = positionY + 'px';
+//
+//
+//
+//   if (positionY <= 0) {
+//     positionX -= 60;
+//     width = 60;
+//   }
+//
+// });
 
 
 
@@ -206,17 +206,31 @@ function animate() {
     width = 48;
     positionX = -52;
     left -= 10;
-    console.log(left);
   }
 
-  if (left > 245) {
-    clearInterval(intervalId);
-    left === 245;
+  if (left === 252) {
+    left += .7;
     positionY = -1055;
-    positionX = -672;
-    width = 60;
+    positionX = -545;
+    width = 38;
     height = 145;
     ami.style.bottom = 0 + 'px';
+  }
+
+  if (left > 254) {
+    positionX = -585;
+    width = 35;
+  }
+
+  if (left > 255) {
+    positionX = -625;
+    width = 50;
+  }
+
+  if (left > 256) {
+    clearInterval(intervalId);
+    positionX = -678;
+    width = 52;
     rain.style.display = 'block';
   }
 
@@ -231,14 +245,5 @@ function animate() {
 
 
 }
-
-
-
-
-
-
-
-
-
 
 var intervalId = setInterval(animate, 100);

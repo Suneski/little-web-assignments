@@ -66,14 +66,15 @@ function countOfAuthorsWhoLivedOver60Years(arr)
 
   sum = 0;
 
-  for (var i = 0; i < authors.length; i++) {
+  for (var i = 0; i < arr.length; i++) {
     if (authors[i].deathYear - authors[i].birthYear > 60) {
       sum++;
     }
   }
 
-  return sum;
+  return ': ' + sum;
 }
+
 var result = countOfAuthorsWhoLivedOver60Years(authors);
 
 console.log('Count of authors who lived over 50 years', result);

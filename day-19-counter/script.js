@@ -21,5 +21,4 @@ down.addEventListener('click', function() {
     number.textContent = displayNum;
   }
 
-  return number.textContent = displayNum;
 });

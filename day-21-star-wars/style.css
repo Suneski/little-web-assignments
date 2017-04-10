@@ -80,17 +80,20 @@ h2 {
   margin-top: 5px;
   font-weight: bold; }
 
-div {
-  font-size: 25px; }
+ul div {
+  font-size: 25px;
+  margin: 3px 0; }
 
 li {
   outline: 1px solid rgba(19, 19, 19, 0.1);
   background-color: rgba(255, 255, 255, 0.3);
   width: 42%;
-  margin: 4%;
+  margin: 2% 4%;
   float: left;
+  border-radius: 10px;
   color: white;
   text-align: center;
+  padding: 5px 0;
   text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black; }
 
 .characters-page {
@@ -98,7 +101,7 @@ li {
   background-size: cover; }
 
 .ships-page {
-  background: url("images/falcon.gif") no-repeat center center fixed;
+  background: url("images/trench.gif") no-repeat center center fixed;
   background-size: cover; }
 
 .planets-page {

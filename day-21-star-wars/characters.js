@@ -31,6 +31,36 @@ promise.done(function(data) {
     birthYear.classList.add("birthYear");
     anLi.appendChild(birthYear);
 
+    var height = document.createElement('div');
+    height.className = 'height';
+    height.textContent = 'Height : ' + data.results[i].height + ' cm';
+    height.classList.add("height");
+    anLi.appendChild(height);
+
+    var mass = document.createElement('div');
+    mass.className = 'mass';
+    mass.textContent = 'Mass : ' + data.results[i].mass + ' kg';
+    mass.classList.add("mass");
+    anLi.appendChild(mass);
+
+    var skin = document.createElement('div');
+    skin.className = 'skin';
+    skin.textContent = 'Skin Color : ' + data.results[i].skin_color;
+    skin.classList.add("skin");
+    anLi.appendChild(skin);
+
+    var eye = document.createElement('div');
+    eye.className = 'eye';
+    eye.textContent = 'Eye Color : ' + data.results[i].eye_color;
+    eye.classList.add("eye");
+    anLi.appendChild(eye);
+
+    var hair = document.createElement('div');
+    hair.className = 'hair';
+    hair.textContent = 'Hair Color : ' + data.results[i].hair_color;
+    hair.classList.add("hair");
+    anLi.appendChild(hair);
+
     peopleList.appendChild(anLi);
   }
 });

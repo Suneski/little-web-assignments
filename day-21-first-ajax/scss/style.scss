@@ -1,0 +1,25 @@
+@import 'reset';
+
+body {
+  width: 60%;
+  margin: 20px auto;
+}
+
+h2 {
+  color: red;
+  font-size: 30px;
+  margin-top: 5px;
+  font-weight: bold;
+}
+
+h2, div {
+  padding: 10px;
+}
+
+div {
+  font-size: 15px;
+}
+
+li {
+  border-bottom: 3px solid black;
+}

@@ -5,9 +5,12 @@ var foods = [
   'steak',
   'pupusas',
   'seaweed',
-  'pho',
+  'chocolate chip cookies',
   'melted cheese',
-  'rice crackers'
+  'rice crackers',
+  'pistachio ice cream',
+  'samoas',
+  'peanut butter'
 ];
 
 // FIND INPUT IN HTML
@@ -20,7 +23,7 @@ var foodListOL = document.querySelector('#food-list');
 createList(foods);
 
 // SET UP EVENT LISTENER IN INPUT BOX.
-input.addEventListener('keyup', function() {
+input.addEventListener('keyup', function(evt) {
 
   // CREATE A NEW BLANK ARRAY
   var newList = [];
@@ -28,7 +31,7 @@ input.addEventListener('keyup', function() {
   // DEPENDING ON WHAT HAS BEEN ENTERED INTO INPUT BOX, PUSH THOSE CHARACTERS INTO NEW ARRAY (newList)
   for (var i = 0; i < foods.length; i++) {
 
-    //
+
     var containsLetter = foods[i].indexOf(input.value) > -1;
 
     if (containsLetter) {
@@ -36,12 +39,17 @@ input.addEventListener('keyup', function() {
     }
   }
 
-  // REMOVE OLD LIST FROM SCREEN, DEPENDENT ON NEW LIST
-  foodListOL.innerHTML = '';
+  input.addEventListener('keydown', function(evt) {
+    if (evt.keyCode === 13) {
+      foodListOL.innerHTML = '';
+      createList(newList);
+    }
+  });
 
-  // ADD NEW LIST TO SCREEN
-  createList(newList);
+
+
 });
+
 
 
 // DEFINE FUNCTION (createList)

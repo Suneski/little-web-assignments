@@ -1,3 +1,5 @@
+var chalk = require('chalk');
+
 var weather = {
 
   day: 'Apr 19, 2017',
@@ -131,9 +133,9 @@ var weather = {
 
 function printWeather(w) {
 
-  console.log('------------------------------');
-  console.log('Weather for ' + w.day)
-  console.log('------------------------------');
+  console.log(chalk.magenta('------------------------------'));
+  console.log(chalk.magenta('Weather for ' + w.day));
+  console.log(chalk.magenta('------------------------------'));
 
   for (var i = 0; i < w.hourlyForecast.length; i++) {
 
@@ -143,26 +145,26 @@ function printWeather(w) {
 
     if (obj.hour === 0) {
       // time = '12:00 Midnight';
-      console.log('12:00 Midnight');
+      console.log(chalk.bgRed('12:00 Midnight'));
     }
     else if (obj.hour > 0 && obj.hour < 12) {
       // time = obj.hour + ':00 AM';
-      console.log(obj.hour + ':00 AM');
+      console.log(chalk.bgRed(obj.hour + ':00 AM'));
     }
     else if (obj.hour === 12) {
       // time = '12:00 Noon';
-      console.log('12:00 Noon');
+      console.log(chalk.bgRed('12:00 Noon'));
     }
     else if (obj.hour > 12 && obj.hour < 24) {
       // time = obj.hour - 12 + ':00 PM';
-      console.log(obj.hour - 12 + ':00 PM');
+      console.log(chalk.bgRed(obj.hour - 12 + ':00 PM'));
     }
 
     // console.log(time);
 
-    console.log('  Chance of rain: ' + (obj.chanceOfRain * 100) + "%");
+    console.log(chalk.blue('  Chance of rain: ') + chalk.bgCyan((obj.chanceOfRain * 100) + "%"));
 
-    console.log('  Temp: ' + obj.temp);
+    console.log(chalk.blue('  Temp: ') + chalk.bgCyan(obj.temp));
 
 
   }

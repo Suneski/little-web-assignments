@@ -25,29 +25,31 @@ createList(foods);
 // SET UP EVENT LISTENER IN INPUT BOX.
 input.addEventListener('keyup', function(evt) {
 
+  //IF STATEMENT. IF ANYTHING OTHER THAN 'ENTER' IS PRESSED, HOP OUT OF FUNCTION
+  if (evt.keyCode !== 13) {
+    return;
+  }
+
   // CREATE A NEW BLANK ARRAY
   var newList = [];
 
   // DEPENDING ON WHAT HAS BEEN ENTERED INTO INPUT BOX, PUSH THOSE CHARACTERS INTO NEW ARRAY (newList)
   for (var i = 0; i < foods.length; i++) {
 
-
+    // CREATE VARIABLE FOR DETERMINING IF LETTER IS IN STRING
     var containsLetter = foods[i].indexOf(input.value) > -1;
 
+    // IF LETTER IS IN STRING, PUSH TO NEW ARRAY (newList)
     if (containsLetter) {
       newList.push(foods[i]);
     }
   }
 
-  input.addEventListener('keydown', function(evt) {
-    if (evt.keyCode === 13) {
-      foodListOL.innerHTML = '';
-      createList(newList);
-    }
-  });
+  // REMOVE OLD ARRAY FROM SCREEN (foodListOL, aka 'full list')
+  foodListOL.innerHTML = '';
 
-
-
+  // ADD NEW LIST (aka isolated item(s))
+  createList(newList);
 });
 
 
@@ -58,9 +60,11 @@ function createList(arr) {
   // FOR LOOP, LOOP THROUGH ARRAY
   for (var i = 0; i < arr.length; i++) {
 
-    //
+    // CREATE LI
     var li = document.createElement('li');
+    // ADD ARR[i] STRING TO LI
     li.textContent = arr[i];
+    // APPEND NEW LI TO OL
     foodListOL.appendChild(li);
   }
 }

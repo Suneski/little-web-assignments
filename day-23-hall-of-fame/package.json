@@ -2,7 +2,7 @@
   "name": "day-23-hall-of-fame",
   "version": "1.0.0",
   "description": "",
-  "main": "players.js",
+  "main": "parse.js",
   "dependencies": {
     "chalk": "^1.1.3",
     "express": "^4.15.2"

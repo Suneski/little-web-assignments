@@ -73,3 +73,7 @@ img {
 img:hover {
   opacity: .5;
 }
+
+button {
+	display: none;
+}

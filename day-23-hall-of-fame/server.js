@@ -22,11 +22,26 @@ app.get('/api/favoritesodas', function(req,res) {
 
   var output = {
     sodas: [
-      'ramune',
-      'root beer',
-      'Dr. Pepper',
-      'grape soda',
-      'that orange one'
+      {
+        soda: 'ramune',
+        image: 'images/ramune.jpg'
+      },
+      {
+        soda: 'root beer',
+        image: 'images/rootbeer.jpg'
+      },
+      {
+        soda: 'Dr. Pepper',
+        image: 'images/drpepper.jpeg'
+      },
+      {
+        soda: 'grape soda',
+        image: 'images/grapesoda.jpg'
+      },
+      {
+        soda: 'that orange one',
+        image: 'images/orangesoda.jpeg'
+      }
     ]
   }
 

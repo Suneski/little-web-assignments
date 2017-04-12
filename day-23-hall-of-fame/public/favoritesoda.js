@@ -29,9 +29,13 @@ $.ajax({
   for (var i = 0; i < data.sodas.length; i++){
     var li = document.createElement('li');
 
-    var soda = document.createElement('p');
-    soda.textContent = data.sodas[i];
+    var soda = document.createElement('h2');
+    soda.textContent = data.sodas[i].soda;
     li.appendChild(soda);
+
+    var image = document.createElement('img');
+    image.src = data.sodas[i].image;
+    li.appendChild(image);
 
 
     sodaList.appendChild(li);

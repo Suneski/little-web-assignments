@@ -29,7 +29,7 @@ ul {
     height: 100px;
     margin: 10px 2%;
     padding: 10px;
-    width: auto;
+    // width: auto;
     border-radius: 5px;
     background-color: rgba(70, 70, 70, 0.6);
     img {
@@ -53,13 +53,6 @@ ul {
     }
   }
 }
-
-
-
-
-
-
-
 
 @media (max-width: 1250px) {
   ul li {

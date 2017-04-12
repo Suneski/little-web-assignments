@@ -28,6 +28,7 @@ searchQuery.addEventListener('keyup', function(evt){
       repoName.href = 'https://github.com/' + data.items[i].full_name;
       repoName.textContent = data.items[i].name;
       repoName.target = '_blank';
+      repoName.classList.add("bold");
       anLi.appendChild(repoName);
 
       var userName = document.createElement('a');

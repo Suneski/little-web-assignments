@@ -15,6 +15,7 @@ nav {
   padding: 5px 0 5px 5px;
   width: 100%;
   color: white;
+  z-index: 5;
   input {
     width: 250px;
   }
@@ -29,20 +30,21 @@ ul {
     height: 100px;
     margin: 10px 2%;
     padding: 10px;
-    // width: auto;
     border-radius: 5px;
     background-color: rgba(70, 70, 70, 0.6);
     img {
       width: 100px;
       border-radius: 100%;
+      border: 3px solid rgba(0, 0, 0, 0.25);
       float: left;
+      opacity: .8;
       margin: 0 auto;
       display: block;
     }
     a {
       display: block;
       text-decoration: none;
-      color: rgb(36, 33, 199);
+      color: rgba(55, 51, 238, 0.8);
       text-shadow: 0 0 1px #000;
       font-size: 40px;
       padding: 2.5px 0;

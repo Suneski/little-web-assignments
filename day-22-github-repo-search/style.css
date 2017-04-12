@@ -58,7 +58,8 @@ nav {
   background-color: black;
   padding: 5px 0 5px 5px;
   width: 100%;
-  color: white; }
+  color: white;
+  z-index: 5; }
   nav input {
     width: 250px; }
 
@@ -74,13 +75,15 @@ ul {
     ul li img {
       width: 100px;
       border-radius: 100%;
+      border: 3px solid rgba(0, 0, 0, 0.25);
       float: left;
+      opacity: .8;
       margin: 0 auto;
       display: block; }
     ul li a {
       display: block;
       text-decoration: none;
-      color: #2421c7;
+      color: rgba(55, 51, 238, 0.8);
       text-shadow: 0 0 1px #000;
       font-size: 40px;
       padding: 2.5px 0;

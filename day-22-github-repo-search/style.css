@@ -62,35 +62,25 @@ nav {
   z-index: 5; }
   nav input {
     width: 250px; }
-
-.total-repos {
-  float: right;
-  padding-right: 10px;
-  display: none; }
-
-.search, #search-query, button {
-  float: left; }
-
-#search-query, #next-button, #previous-button, .search-results {
-  margin-left: 10px; }
-
-.search {
-  padding: 2px 0; }
-
-.search-results {
-  display: none; }
-
-.total-results {
-  display: none;
-  float: right;
-  margin-right: 10px; }
-
-#next-button, #previous-button {
-  display: none;
-  padding: 2px 0; }
-
-.totalResults {
-  padding-left: 10px; }
+  nav #search-query, nav #next-button, nav #previous-button, nav .search-results {
+    margin-left: 10px; }
+  nav .search, nav #search-query, nav button {
+    float: left; }
+  nav .search {
+    padding: 2px 0; }
+  nav #next-button, nav #previous-button {
+    display: none;
+    padding: 2px 0; }
+  nav .search-results {
+    display: none; }
+  nav .total-results {
+    display: none;
+    float: right;
+    margin-right: 10px; }
+  nav .total-repos {
+    float: right;
+    padding-right: 10px;
+    display: none; }
 
 ul {
   margin-top: 40px; }

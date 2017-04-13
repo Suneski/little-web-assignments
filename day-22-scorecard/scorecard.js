@@ -10,11 +10,11 @@ fs.readFile('Most-Recent-Cohorts-Scorecard-Elements.csv', 'utf-8', function(err,
     var line = lines[i];
     var pieces = line.split(',');
 
-    if (i % 2 === 0) {
-      console.log(chalk.cyan.bold(pieces[3]), '||', chalk.cyan('ACT cumulative score (75th percentile):', pieces[32]));
+    if (pieces[32] !== 'NULL') {
+      console.log(chalk.magenta.bold(pieces[3]), '||', chalk.magenta('ACT cumulative score (75th percentile):', pieces[32]));
     }
     else {
-      console.log(chalk.magenta.bold(pieces[3]), '||', chalk.magenta('ACT cumulative score (75th percentile):', pieces[32]));
+      continue;
     }
 
   }

@@ -63,6 +63,11 @@ nav {
   nav input {
     width: 250px; }
 
+.total-repos {
+  float: right;
+  padding-right: 10px;
+  display: none; }
+
 .search, #search-query, button {
   float: left; }
 

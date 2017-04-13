@@ -5,6 +5,7 @@ var previousButton = document.querySelector('#previous-button');
 var navBar = document.querySelector('nav');
 var searchResults = document.querySelector('.search-results');
 var totalResults = document.querySelector('.total-results');
+var totalRepos = document.querySelector('.total-repos');
 
 var page = 1;
 var totalResults;
@@ -32,6 +33,9 @@ function makeAjaxCall() {
 
     searchResults.textContent = 'Page: ' + page + '/' + pageCount;
     searchResults.style.display = 'inline-block';
+
+    totalRepos.textContent = 'Total Repositories: ' + data.total_count;
+    totalRepos.style.display = 'inline-block';
 
     for (var i = 0; i < data.items.length; i++){
       var anLi = document.createElement('li');

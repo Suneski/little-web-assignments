@@ -20,8 +20,7 @@ function makeAjaxCall() {
 
 
 
-  searchResults.textContent = 'Page: ' + page;
-  searchResults.style.display = 'inline-block';
+
 
 
 
@@ -30,6 +29,9 @@ function makeAjaxCall() {
 
     totalResults = data.total_count;
     pageCount = Math.ceil(totalResults / 30);
+
+    searchResults.textContent = 'Page: ' + page + '/' + pageCount;
+    searchResults.style.display = 'inline-block';
 
     for (var i = 0; i < data.items.length; i++){
       var anLi = document.createElement('li');

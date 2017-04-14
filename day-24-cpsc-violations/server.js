@@ -6,7 +6,7 @@ app.use(express.static('public'));
 
 app.get('/api/cpscViolations', function(req, res) {
 
-  fs.readFile('CPSC-LOA-Data-MM-DD-2016.csv', 'utf-8', function(err, data) {
+  fs.readFile('violation-data.csv', 'utf-8', function(err, data) {
 
     var lines = data.split('\n');
 
@@ -17,8 +17,8 @@ app.get('/api/cpscViolations', function(req, res) {
 
       var date = values[0].replace('"', '').replace('"', '');
       var product = values[1].replace('"', '').replace('"', '');
-      var violation = values[3].replace('"', '').replace('"', '');
-      var firm = values[6].replace('"', '').replace('"', '');
+      var violation = values[2].replace('"', '').replace('"', '');
+      var firm = values[3].replace('"', '').replace('"', '');
 
       output.push({
         date: date,

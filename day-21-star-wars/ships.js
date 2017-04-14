@@ -9,7 +9,7 @@ var promise = $.ajax({
 
 promise.done(function(data) {
 
-  shipList.innerHTML = '';
+  // shipList.innerHTML = '';
 
   var totalHtml = '';
 

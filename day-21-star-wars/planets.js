@@ -9,7 +9,7 @@ var promise = $.ajax({
 
 promise.done(function(data) {
 
-  planetsList.innerHTML = '';
+  // planetsList.innerHTML = '';
 
   var totalHtml = '';
 

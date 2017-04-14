@@ -1,4 +1,7 @@
 var repos = document.querySelector('#repos');
+var template = document.querySelector('#list-template').innerHTML;
+
+
 var searchQuery = document.querySelector('#search-query');
 var nextButton = document.querySelector('#next-button');
 var previousButton = document.querySelector('#previous-button');
@@ -20,12 +23,6 @@ function makeAjaxCall() {
   });
 
 
-
-
-
-
-
-
   promise.done(function(data) {
 
     totalResults = data.total_count;
@@ -37,31 +34,37 @@ function makeAjaxCall() {
     totalRepos.textContent = 'Total Repositories: ' + data.total_count;
     totalRepos.style.display = 'inline-block';
 
+
+
+    repos.innerHTML = '';
+
+    var totalHtml = '';
+
     for (var i = 0; i < data.items.length; i++){
-      var anLi = document.createElement('li');
 
-      var image = document.createElement('img');
-      image.src = data.items[i].owner.avatar_url;
-      anLi.appendChild(image);
+      var items = data.items[i];
 
-      var repoName = document.createElement('a');
-      repoName.href = 'https://github.com/' + data.items[i].full_name;
-      repoName.textContent = data.items[i].name;
-      repoName.target = '_blank';
-      repoName.classList.add("bold");
-      anLi.appendChild(repoName);
+      var imageSrc = items.owner.avatar_url;
 
-      var userName = document.createElement('a');
-      userName.href = 'https://github.com/' + data.items[i].owner.login;
-      userName.textContent = 'by: ' + data.items[i].owner.login;
-      userName.target = '_blank';
-      anLi.appendChild(userName);
+      var repoNameHref = 'https://github.com/' + items.full_name;
+      var repoNameContent = items.name;
 
+      var userNameHref = 'https://github.com/' + items.owner.login;
+      var userNameContent = 'by: ' + items.owner.login;
 
+      var html = Mustache.render(template, {
+        imageSrc: imageSrc,
+        repoNameHref: repoNameHref,
+        repoNameContent: repoNameContent,
+        userNameHref: userNameHref,
+        userNameContent: userNameContent
+      });
 
 
-      repos.appendChild(anLi);
+      totalHtml += html;
     }
+
+    repos.innerHTML = totalHtml;
 
     if (page === 1) {
       previousButton.style.display = 'inline';

@@ -7,7 +7,26 @@
   </head>
   <body>
 
+    <h1>Select an Image</h1>
 
+    <img class='selected-image' />
+
+    <ol class='image-list'>
+    </ol>
+
+    <script type="text/html" id="list-template">
+      <li class="row">
+        <img class="thumbnail-image" src='{{imgThumbSrc}}'/>
+      </li>
+    </script>
+
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="gallery.js"></script>
   </body>
 </html>

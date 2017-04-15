@@ -4,6 +4,8 @@ var imageList = document.querySelector('.image-list');
 var template = document.querySelector('#list-template').innerHTML;
 var row = document.querySelector('.row');
 var thumbnailImage = document.querySelector('.thumbnail-image');
+var detailsDiv = document.querySelector('#details');
+var detailsTemplate = document.querySelector('#detail-template').innerHTML;
 
 var ajaxData;
 
@@ -21,7 +23,9 @@ $.ajax({
 
     html += Mustache.render(template, {
       index: i,
-      imgThumbSrc: data.pictures[i].thumbnail
+      imgThumbSrc: data.pictures[i].thumbnail,
+      fullSize: data.pictures[i].fullSize,
+      description: data.pictures[i].description
     });
 
   }
@@ -32,6 +36,13 @@ $.ajax({
 
 
 imageList.addEventListener('click', function(evt) {
+  h1.style.display = 'none';
+
   var index = Number(evt.target.getAttribute('data-index'));
   console.log(ajaxData.pictures[index]);
+
+  var html = Mustache.render(detailsTemplate, ajaxData.pictures[index]);
+  console.log(html);
+
+  detailsDiv.innerHTML = html;
 });

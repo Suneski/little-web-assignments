@@ -47,7 +47,40 @@ table {
 	border-spacing: 0;
 }
 
+
+
+
+
+body {
+	width: 75%;
+	text-align: center;
+	margin: 50px auto;
+}
+
+div {
+	height: 460px;
+}
+
+h1 {
+	font-size: 50px;
+}
+
+.full-size {
+	height: 400px;
+}
+
+p {
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+ol {
+	margin: 0 auto;
+	width: 600px;
+}
+
 li {
 	float: left;
 	margin: 10px;
+
 }

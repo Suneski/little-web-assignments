@@ -82,5 +82,8 @@ ol {
 li {
 	float: left;
 	margin: 10px;
+}
 
+.toggled {
+	outline: 4px solid black;
 }

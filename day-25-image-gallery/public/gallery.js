@@ -39,10 +39,20 @@ imageList.addEventListener('click', function(evt) {
   h1.style.display = 'none';
 
   var index = Number(evt.target.getAttribute('data-index'));
-  console.log(ajaxData.pictures[index]);
+  // console.log(ajaxData.pictures[index]);
 
   var html = Mustache.render(detailsTemplate, ajaxData.pictures[index]);
-  console.log(html);
+  // console.log(html);
+
+  var previouslySelected = document.querySelector('.toggled');
+
+  if (previouslySelected !== null) {
+    previouslySelected.classList.remove('toggled');
+  }
+
+  if (evt.target.tagName === 'IMG') {
+    evt.target.classList.add('toggled');
+  }
 
   detailsDiv.innerHTML = html;
 });

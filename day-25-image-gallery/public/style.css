@@ -87,3 +87,8 @@ li {
 .toggled {
 	outline: 4px solid black;
 }
+
+.link-to-adventure-mode {
+	margin-bottom: 100px;
+	clear: both;
+}

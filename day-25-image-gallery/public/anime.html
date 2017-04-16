@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Winter 2017 Anime</title>
+    <link href="anime.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <div id="details">
+      <h1>Select an Image</h1>
+      <p>Sadly, the Winter 2017 anime season was a snore-fest. I ended up dropping a lot of shows, and most of the ones I decided to keep up with were only somewhat decent. However, there were a few gems.</p>
+      <p>Note: Only some of the below are gems.</p>
+    </div>
+
+    <script type="text/html" id="detail-template">
+      <img src="{{fullSize}}" class='full-size'/>
+      <p>Description: {{description}}</p>
+      <p>Thoughts: {{thoughts}}</p>
+    </script>
+
+
+
+    <img class='selected-image' />
+
+    <ol class='image-list'>
+    </ol>
+
+    <script type="text/html" id="list-template">
+      <li class="row">
+        <img class="thumbnail-image" data-index="{{index}}" src='{{imgThumbSrc}}'/>
+      </li>
+    </script>
+
+
+
+    <h1 class='link-to-adventure-mode'><a href='index.html'>Back to Main Assignment</a></h1>
+
+
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="anime.js"></script>
+
+  </body>
+</html>

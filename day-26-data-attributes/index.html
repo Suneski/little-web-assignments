@@ -3,16 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>Data-Attributes</title>
+    <link href='style.css' rel='stylesheet' />
   </head>
   <body>
 
     <div data-id="9" id="click-me">Click Me</div>
 
+    <img id="spinner" src='loading_spinner.gif'>
+
     <ol id="swapi-people">
     </ol>
 
+    <div id="details"></div>
+
     <script type="text/html" id="list-template">
       <li data-index='{{index}}'>{{name}}</li>
+    </script>
+
+    <script type='text/html' id="detail-template">
+      <h1>{{name}}</h1>
+      <div>Birth Year {{birth_year}}</div>
+      <div>Eye Color {{eye_color}}</div>
     </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>

@@ -62,8 +62,49 @@ var numbers = [1, 56, 89, 12, 45, 211, 45, 56, 32];
 //   }
 // });
 
-var output = numbers.filter(function(num) {
-  return num > 50;
-});
 
-console.log(output);
+// SHORT FILTER
+
+// var output = numbers.filter(function(num) {
+//   return num > 50;
+// });
+//
+// console.log(output);
+
+
+
+
+// MAPPING
+
+// var bigger = numbers.map(function(x) {
+//   return x + 100;
+// });
+//
+// console.log('Bigger', bigger);
+//
+// var lis = numbers.map(function(x) {
+//   return '<li>' + x + '<li>';
+// });
+//
+// console.log(lis);
+
+
+// SORT
+
+// var count = 0;
+//
+// numbers.sort(function(a, b) {
+//   count += 1;
+//
+//   if (a > b) {
+//     return true;
+//   }
+//   else {
+//     return false;
+//   }
+// });
+//
+//
+// console.log(numbers);
+//
+// console.log(count);

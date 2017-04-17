@@ -5,18 +5,18 @@ var template = document.querySelector('#row-template').innerHTML;
 var ajaxData;
 
 $.ajax({
-  url: '/api/cpscViolations'
+  url: '/api/data'
 })
-
 .done(function(data) {
-  console.log('visible?', data);
+  console.log('data?', data);
   ajaxData = data;
 
   var dates = [];
 
-  for (var i = 0; i < data.values.length; i++) {
-    if (dates.indexOf(data.values[i].date) === -1) {
-      dates.push(data.values[i].date);
+  for (var i = 0; i < data.violations.length; i++) {
+    //gathering the dates in that array
+    if (dates.indexOf(data.violations[i].date) === -1) {
+      dates.push(data.violations[i].date);
     }
   }
 
@@ -26,44 +26,30 @@ $.ajax({
     li.textContent = dates[i];
     dateList.appendChild(li);
   }
+
 });
+
 
 dateList.addEventListener('click', function(evt) {
   var text = evt.target.textContent;
   console.log('You clicked on', text);
 
-  //now, filter data and put on page!!
-
+  //now, filter data and put on page!
   var filtered = [];
 
-  for (var i = 0; i < ajaxData.values.length; i++){
+  for (var i = 0; i < ajaxData.violations.length; i++) {
 
-    if (ajaxData.values[i].date === text) {
-      filtered.push(ajaxData.values[i]);
+    if (ajaxData.violations[i].date === text) {
+      filtered.push(ajaxData.violations[i]);
     }
+
   }
 
   putItOnThePage(filtered);
-});
+})
+
 
 function putItOnThePage(arr) {
-
-  // tbody.innerHTML = '';
-  //
-  // for (var i = 0; i < arr.length; i++) {
-  //   var tr = document.createElement('tr');
-  //
-  //   var td = document.createElement('td');
-  //
-  //   td.textContent = arr[i].violation;
-  //
-  //   tr.appendChild(td);
-  //
-  //   tbody.appendChild(tr);
-  // }
-
-  tbody.innerHTML = '';
-
   var totalHtml = '';
 
   for (var i = 0; i < arr.length; i++) {
@@ -72,4 +58,5 @@ function putItOnThePage(arr) {
   }
 
   tbody.innerHTML = totalHtml;
+
 }

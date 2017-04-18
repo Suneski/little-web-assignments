@@ -62,3 +62,35 @@ var peeps = [
 // })
 //
 // console.log('Name contains the letter "i"', hasLetterI);
+
+
+
+// // Return array of peeps' first names
+// var firstNames = peeps.map(function(obj) {
+//   return obj.firstName;
+// });
+//
+// console.log(firstNames);
+
+
+// // Return array of peeps' first and last names
+// var firstAndLastName = peeps.map(function(obj) {
+//   return obj.firstName + ' ' + obj.lastName;
+// });
+//
+// console.log(firstAndLastName);
+
+
+
+/// Create a new array with firstName, lastName, age, AND fullName
+
+var objectsWithFullNames = peeps.map(function(obj) {
+  return {
+    firstName: obj.firstName,
+    lastName: obj.lastName,
+    age: obj.age,
+    fullName: obj.firstName + ' ' + obj.lastName
+  }
+});
+
+console.log(objectsWithFullNames);

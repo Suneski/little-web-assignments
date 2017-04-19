@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Joke Generator</title>
+    <link href='style.css' rel='stylesheet'/>
+  </head>
+  <body>
+
+    <input id='search-query' placeholder="name"/>
+    <button id='create-a-joke'>Create a joke</button>
+
+    <div id="details">
+      <h1>Incoming hilarity</h1>
+    </div>
+
+    <script type="text/html" id="template">
+      <p>{{joke}}</p>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/2.3.0/mustache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

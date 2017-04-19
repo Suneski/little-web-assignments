@@ -5,9 +5,7 @@ var input = document.querySelector('input');
 
 var randomNumber;
 
-
 var ajaxData;
-
 
 $.ajax({
   url: 'http://api.icndb.com/jokes/'
@@ -15,16 +13,6 @@ $.ajax({
 
 .done(function(data) {
   ajaxData = data;
-
-  var totalHtml = '';
-
-  for (var i = 0; i < data.value.length; i++) {
-    var html = Mustache.render(template, {
-      joke: data.value[i].joke
-    });
-  }
-
-  totalHtml += html;
 });
 
 button.addEventListener('click', function() {
@@ -34,10 +22,15 @@ button.addEventListener('click', function() {
 
   var html = Mustache.render(template, ajaxData.value[randomNumber]);
 
+  if (ajaxData.value[randomNumber].joke.indexOf("&quot;") > -1) {
+    html.replace("&quot;", "\"");
+  }
+
+
   if (input.value !== '') {
     var name = input.value;
 
-    var bootChuck = html.replace("Chuck Norris", name);
+    var bootChuck = html.replace(/Chuck Norris/g, name);
 
     html = bootChuck;
   }

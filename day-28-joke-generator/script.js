@@ -18,7 +18,11 @@ button.addEventListener('click', function() {
 
   var html = Mustache.render(template, ajaxData.value[randomNumber]);
 
-  html = html.replace(/&quot;/g, "\"");
+  if (ajaxData.value[randomNumber].joke.indexOf('&quot;') > -1) {
+    html = html.replace("&quot;", "\"");
+  }
+
+
 
 
   if (input.value !== '') {

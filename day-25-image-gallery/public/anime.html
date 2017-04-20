@@ -14,6 +14,7 @@
     </div>
 
     <script type="text/html" id="detail-template">
+      <h1>{{title}}</h1>
       <img src="{{fullSize}}" class='full-size'/>
       <p>Description: {{description}}</p>
       <p>Thoughts: {{thoughts}}</p>
@@ -23,8 +24,14 @@
 
     <img class='selected-image' />
 
-    <ol class='image-list'>
-    </ol>
+
+      <div class="inner-frame">
+        <button class="previous"><</button>
+        <ol class='image-list'>
+        </ol>
+        <button class="next">></button>
+      </div>
+
 
     <script type="text/html" id="list-template">
       <li class="row">

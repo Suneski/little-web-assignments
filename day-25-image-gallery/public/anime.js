@@ -7,6 +7,9 @@ var thumbnailImage = document.querySelector('.thumbnail-image');
 var detailsDiv = document.querySelector('#details');
 var detailsTemplate = document.querySelector('#detail-template').innerHTML;
 
+var previous = document.querySelector('.previous');
+var next = document.querySelector('.next');
+
 var ajaxData;
 
 $.ajax({
@@ -55,4 +58,23 @@ imageList.addEventListener('click', function(evt) {
   }
 
   detailsDiv.innerHTML = html;
+});
+
+
+
+
+
+var innerFrame = document.querySelector('.inner-frame');
+var left = 0;
+
+previous.addEventListener('click', function() {
+  if (left < 1201) {
+    left += 600;
+  }
+  else {
+    left = 0;
+  }
+
+innerFrame.style.backgroundPositionX = left + 'px';
+
 });

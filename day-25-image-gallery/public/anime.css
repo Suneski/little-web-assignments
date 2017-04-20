@@ -52,9 +52,9 @@ table {
 
 
 body {
-	width: 75%;
-	text-align: center;
+	width: 80%;
 	margin: 50px auto;
+	text-align: justify;
 }
 
 #details {
@@ -63,26 +63,37 @@ body {
 
 h1 {
 	font-size: 50px;
+	text-align: center;
 }
 
 .full-size {
 	height: 400px;
+	margin: 0 auto;
+	display: block;
 }
 
 p {
 	font-size: 20px;
 	margin-top: 20px;
+	float: left;
 }
 
 ol {
 	margin: 20px auto;
-	width: 720px;
-
+	float: left;
+	position: absolute;
 }
 
 li {
 	float: left;
 	margin: 10px;
+}
+
+button {
+	float: left;
+	display: inline;
+	height: 80px;
+	margin: 55px;
 }
 
 .toggled {
@@ -92,4 +103,12 @@ li {
 .link-to-adventure-mode {
 	margin-bottom: 100px;
   clear: both;
+}
+
+.inner-frame {
+	margin: 0 auto;
+	width: 600px;
+	height: 180px;
+	overflow: hidden;
+	position: relative;
 }

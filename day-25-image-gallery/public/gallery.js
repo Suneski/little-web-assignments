@@ -36,9 +36,8 @@ $.ajax({
 
 
 imageList.addEventListener('click', function(evt) {
-  h1.style.display = 'none';
 
-  var index = Number(evt.target.getAttribute('data-index'));
+  var index = evt.target.getAttribute('data-index');
   // console.log(ajaxData.pictures[index]);
 
   var html = Mustache.render(detailsTemplate, ajaxData.pictures[index]);

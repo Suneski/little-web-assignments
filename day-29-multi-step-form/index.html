@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Mutli-Step Form</title>
+    <link href="style.css" rel="stylesheet" />
+  </head>
+  <body>
+
+    <form action="http://postb.in/b/Uup9WpJB" method="post">
+
+      <div id='page-1'>
+
+        <div id="first-name-div">
+          First Name: <input name="first-name" id="first-name" placeholder="First Name"/>
+        </div>
+        <div id="last-name-div">
+          Last Name: <input name="last-name" id="last-name" placeholder="Last Name"/>
+        </div>
+        <button id="next-page-one">next</button>
+
+      </div>
+
+      <div id='page-2'>
+
+        <p>Age:</p>
+        <div class='zeroToTwenty'><input class="age-radio" type="radio" name="age"/> 0 - 20</div>
+        <div class='twentyOneToForty'><input class="age-radio" type="radio" name="age"/> 21 - 40</div>
+        <div class='fortyPlus'><input class="age-radio" type="radio" name="age"/> 40+</div>
+
+        <button id="previous-page-two">previous</button>
+        <button id="next-page-two">next</button>
+
+      </div>
+
+      <div id='page-3'>
+        I want to be a...
+        <select>
+          <option>Programmer</option>
+          <option>Professional Sleeper</option>
+          <option>Pokemon Master</option>
+          <option>Godzilla</option>
+          <option>Reverse Stripper</option>
+        </select>
+
+        <button id="previous-page-three">previous</button>
+        <button id="submit">submit</button>
+
+      </div>
+
+
+
+    </form>
+
+    <script src="script.js"></script>
+  </body>
+</html>

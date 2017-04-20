@@ -44,8 +44,17 @@ previousPage2.addEventListener('click', function(evt) {
 nextPage2.addEventListener('click', function(evt) {
   evt.preventDefault();
 
-  secondPage.style.display = "none";
-  thirdPage.style.display = "block";
+
+
+  var IsChecked = $('.age-radio').is(':checked');
+
+  if(IsChecked) {
+    secondPage.style.display = "none";
+    thirdPage.style.display = "block";
+  }
+  else {
+    alert('ERROR! Please select your age range!');
+  }
 
 });
 

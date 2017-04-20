@@ -58,8 +58,11 @@ body {
 #page-1, #page-2, #page-3 {
   padding: 10px;
   border: 1px solid black;
+	border-radius: 5px;
   margin: 10px;
-  /*display: inline-block;*/
+  display: inline-block;
+	width: 25%;
+	height: 130px;
 }
 
 #page-2, #page-3 {
@@ -71,20 +74,26 @@ body {
 
 #first-name-div, #last-name-div {
   display: block;
-  margin-bottom: 5px;
+  margin-top: 10px;
 }
 
-.age-radio.p {
-  display: inline-block;
+#page-1 button {
+	margin-top: 10px;
 }
 
 
 /********** PAGE TWO **********/
 
-
+#page-2 div, #page-2 button {
+	margin-top: 10px;
+}
 
 /********** PAGE THREE **********/
 
-select {
-  display: block;
+#page-3 select, #page-3 button {
+	margin-top: 10px;
+}
+
+#page-3 select {
+	display: block;
 }

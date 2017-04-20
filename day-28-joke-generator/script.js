@@ -3,8 +3,6 @@ var details = document.querySelector('#details');
 var template = document.querySelector('#template').innerHTML;
 var input = document.querySelector('input');
 
-var randomNumber;
-
 var ajaxData;
 
 $.ajax({
@@ -16,23 +14,17 @@ $.ajax({
 });
 
 button.addEventListener('click', function() {
-  randomNumber = Math.floor(Math.random() * ajaxData.value.length);
-
-
+  var randomNumber = Math.floor(Math.random() * ajaxData.value.length);
 
   var html = Mustache.render(template, ajaxData.value[randomNumber]);
 
-  if (ajaxData.value[randomNumber].joke.indexOf("&quot;") > -1) {
-    html.replace("&quot;", "\"");
-  }
+  html = html.replace(/&quot;/g, "\"");
 
 
   if (input.value !== '') {
-    var name = input.value;
 
-    var bootChuck = html.replace(/Chuck Norris/g, name);
+    html = html.replace(/Chuck Norris/g, input.value);
 
-    html = bootChuck;
   }
 
   details.innerHTML = html;

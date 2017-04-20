@@ -10,15 +10,11 @@ var names = ['Rocky', 'Henry', 'Tasuki', 'Kairi', 'Kefka']
 
 
 Array.prototype.head = function() {
-  var headExtraction = this.slice(0,1);
-
-  return headExtraction;
+  return this.slice[0]];
 };
 
 Array.prototype.tail = function() {
-  var tailExtraction = this.slice(1);
-
-  return tailExtraction;
+  return this.slice(1);
 }
 
 

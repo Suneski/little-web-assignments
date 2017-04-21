@@ -51,12 +51,57 @@ table {
 }
 
 
-.grid {
+body {
+	background-color: black;
+}
+
+#intro, #mission-accepted, #mission-rejected {
+  color: white;
+  width: 50%;
+  margin: 50px auto;
+  font-size: 35px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+#intro p {
+  margin-bottom: 10px;
+}
+
+#intro div {
+  margin-top: 20px;
+}
+
+#yes:hover, #no:hover, #proceed:hover {
+  color: grey;
+}
+
+#mission-accepted, #mission-rejected {
+	display:none;
+}
+
+#mission-rejected {
+	text-align: center;
+}
+
+#proceed {
+	text-align: center;
+}
+
+
+
+
+
+
+
+.grid, #ghost-party, #pumpkin-man, #burger-rain {
   height: 800px;
   width: 800px;
   background-image: url('images/haunted-woods.jpg');
   background-size: contain;
   position: relative;
+	display: none;
+	margin: 30px auto;
 }
 
 .grid div {

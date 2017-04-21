@@ -19,6 +19,11 @@ var ghostParty = document.querySelector("#ghost-party");
 var burgerRain = document.querySelector("#burger-rain");
 var pumpkin = document.querySelector('#pumpkin-man');
 
+var spookyMusic = new Audio('spookyMusic.mp4');
+var celebrate = new Audio ('celebrate.mp4');
+var hallelujah = new Audio ('hallelujah.mp4');
+var tooSexy = new Audio ('tooSexy.mp4');
+
 initialDecision.addEventListener('click', function(evt) {
   if (evt.target === yes) {
     intro.style.display = "none";
@@ -45,15 +50,29 @@ function gridBoxes() {
   }
 
   var ghostRandomNumber = Math.ceil((Math.random() * 25));
-  // console.log("ghost: " + ghostRandomNumber);
+
+  var burgerRandomNumber = Math.ceil((Math.random() * 25));
+
+  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber < 25) {
+    burgerRandomNumber = ghostRandomNumber + 1;
+  }
+
+  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber === 25) {
+    burgerRandomNumber = 13;
+  }
+
+  console.log("ghost: " + ghostRandomNumber);
+  console.log("burger: " + burgerRandomNumber);
 
   var ghostLocation = document.getElementsByClassName("box-" + ghostRandomNumber)[0].appendChild(ghost);
 
-  var burgerRandomNumber = Math.ceil((Math.random() * 25));
-  // console.log("burger: " + burgerRandomNumber);
-
   var burgerLocation = document.getElementsByClassName("box-" + burgerRandomNumber)[0].appendChild(burger);
 
+  spookyMusic.addEventListener('ended', function() {
+    this.currentTime = 0;
+    this.play();
+  }, false);
+  spookyMusic.play();
 }
 
 gridBoxes();
@@ -73,22 +92,30 @@ grid.addEventListener('click', function(evt) {
     attempts.style.display = "none";
   }
 
-
-
   if (counter === 0) {
+    spookyMusic.pause();
+    tooSexy.addEventListener('ended', function() {
+      this.currentTime = 10;
+      this.play();
+    }, false);
+    tooSexy.play();
     setTimeout(function () {
       grid.style.display = "none";
-
       pumpkin.style.display = "block";
     }, 500);
   }
-
 
   if (evt.target === burger) {
     burger.style.opacity = "1";
 
     setTimeout(function () {
       burgerCatVictory.style.display = "block";
+      spookyMusic.pause();
+      hallelujah.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+      }, false);
+      hallelujah.play();
     }, 500);
 
     setTimeout(function () {
@@ -109,7 +136,15 @@ grid.addEventListener('click', function(evt) {
     setTimeout(function () {
       grid.style.display = "none";
       ghostParty.style.display = "block";
+      spookyMusic.pause();
+      celebrate.addEventListener('ended', function() {
+        this.currentTime = 0;
+        this.play();
+      }, false);
+      celebrate.play();
     }, 2000);
+
+
 
     burger.style.display = "none";
   }

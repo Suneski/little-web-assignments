@@ -5,12 +5,10 @@ var yes = document.querySelector("#yes");
 var no = document.querySelector("#no");
 var initialDecision = document.querySelector("#initial-decision");
 
-
 var missionAccepted = document.querySelector("#mission-accepted");
 var missionRejected = document.querySelector("#mission-rejected");
 
 var proceed = document.querySelector("#proceed");
-
 
 var ghost = document.querySelector("#ghost");
 var burger = document.querySelector("#burger");
@@ -71,20 +69,23 @@ grid.addEventListener('click', function(evt) {
     attempts.textContent = "Remaining Attempts: " + counter;
   }
 
-  if (counter === 0) {
+  if (evt.target === burger || evt.target === ghost || counter === 0) {
     attempts.style.display = "none";
+  }
 
+
+
+  if (counter === 0) {
     setTimeout(function () {
       grid.style.display = "none";
 
       pumpkin.style.display = "block";
-    }, 200);
+    }, 500);
   }
 
 
   if (evt.target === burger) {
     burger.style.opacity = "1";
-    attempts.style.display = "none";
 
     setTimeout(function () {
       burgerCatVictory.style.display = "block";
@@ -100,7 +101,6 @@ grid.addEventListener('click', function(evt) {
 
   if (evt.target === ghost) {
     ghost.style.opacity = "1";
-    attempts.style.display = "none";
 
     setTimeout(function () {
       ghostGameOver.style.display = "block";

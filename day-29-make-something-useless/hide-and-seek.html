@@ -2,30 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Make Something Useless</title>
-    <link href="style.css" rel="stylesheet" />
+    <title>Find the Burger Cat</title>
+    <link href="hide-and-seek.css" rel="stylesheet" />
   </head>
   <body>
-
-    <div id="intro">
-      <p>The year is 2072. What's left of the Resistance has been forced into the shadows. The masses live in constant fear.</p>
-      <p>The enemy came without warning, took control, and we've been on the run ever since. We tried peace, but they were merciless, absolute. We couldn't bargain with them. We couldn't reason with them. They don't feel pity, or remorse, or fear. And they absolutely will not stop, ever, until you only eat salads.</p>
-      <p>We need your help. Will you join us?</p>
-      <div id="initial-decision">
-        <div id="yes">YES</div>
-        <div id="no">NO</div>
-      </div>
-    </div>
-
-    <div id="mission-accepted">
-      <p>Awesome, let's get to work.</p>
-    </div>
-
-    <div id="mission-rejected">
-      <p>Fine. Whatever. Thanks but no thanks.</p>
-    </div>
-
-
 
     <div class="grid">
       <div class="one"></div>
@@ -53,8 +33,21 @@
       <div class="twenty-three"></div>
       <div class="twenty-four"></div>
       <div class="twenty-five"></div>
-      <h1 id="ghost-game-over">THE GHOST CAUGHT YOU GAME OVER</h1>
+      <div id="burger-cat-victory">
+        <h1>YOU FOUND THE BURGER CAT</h1>
+        <h1>VICTORY!!!</h1>
+      </div>
+      <div id="ghost-game-over">
+        <h1>THE GHOST CAUGHT YOU</h1>
+        <h1>GAME OVER</h1>
+      </div>
     </div>
+
+    <div id="ghost-party">
+      <h1>GHOST PARTY</h1>
+    </div>
+
+    <h1 id="attempts"></h1>
 
     <div class="victory">
     </div>
@@ -62,9 +55,6 @@
     <div class="defeat">
     </div>
 
-
-
-
-    <script src="script.js"></script>
+    <script src="hide-and-seek.js"></script>
   </body>
 </html>

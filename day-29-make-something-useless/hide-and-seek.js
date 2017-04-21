@@ -7,6 +7,27 @@ var attempts = document.querySelector("#attempts");
 var ghostParty = document.querySelector("#ghost-party");
 var pumpkin = document.querySelector('#pumpkin-man');
 
+function gridBoxes() {
+  for (var i = 0; i < 25; i++) {
+    var div = document.createElement('div');
+    div.classList.add("box-" + (i+1));
+    grid.appendChild(div);
+  }
+
+  var ghostRandomNumber = Math.ceil((Math.random() * 25));
+  console.log("ghost: " + ghostRandomNumber);
+
+  var ghostLocation = document.getElementsByClassName("box-" + ghostRandomNumber)[0].appendChild(ghost);
+
+  var burgerRandomNumber = Math.ceil((Math.random() * 25));
+  console.log("burger: " + burgerRandomNumber);
+
+  var burgerLocation = document.getElementsByClassName("box-" + burgerRandomNumber)[0].appendChild(burger);
+
+}
+
+gridBoxes();
+
 var counter = 5;
 attempts.textContent = "Remaining Attempts: " + counter;
 

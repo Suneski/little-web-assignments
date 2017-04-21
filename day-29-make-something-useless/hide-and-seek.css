@@ -103,7 +103,10 @@ table {
 	text-align: center;
 	color: white;
   text-shadow: 1px 1px black;
-	top: 350px;
+}
+
+#burger-rain h1 {
+	padding-top: 350px;
 }
 
 #ghost-party, #pumpkin-man, #burger-rain {
@@ -134,4 +137,11 @@ table {
 	font-size: 80px;
   color: white;
   text-shadow: 1px 1px 3px black;
+}
+
+#attempts {
+	position: absolute;
+	bottom: 2px;
+	right: 4px;
+	color: rgba(193, 193, 193, 0.8);
 }

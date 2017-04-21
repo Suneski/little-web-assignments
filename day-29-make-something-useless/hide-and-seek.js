@@ -21,8 +21,9 @@ var pumpkin = document.querySelector('#pumpkin-man');
 
 var spookyMusic = new Audio('spookyMusic.mp4');
 var celebrate = new Audio ('celebrate.mp4');
-var hallelujah = new Audio ('hallelujah.mp4');
+var hallelujah = new Audio ('hallelujah.m4a');
 var tooSexy = new Audio ('tooSexy.m4a');
+
 
 initialDecision.addEventListener('click', function(evt) {
   if (evt.target === yes) {
@@ -95,7 +96,7 @@ grid.addEventListener('click', function(evt) {
   if (counter === 0) {
     spookyMusic.pause();
     tooSexy.addEventListener('ended', function() {
-      this.currentTime = 10;
+      this.currentTime = 0;
       this.play();
     }, false);
     tooSexy.play();

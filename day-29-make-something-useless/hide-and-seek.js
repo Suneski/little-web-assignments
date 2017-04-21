@@ -78,12 +78,13 @@ grid.addEventListener('click', function(evt) {
       grid.style.display = "none";
 
       pumpkin.style.display = "block";
-    }, 500);
+    }, 200);
   }
 
 
   if (evt.target === burger) {
     burger.style.opacity = "1";
+    attempts.style.display = "none";
 
     setTimeout(function () {
       burgerCatVictory.style.display = "block";
@@ -99,6 +100,7 @@ grid.addEventListener('click', function(evt) {
 
   if (evt.target === ghost) {
     ghost.style.opacity = "1";
+    attempts.style.display = "none";
 
     setTimeout(function () {
       ghostGameOver.style.display = "block";

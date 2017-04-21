@@ -6,7 +6,7 @@ var input = document.querySelector('input');
 var ajaxData;
 
 $.ajax({
-  url: 'http://api.icndb.com/jokes/'
+  url: 'https://api.icndb.com/jokes/'
 })
 
 .done(function(data) {

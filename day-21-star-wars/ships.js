@@ -3,7 +3,7 @@ var template = document.querySelector('#list-template').innerHTML;
 
 
 var promise = $.ajax({
-  url: 'http://swapi.co/api/starships'
+  url: 'https://swapi.co/api/starships'
 });
 
 

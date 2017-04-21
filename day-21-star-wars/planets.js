@@ -3,7 +3,7 @@ var template = document.querySelector('#list-template').innerHTML;
 
 
 var promise = $.ajax({
-  url: 'http://swapi.co/api/planets'
+  url: 'https://swapi.co/api/planets'
 });
 
 

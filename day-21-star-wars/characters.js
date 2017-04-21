@@ -3,7 +3,7 @@ var template = document.querySelector('#list-template').innerHTML;
 
 
 var promise = $.ajax({
-  url: 'http://swapi.co/api/people'
+  url: 'https://swapi.co/api/people'
 });
 
 

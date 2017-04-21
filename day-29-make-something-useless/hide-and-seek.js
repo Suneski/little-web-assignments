@@ -5,6 +5,7 @@ var ghostGameOver = document.querySelector("#ghost-game-over");
 var burgerCatVictory = document.querySelector("#burger-cat-victory");
 var attempts = document.querySelector("#attempts");
 var ghostParty = document.querySelector("#ghost-party");
+var burgerRain = document.querySelector("#burger-rain");
 var pumpkin = document.querySelector('#pumpkin-man');
 
 function gridBoxes() {
@@ -56,6 +57,11 @@ grid.addEventListener('click', function(evt) {
     setTimeout(function () {
       burgerCatVictory.style.display = "block";
     }, 500);
+
+    setTimeout(function () {
+      grid.style.display = "none";
+      burgerRain.style.display = "block";
+    }, 2000);
 
     ghost.style.display = "none";
   }

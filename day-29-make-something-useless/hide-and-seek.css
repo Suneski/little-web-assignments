@@ -94,12 +94,19 @@ table {
   text-shadow: 1px 1px 3px black;
 }
 
-#burger-cat-victory {
+#burger-cat-victory, #burger-rain {
 	font-family: 'Trade Winds', cursive;
   font-size: 40px;
 }
 
-#ghost-party, #pumpkin-man {
+#burger-rain {
+	text-align: center;
+	color: white;
+  text-shadow: 1px 1px black;
+	top: 350px;
+}
+
+#ghost-party, #pumpkin-man, #burger-rain {
 	background-size: cover;
 	height: 800px;
 	width: 800px;
@@ -108,6 +115,11 @@ table {
 
 #ghost-party {
 	background-image: url("images/ghost-party.gif");
+}
+
+#burger-rain {
+	background-image: url("images/burger-rain.gif");
+	background-position: center;
 }
 
 #pumpkin-man {

@@ -63,7 +63,7 @@ table {
   width: 20%;
   height: 20%;
   float: left;
-  outline: 1px solid orange;
+  /*outline: 1px solid orange;*/
 }
 
 #ghost, #burger {
@@ -82,7 +82,7 @@ table {
   display: none;
 }
 
-#ghost-game-over, #ghost-party {
+#ghost-game-over, #ghost-party, #pumpkin-man {
 	font-family: 'Creepster', cursive;
 	font-size: 80px;
 }
@@ -99,10 +99,27 @@ table {
   font-size: 40px;
 }
 
-#ghost-party {
-	background-image: url("images/ghost-party.gif");
+#ghost-party, #pumpkin-man {
 	background-size: cover;
 	height: 800px;
 	width: 800px;
 	display: none;
+}
+
+#ghost-party {
+	background-image: url("images/ghost-party.gif");
+}
+
+#pumpkin-man {
+	background-image: url("images/pumpkin.gif");
+	position: relative;
+}
+
+#pumpkin-man h1 {
+	position: absolute;
+	bottom: 10px;
+	text-align: center;
+	font-size: 80px;
+  color: white;
+  text-shadow: 1px 1px 3px black;
 }

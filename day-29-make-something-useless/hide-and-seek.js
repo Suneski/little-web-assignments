@@ -45,12 +45,12 @@ function gridBoxes() {
   }
 
   var ghostRandomNumber = Math.ceil((Math.random() * 25));
-  console.log("ghost: " + ghostRandomNumber);
+  // console.log("ghost: " + ghostRandomNumber);
 
   var ghostLocation = document.getElementsByClassName("box-" + ghostRandomNumber)[0].appendChild(ghost);
 
   var burgerRandomNumber = Math.ceil((Math.random() * 25));
-  console.log("burger: " + burgerRandomNumber);
+  // console.log("burger: " + burgerRandomNumber);
 
   var burgerLocation = document.getElementsByClassName("box-" + burgerRandomNumber)[0].appendChild(burger);
 

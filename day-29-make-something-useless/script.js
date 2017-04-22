@@ -19,10 +19,10 @@ var ghostParty = document.querySelector("#ghost-party");
 var burgerRain = document.querySelector("#burger-rain");
 var pumpkin = document.querySelector('#pumpkin-man');
 
-var spookyMusic = new Audio('spookyMusic.mp4');
-var celebrate = new Audio('celebrate.mp4');
-var hallelujah = new Audio('hallelujah.m4a');
-var tooSexy = new Audio('tooSexy.m4a');
+var spookyMusic = new Audio('audio/spookyMusic.mp4');
+var celebrate = new Audio('audio/celebrate.mp4');
+var hallelujah = new Audio('audio/hallelujah.m4a');
+var tooSexy = new Audio('audio/tooSexy.m4a');
 
 
 initialDecision.addEventListener('click', function(evt) {

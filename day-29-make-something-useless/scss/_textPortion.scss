@@ -1,0 +1,35 @@
+body {
+	background-color: black;
+}
+
+#intro, #mission-accepted, #mission-rejected {
+  color: white;
+  width: 50%;
+  margin: 50px auto;
+  font-size: 25px;
+  line-height: 1.5;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+#intro div {
+  margin-top: 20px;
+}
+
+#yes, #no, #proceed {
+	text-align: center;
+}
+
+#yes:hover, #no:hover, #proceed:hover {
+  color: grey;
+}
+
+#mission-accepted, #mission-rejected {
+	display:none;
+}
+
+#mission-rejected {
+	text-align: center;
+}

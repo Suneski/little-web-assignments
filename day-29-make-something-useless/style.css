@@ -1,11 +1,8 @@
-@import url('https://fonts.googleapis.com/css?family=Creepster|Trade+Winds');
-
-
+@import url("https://fonts.googleapis.com/css?family=Creepster|Trade+Winds");
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
-
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -19,102 +16,89 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
-}
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
-	display: block;
-}
+  display: block; }
+
 body {
-	line-height: 1;
-}
+  line-height: 1; }
+
 ol, ul {
-	list-style: none;
-}
+  list-style: none; }
+
 blockquote, q {
-	quotes: none;
-}
+  quotes: none; }
+
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
+  content: '';
+  content: none; }
 
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
 
 body {
-	background-color: black;
-}
+  background-color: black; }
 
 #intro, #mission-accepted, #mission-rejected {
   color: white;
   width: 50%;
   margin: 50px auto;
   font-size: 25px;
-  line-height: 1.5;
-}
+  line-height: 1.5; }
 
 p {
-  margin-bottom: 20px;
-}
+  margin-bottom: 20px; }
 
 #intro div {
-  margin-top: 20px;
-}
-
-#yes:hover, #no:hover, #proceed:hover {
-  color: grey;
-}
-
-#mission-accepted, #mission-rejected {
-	display:none;
-}
-
-#mission-rejected {
-	text-align: center;
-}
+  margin-top: 20px; }
 
 #yes, #no, #proceed {
-	text-align: center;
-}
+  text-align: center; }
 
+#yes:hover, #no:hover, #proceed:hover {
+  color: grey; }
 
+#mission-accepted, #mission-rejected {
+  display: none; }
 
-
-
-
+#mission-rejected {
+  text-align: center; }
 
 .grid, #ghost-party, #pumpkin-man, #burger-rain {
   height: 800px;
   width: 800px;
-  background-image: url('images/haunted-woods.jpg');
+  background-image: url("images/haunted-woods.jpg");
   background-size: contain;
   position: relative;
-	display: none;
-	margin: 30px auto;
-}
+  display: none;
+  margin: 30px auto; }
 
 .grid div {
   width: 20%;
   height: 20%;
   float: left;
-  /*outline: 1px solid orange;*/
-}
+  /*outline: 1px solid orange;*/ }
+
+#attempts {
+  position: absolute;
+  bottom: 2px;
+  right: 4px;
+  color: rgba(193, 193, 193, 0.8); }
 
 #ghost, #burger {
   width: 100%;
   height: 100%;
-  opacity: 0;
-}
+  opacity: 0; }
 
 #ghost-game-over, #burger-cat-victory {
   position: absolute;
@@ -123,69 +107,51 @@ p {
   color: white;
   width: 100%;
   text-shadow: 1px 1px black;
-  display: none;
-}
+  display: none; }
 
 #ghost-game-over, #ghost-party, #pumpkin-man {
-	font-family: 'Creepster', cursive;
-	font-size: 80px;
-}
-
-#ghost-party {
-	text-align: center;
-	font-size: 100px;
-  color: white;
-  text-shadow: 1px 1px 3px black;
-}
+  font-family: 'Creepster', cursive;
+  font-size: 80px; }
 
 #burger-cat-victory, #burger-rain {
-	font-family: 'Trade Winds', cursive;
-  font-size: 40px;
-}
-
-#burger-rain {
-	text-align: center;
-	color: white;
-  text-shadow: 1px 1px black;
-}
-
-#burger-rain h1 {
-	padding-top: 350px;
-}
-
-#ghost-party, #pumpkin-man, #burger-rain {
-	background-size: cover;
-	height: 800px;
-	width: 800px;
-	display: none;
-}
+  font-family: 'Trade Winds', cursive;
+  font-size: 40px; }
 
 #ghost-party {
-	background-image: url("images/ghost-party.gif");
-}
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  text-shadow: 1px 1px 3px black; }
 
 #burger-rain {
-	background-image: url("images/burger-rain.gif");
-	background-position: center;
-}
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px black; }
 
-#pumpkin-man {
-	background-image: url("images/pumpkin.gif");
-	position: relative;
-}
+#burger-rain h1 {
+  padding-top: 350px; }
 
 #pumpkin-man h1 {
-	position: absolute;
-	bottom: 10px;
-	text-align: center;
-	font-size: 80px;
+  position: absolute;
+  bottom: 10px;
+  text-align: center;
+  font-size: 80px;
   color: white;
-  text-shadow: 1px 1px 3px black;
-}
+  text-shadow: 1px 1px 3px black; }
 
-#attempts {
-	position: absolute;
-	bottom: 2px;
-	right: 4px;
-	color: rgba(193, 193, 193, 0.8);
-}
+#ghost-party, #pumpkin-man, #burger-rain {
+  background-size: cover;
+  height: 800px;
+  width: 800px;
+  display: none; }
+
+#ghost-party {
+  background-image: url("images/ghost-party.gif"); }
+
+#burger-rain {
+  background-image: url("images/burger-rain.gif");
+  background-position: center; }
+
+#pumpkin-man {
+  background-image: url("images/pumpkin.gif");
+  position: relative; }

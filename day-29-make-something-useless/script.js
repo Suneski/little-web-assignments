@@ -31,13 +31,25 @@ var tooSexy = new Audio('audio/tooSexy.m4a');
 
 audioOn.addEventListener('click', function() {
 
-  spookyMusic.pause();
-  celebrate.pause();
-  hallelujah.pause();
-  tooSexy.pause();
+  spookyMusic.muted = true;
+  celebrate.muted = true;
+  hallelujah.muted = true;
+  tooSexy.muted = true;
 
   audioOn.style.display = "none";
   audioOff.style.display = "block";
+
+});
+
+audioOff.addEventListener('click', function() {
+
+  spookyMusic.muted = false;
+  celebrate.muted = false;
+  hallelujah.muted = false;
+  tooSexy.muted = false;
+
+  audioOn.style.display = "block";
+  audioOff.style.display = "none";
 
 });
 

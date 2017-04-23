@@ -1,4 +1,6 @@
 var grid = document.querySelector(".grid");
+var audioOn = document.querySelector("#audio-on");
+var audioOff = document.querySelector("#audio-off");
 
 var body = document.querySelector('body');
 var difficulty = document.querySelector('#difficulty');
@@ -27,9 +29,23 @@ var celebrate = new Audio('audio/celebrate.mp4');
 var hallelujah = new Audio('audio/hallelujah.m4a');
 var tooSexy = new Audio('audio/tooSexy.m4a');
 
+audioOn.addEventListener('click', function() {
+
+  spookyMusic.pause();
+  celebrate.pause();
+  hallelujah.pause();
+  tooSexy.pause();
+
+  audioOn.style.display = "none";
+  audioOff.style.display = "block";
+
+});
+
 confirm.addEventListener('click', function() {
   difficulty.style.display = "none";
   intro.style.display = "block";
+
+  audioOn.style.display = "block";
 
   gridBoxes()
 });

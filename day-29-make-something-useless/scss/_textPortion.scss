@@ -2,6 +2,26 @@ body {
 	background-color: black;
 }
 
+#audio-on, #audio-off {
+	width: 25px;
+	position: absolute;
+	top: 5px;
+	display: none;
+}
+
+#audio-on {
+	left: 8px;
+}
+
+#audio-off {
+	left: 5px;
+	display: none;
+}
+
+#audio-on:hover, #audio-off:hover {
+	opacity: .5;
+}
+
 #difficulty {
 	text-align: center;
 }

@@ -1,5 +1,8 @@
 var grid = document.querySelector(".grid");
+
 var body = document.querySelector('body');
+var difficulty = document.querySelector('#difficulty');
+var confirm = document.querySelector('#confirm');
 var intro = document.querySelector('#intro');
 var yes = document.querySelector("#yes");
 var no = document.querySelector("#no");
@@ -24,6 +27,12 @@ var celebrate = new Audio('audio/celebrate.mp4');
 var hallelujah = new Audio('audio/hallelujah.m4a');
 var tooSexy = new Audio('audio/tooSexy.m4a');
 
+confirm.addEventListener('click', function() {
+  difficulty.style.display = "none";
+  intro.style.display = "block";
+
+  gridBoxes()
+});
 
 initialDecision.addEventListener('click', function(evt) {
   if (evt.target === yes) {
@@ -43,22 +52,60 @@ proceed.addEventListener('click', function() {
   body.style.backgroundColor = "black";
 });
 
+
 function gridBoxes() {
-  for (var i = 0; i < 25; i++) {
+
+  var selectDifficulty = document.querySelector("#selectDifficulty").selectedIndex;
+  var selectedDifficulty = document.getElementsByTagName("option")[selectDifficulty].value;
+
+  var totalSquares;
+  var boxDiv = document.querySelector(".grid div");
+
+  if (selectedDifficulty === "easy") {
+    totalSquares = 9;
+  }
+  if (selectedDifficulty === "medium") {
+    totalSquares = 25;
+  }
+  if (selectedDifficulty === "hard") {
+    totalSquares = 100;
+  }
+
+  for (var i = 0; i < totalSquares; i++) {
+
+
     var div = document.createElement('div');
     div.classList.add("box-" + (i+1));
+
+    if (totalSquares === 9) {
+      div.style.width = 33.333 + "%";
+      div.style.height = 33.333 + "%";
+    }
+    if (totalSquares === 25) {
+      div.style.width = 20 + "%";
+      div.style.height = 20 + "%";
+    }
+    if (totalSquares === 100) {
+      div.style.width = 10 + "%";
+      div.style.height = 10 + "%";
+    }
+
+
+
     grid.appendChild(div);
   }
 
-  var ghostRandomNumber = Math.ceil((Math.random() * 25));
+  console.log(totalSquares);
 
-  var burgerRandomNumber = Math.ceil((Math.random() * 25));
+  var ghostRandomNumber = Math.ceil((Math.random() * totalSquares));
 
-  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber < 25) {
+  var burgerRandomNumber = Math.ceil((Math.random() * totalSquares));
+
+  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber < totalSquares) {
     burgerRandomNumber = ghostRandomNumber + 1;
   }
 
-  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber === 25) {
+  if (ghostRandomNumber === burgerRandomNumber && ghostRandomNumber === totalSquares) {
     burgerRandomNumber = 13;
   }
 
@@ -76,7 +123,6 @@ function gridBoxes() {
   spookyMusic.play();
 }
 
-gridBoxes();
 
 var counter = 5;
 attempts.textContent = "Remaining Attempts: " + counter;

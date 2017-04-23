@@ -2,7 +2,11 @@ body {
 	background-color: black;
 }
 
-#intro, #mission-accepted, #mission-rejected {
+#difficulty {
+	text-align: center;
+}
+
+#difficulty, #intro, #mission-accepted, #mission-rejected {
   color: white;
   width: 50%;
   margin: 50px auto;
@@ -26,7 +30,7 @@ p {
   color: grey;
 }
 
-#mission-accepted, #mission-rejected {
+#intro, #mission-accepted, #mission-rejected {
 	display:none;
 }
 

@@ -49,7 +49,10 @@ table {
 body {
   background-color: black; }
 
-#intro, #mission-accepted, #mission-rejected {
+#difficulty {
+  text-align: center; }
+
+#difficulty, #intro, #mission-accepted, #mission-rejected {
   color: white;
   width: 50%;
   margin: 50px auto;
@@ -68,7 +71,7 @@ p {
 #yes:hover, #no:hover, #proceed:hover {
   color: grey; }
 
-#mission-accepted, #mission-rejected {
+#intro, #mission-accepted, #mission-rejected {
   display: none; }
 
 #mission-rejected {
@@ -84,10 +87,7 @@ p {
   margin: 30px auto; }
 
 .grid div {
-  width: 20%;
-  height: 20%;
-  float: left;
-  /*outline: 1px solid orange;*/ }
+  float: left; }
 
 #attempts {
   position: absolute;

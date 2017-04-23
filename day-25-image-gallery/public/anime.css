@@ -111,4 +111,17 @@ button {
 	height: 180px;
 	overflow: hidden;
 	position: relative;
+	display: inline-block;
+	float: left;
+}
+
+#carasoul {
+	margin: 0 auto;
+	display: inline-block;
+	clear: both;
+	overflow: auto;
+	outline: 1px solid orange;
+	height: 100px;
+	width: 100px;
+	z-index: 193;
 }

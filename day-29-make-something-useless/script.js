@@ -28,13 +28,15 @@ var spookyMusic = new Audio('audio/spookyMusic.mp4');
 var celebrate = new Audio('audio/celebrate.mp4');
 var hallelujah = new Audio('audio/hallelujah.m4a');
 var tooSexy = new Audio('audio/tooSexy.m4a');
+var wompWomp = new Audio('audio/womp-womp.mp4');
+
+var music = [spookyMusic, celebrate, hallelujah, tooSexy, wompWomp];
 
 audioOn.addEventListener('click', function() {
 
-  spookyMusic.muted = true;
-  celebrate.muted = true;
-  hallelujah.muted = true;
-  tooSexy.muted = true;
+  music.forEach(function(song) {
+    song.muted = true;
+  });
 
   audioOn.style.display = "none";
   audioOff.style.display = "block";
@@ -43,10 +45,9 @@ audioOn.addEventListener('click', function() {
 
 audioOff.addEventListener('click', function() {
 
-  spookyMusic.muted = false;
-  celebrate.muted = false;
-  hallelujah.muted = false;
-  tooSexy.muted = false;
+  music.forEach(function(song) {
+    song.muted = false;
+  });
 
   audioOn.style.display = "block";
   audioOff.style.display = "none";
@@ -71,6 +72,8 @@ initialDecision.addEventListener('click', function(evt) {
   if (evt.target === no) {
     intro.style.display = "none";
     missionRejected.style.display = "block";
+    spookyMusic.pause();
+    wompWomp.play();
   }
 });
 

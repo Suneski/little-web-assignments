@@ -122,11 +122,16 @@ p {
 #ghost-game-over, #burger-cat-victory {
   position: absolute;
   text-align: center;
-  top: 310px;
   color: white;
   width: 100%;
   text-shadow: 1px 1px black;
   display: none; }
+
+#ghost-game-over {
+  top: 310px; }
+
+#burger-cat-victory {
+  top: 360px; }
 
 #ghost-game-over, #ghost-party, #pumpkin-man {
   font-family: 'Creepster', cursive;
@@ -148,7 +153,7 @@ p {
   text-shadow: 1px 1px black; }
 
 #burger-rain h1 {
-  padding-top: 350px; }
+  padding-top: 380px; }
 
 #pumpkin-man h1 {
   position: absolute;

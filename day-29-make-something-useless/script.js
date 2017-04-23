@@ -100,6 +100,9 @@ function gridBoxes() {
   if (selectedDifficulty === "hard") {
     totalSquares = 100;
   }
+  if (selectedDifficulty === "good-luck") {
+    totalSquares = 2500;
+  }
 
   for (var i = 0; i < totalSquares; i++) {
 
@@ -117,6 +120,10 @@ function gridBoxes() {
     if (totalSquares === 100) {
       div.style.width = 10 + "%";
       div.style.height = 10 + "%";
+    }
+    if (totalSquares === 2500) {
+      div.style.width = 2 + "%";
+      div.style.height = 2 + "%";
     }
 
     grid.appendChild(div);

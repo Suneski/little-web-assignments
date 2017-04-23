@@ -188,8 +188,13 @@ grid.addEventListener('click', function(evt) {
   if (evt.target === burger) {
     burger.style.opacity = "1";
 
+
     setTimeout(function () {
       burgerCatVictory.style.display = "block";
+      burger.style.display = "absolute";
+      burger.style.width = 800 + "px";
+      burger.style.height = 800 + "px";
+      burgerLocation = document.getElementsByClassName("box-1")[0].appendChild(burger);
       spookyMusic.pause();
       hallelujah.addEventListener('ended', function() {
         this.currentTime = 0;
@@ -211,6 +216,10 @@ grid.addEventListener('click', function(evt) {
 
     setTimeout(function () {
       ghostGameOver.style.display = "block";
+      ghost.style.display = "absolute";
+      ghost.style.width = 800 + "px";
+      ghost.style.height = 800 + "px";
+      ghostLocation = document.getElementsByClassName("box-1")[0].appendChild(ghost);
     }, 500);
 
     setTimeout(function () {

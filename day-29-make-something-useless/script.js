@@ -80,7 +80,6 @@ proceed.addEventListener('click', function() {
   body.style.backgroundColor = "black";
 });
 
-
 function gridBoxes() {
 
   var selectDifficulty = document.querySelector("#selectDifficulty").selectedIndex;
@@ -101,7 +100,6 @@ function gridBoxes() {
 
   for (var i = 0; i < totalSquares; i++) {
 
-
     var div = document.createElement('div');
     div.classList.add("box-" + (i+1));
 
@@ -117,8 +115,6 @@ function gridBoxes() {
       div.style.width = 10 + "%";
       div.style.height = 10 + "%";
     }
-
-
 
     grid.appendChild(div);
   }
@@ -150,7 +146,6 @@ function gridBoxes() {
   }, false);
   spookyMusic.play();
 }
-
 
 var counter = 5;
 attempts.textContent = "Remaining Attempts: " + counter;
@@ -218,8 +213,6 @@ grid.addEventListener('click', function(evt) {
       }, false);
       celebrate.play();
     }, 2000);
-
-
 
     burger.style.display = "none";
   }

@@ -18,6 +18,12 @@ var submit = document.querySelector('#submit');
 
 // PAGE 1
 
+var firstName = localStorage.getItem('first-name');
+firstNameInput.value = firstName;
+
+var lastName = localStorage.getItem('last-name');
+lastNameInput.value = lastName;
+
 nextButtonOne.addEventListener('click', function(evt) {
   evt.preventDefault();
 
@@ -28,6 +34,10 @@ nextButtonOne.addEventListener('click', function(evt) {
     firstPage.style.display = "none";
     secondPage.style.display = "block";
   }
+
+  localStorage.setItem('first-name', firstNameInput.value);
+  localStorage.setItem('last-name', lastNameInput.value);
+
 
 });
 

@@ -17,6 +17,10 @@ var Calculator = {
 
       return sum;
     }
+
+    if (input.indexOf('-') > -1) {
+      return "negatives not allowed " + input;
+    }
     return Number(input);
   }
 }
@@ -55,6 +59,18 @@ describe('String Calculator add method', function() {
 
     assert.equal(3, result);
   })
+
+  it('should return negatives not allowed -3 if the value is “-3”', function() {
+    var result = Calculator.add("-3");
+
+    assert.equal("negatives not allowed ", -3, result);
+  })
+
+  // it('should return negatives not allowed -3, -5 if the value is “-3, -5”', function() {
+  //   var result = Calculator.add("-3");
+  //
+  //   assert.equal("negatives not allowed", -3, -5, result);
+  // })
 });
 
 

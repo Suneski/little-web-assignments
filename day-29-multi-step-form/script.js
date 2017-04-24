@@ -12,17 +12,31 @@ var previousPage2 = document.querySelector('#previous-page-two');
 var nextPage2 = document.querySelector('#next-page-two');
 
 var previousPage3 = document.querySelector('#previous-page-three');
+
 var submit = document.querySelector('#submit');
 
 
 
 // PAGE 1
 
+
+
+
 var firstName = localStorage.getItem('first-name');
 firstNameInput.value = firstName;
 
 var lastName = localStorage.getItem('last-name');
 lastNameInput.value = lastName;
+
+
+firstNameInput.addEventListener('keyup', function() {
+  localStorage.setItem('first-name', firstNameInput.value);
+});
+
+lastNameInput.addEventListener('keyup', function() {
+  localStorage.setItem('last-name', lastNameInput.value);
+});
+
 
 nextButtonOne.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -35,13 +49,15 @@ nextButtonOne.addEventListener('click', function(evt) {
     secondPage.style.display = "block";
   }
 
-  localStorage.setItem('first-name', firstNameInput.value);
-  localStorage.setItem('last-name', lastNameInput.value);
+
 
 
 });
 
 // PAGE 2
+
+
+
 
 previousPage2.addEventListener('click', function(evt) {
   evt.preventDefault();
@@ -53,8 +69,6 @@ previousPage2.addEventListener('click', function(evt) {
 
 nextPage2.addEventListener('click', function(evt) {
   evt.preventDefault();
-
-
 
   var IsChecked = $('.age-radio').is(':checked');
 
@@ -70,8 +84,17 @@ nextPage2.addEventListener('click', function(evt) {
 
 // PAGE 3
 
+
+//
+// var select = document.getItem('job');
+// select.value = select;
+//
+// localStorage.setItem('job', select.value);
+
 previousPage3.addEventListener('click', function(evt) {
   evt.preventDefault();
+
+  // console.log(select.value);
 
   secondPage.style.display = "block";
   thirdPage.style.display = "none";

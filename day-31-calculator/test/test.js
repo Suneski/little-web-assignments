@@ -5,8 +5,10 @@ var Calculator = {
     if (input === '') {
       return 0;
     }
-    if (input.indexOf(",") > -1) {
-      var array = input.split(/[,]|[\n]+/);
+
+
+    if (input.indexOf(',') > -1 || input.indexOf('//') > -1) {
+      var array = input.split(/[ .:;?!~,`"&|()<>{}\[\]\r\n\s/\\]+/);
       var sum = 0;
 
       array.forEach(function(x) {
@@ -46,6 +48,12 @@ describe('String Calculator add method', function() {
     var result = Calculator.add("1\n2,3");
 
     assert.equal(6, result);
+  })
+
+  it('should return 3 if the value is “//;\n1;2”', function() {
+    var result = Calculator.add("//;\n1;2");
+
+    assert.equal(3, result);
   })
 });
 

@@ -84,17 +84,17 @@ nextPage2.addEventListener('click', function(evt) {
 
 // PAGE 3
 
+var select = document.querySelector('select');
 
-//
-// var select = document.getItem('job');
-// select.value = select;
-//
-// localStorage.setItem('job', select.value);
+var occupation = localStorage.getItem('occupation');
+select.value = occupation;
+
+select.addEventListener('change', function(evt) {
+  localStorage.setItem('occupation', select.value);
+});
 
 previousPage3.addEventListener('click', function(evt) {
   evt.preventDefault();
-
-  // console.log(select.value);
 
   secondPage.style.display = "block";
   thirdPage.style.display = "none";

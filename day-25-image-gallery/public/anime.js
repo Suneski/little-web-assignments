@@ -70,9 +70,11 @@ var left = 0;
 previous.addEventListener('click', function() {
   if (left < 1201) {
     left += 600;
+    console.log("huh?");
   }
   else {
     left = 0;
+    console.log("wha??");
   }
 
 innerFrame.style.backgroundPositionX = left + 'px';

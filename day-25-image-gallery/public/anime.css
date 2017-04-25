@@ -93,7 +93,7 @@ button {
 	float: left;
 	display: inline;
 	height: 80px;
-	margin: 55px;
+	margin-top: 55px;
 }
 
 .toggled {
@@ -115,13 +115,13 @@ button {
 	float: left;
 }
 
-#carasoul {
+#carousel {
 	margin: 0 auto;
-	display: inline-block;
+	display: block;
 	clear: both;
 	overflow: auto;
 	outline: 1px solid orange;
-	height: 100px;
-	width: 100px;
+	height: 200px;
+	width: 650px;
 	z-index: 193;
 }

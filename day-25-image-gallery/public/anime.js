@@ -68,15 +68,29 @@ var innerFrame = document.querySelector('.inner-frame');
 var left = 0;
 
 previous.addEventListener('click', function() {
-  if (left < 1201) {
-    left += 600;
-    console.log("huh?");
-  }
-  else {
+  if (left === -600) {
     left = 0;
-    console.log("wha??");
+    previous.style.opacity = "0.3";
+  }
+  if (left < 0) {
+    next.style.opacity = "1.0";
+    left += 600;
   }
 
-innerFrame.style.backgroundPositionX = left + 'px';
+imageList.style.left = left + 'px';
+
+});
+
+next.addEventListener('click', function() {
+  if (left > -1200) {
+    previous.style.opacity = "1.0";
+    left -= 600;
+  }
+  if (left === -1200) {
+    left = -1200;
+    next.style.opacity = "0.3";
+  }
+
+imageList.style.left = left + 'px';
 
 });

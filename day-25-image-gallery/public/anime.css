@@ -96,6 +96,10 @@ button {
 	margin-top: 55px;
 }
 
+.previous {
+	opacity: 0.3;
+}
+
 .toggled {
 	outline: 4px solid black;
 }
@@ -108,7 +112,7 @@ button {
 .inner-frame {
 	margin: 0 auto;
 	width: 600px;
-	height: 180px;
+	height: 190px;
 	overflow: hidden;
 	position: relative;
 	display: inline-block;
@@ -120,7 +124,7 @@ button {
 	display: block;
 	clear: both;
 	overflow: auto;
-	outline: 1px solid orange;
+	/*outline: 1px solid orange;*/
 	height: 200px;
 	width: 650px;
 	z-index: 193;

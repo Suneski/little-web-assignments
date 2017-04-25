@@ -38,6 +38,11 @@ lastNameInput.addEventListener('keyup', function() {
 });
 
 
+
+
+
+
+
 nextButtonOne.addEventListener('click', function(evt) {
   evt.preventDefault();
 
@@ -47,14 +52,38 @@ nextButtonOne.addEventListener('click', function(evt) {
   else {
     firstPage.style.display = "none";
     secondPage.style.display = "block";
+
+    if(selectedAge === "0 - 20") {
+      zeroToTwenty.checked = true;
+    }
+    if(selectedAge === "21 - 40") {
+      twentyOneToForty.checked = true;
+    }
+    if(selectedAge === "41+") {
+      fortyPlus.checked = true;
+    }
   }
-
-
 
 
 });
 
 // PAGE 2
+
+
+var selectedAge = localStorage.getItem('ageRange');
+var ageOptions = document.querySelector('#age-options')
+
+var ageRadio = document.querySelector('.age-radio');
+var zeroToTwenty = document.querySelector('#zeroToTwenty');
+var twentyOneToForty = document.querySelector('#twentyOneToForty');
+var fortyPlus = document.querySelector('#fortyPlus');
+
+$(document).ready(function(){
+    $('input[type=radio]').click(function(){
+      localStorage.setItem('ageRange', this.value);
+    });
+});
+
 
 
 
@@ -70,6 +99,19 @@ previousPage2.addEventListener('click', function(evt) {
 nextPage2.addEventListener('click', function(evt) {
   evt.preventDefault();
 
+  // var age1=document.querySelector('#zeroToTwenty');
+  // var age2=document.querySelector('#twentyOneToForty');
+  // var age3=document.querySelector('#fortyPlus');
+  //
+  //
+  // if(age1.checked || age2.checked || age3.checked) {
+  //   secondPage.style.display = "none";
+  //   thirdPage.style.display = "block";
+  // }
+  // else {
+  //   alert('ERROR! Please select your age range!');
+  // }
+
   var IsChecked = $('.age-radio').is(':checked');
 
   if(IsChecked) {
@@ -81,6 +123,12 @@ nextPage2.addEventListener('click', function(evt) {
   }
 
 });
+
+
+
+
+
+
 
 // PAGE 3
 

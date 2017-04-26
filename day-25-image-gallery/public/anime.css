@@ -129,3 +129,8 @@ button {
 	width: 650px;
 	z-index: 193;
 }
+
+.image-list {
+
+	transition: all .5s;
+}

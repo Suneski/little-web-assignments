@@ -5,7 +5,7 @@ import './index.css';
 import Clicker from './Clicker.js';
 import TickCounter from './TickCounter.js';
 import Clock from './Clock.js';
-
+import SuperDuperClock from './SuperDuperClock.js'
 
 
 
@@ -19,6 +19,7 @@ class App extends React.Component {
         <Clicker />
         <TickCounter />
         <Clock />
+        <SuperDuperClock />
       </div>
     )
   }

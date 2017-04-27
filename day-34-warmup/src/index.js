@@ -10,26 +10,50 @@ class Clicker extends React.Component {
     }
   }
 
+  // MY SOLUTION (WORKS)
+
+  // handleClickDown() {
+  //   var value = this.state.value - 1;
+  //
+  //   if (this.state.value === 0) {
+  //     this.setState({
+  //       value: 0
+  //     })
+  //   }
+  //   if (this.state.value > 0) {
+  //     this.setState({
+  //       value: value
+  //     })
+  //   }
+  //
+  // }
+
+
+  // ERIC'S SOLUTION
   handleClickDown() {
-    var value = this.state.value - 1;
-
     if (this.state.value === 0) {
-      this.setState({
-        value: 0
-      })
+      return;
     }
-    if (this.state.value > 0) {
-      this.setState({
-        value: value
-      })
-    }
-
+    this.setState({
+      value: this.state.value - 1
+    });
   }
 
+
+
+
+  // MY SOLUTION (WORKS)
   handleClickUp() {
     var value = this.state.value + 1;
     this.setState({
       value: value
+    });
+  }
+
+  // ERIC'S SOLUTION
+  handleClickUp() {
+    this.setState({
+      value: this.state.value + 1
     });
   }
 
@@ -44,7 +68,7 @@ class Clicker extends React.Component {
   }
 
 }
-// 
+//
 // class App extends React.Component {
 //   render() {
 //     return (

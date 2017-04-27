@@ -27,6 +27,13 @@ class Clicker extends React.Component {
   //   }
   //
   // }
+  //
+  // handleClickUp() {
+  //   var value = this.state.value + 1;
+  //   this.setState({
+  //     value: value
+  //   });
+  // }
 
 
   // ERIC'S SOLUTION
@@ -39,18 +46,6 @@ class Clicker extends React.Component {
     });
   }
 
-
-
-
-  // MY SOLUTION (WORKS)
-  handleClickUp() {
-    var value = this.state.value + 1;
-    this.setState({
-      value: value
-    });
-  }
-
-  // ERIC'S SOLUTION
   handleClickUp() {
     this.setState({
       value: this.state.value + 1

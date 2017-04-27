@@ -51,9 +51,10 @@ table {
 body {
   margin: 0;
   padding: 0;
-  text-align: center;
+	text-align: center;
   font-family: sans-serif;
 }
+
 
 h1 {
   font-size: 30px;
@@ -62,4 +63,8 @@ h1 {
 
 span {
   margin: 0 10px;
+}
+
+.tickCounter, .boringClock {
+	margin-top: 10px;
 }

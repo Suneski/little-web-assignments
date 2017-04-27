@@ -2,79 +2,29 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Clicker extends React.Component {
-  constructor() {
-    super();
-    this.state = {
-      value: 0
-    }
-  }
-
-  // MY SOLUTION (WORKS)
-
-  // handleClickDown() {
-  //   var value = this.state.value - 1;
-  //
-  //   if (this.state.value === 0) {
-  //     this.setState({
-  //       value: 0
-  //     })
-  //   }
-  //   if (this.state.value > 0) {
-  //     this.setState({
-  //       value: value
-  //     })
-  //   }
-  //
-  // }
-  //
-  // handleClickUp() {
-  //   var value = this.state.value + 1;
-  //   this.setState({
-  //     value: value
-  //   });
-  // }
+import Clicker from './Clicker.js';
+import TickCounter from './TickCounter.js';
+import Clock from './Clock.js';
 
 
-  // ERIC'S SOLUTION
-  handleClickDown() {
-    if (this.state.value === 0) {
-      return;
-    }
-    this.setState({
-      value: this.state.value - 1
-    });
-  }
 
-  handleClickUp() {
-    this.setState({
-      value: this.state.value + 1
-    });
-  }
 
+
+
+
+class App extends React.Component {
   render() {
     return (
       <div>
-        <button onClick={ () => this.handleClickDown()}>down</button>
-        <span>{this.state.value}</span>
-        <button onClick={ () => this.handleClickUp()}>up</button>
+        <Clicker />
+        <TickCounter />
+        <Clock />
       </div>
     )
   }
-
 }
-//
-// class App extends React.Component {
-//   render() {
-//     return (
-//       <div>
-//         <Clicker />
-//       </div>
-//     )
-//   }
-// }
 
 ReactDOM.render(
-  <Clicker />,
+  <App />,
   document.getElementById('root')
 );

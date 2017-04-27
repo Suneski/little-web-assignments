@@ -44,7 +44,16 @@ class Clicker extends React.Component {
   }
 
 }
-
+// 
+// class App extends React.Component {
+//   render() {
+//     return (
+//       <div>
+//         <Clicker />
+//       </div>
+//     )
+//   }
+// }
 
 ReactDOM.render(
   <Clicker />,

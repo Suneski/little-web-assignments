@@ -23,7 +23,7 @@ class Clicker extends React.Component {
         value: value
       })
     }
-    
+
   }
 
   handleClickUp() {
@@ -37,7 +37,7 @@ class Clicker extends React.Component {
     return (
       <div>
         <button onClick={ () => this.handleClickDown()}>down</button>
-        {this.state.value}
+        <span>{this.state.value}</span>
         <button onClick={ () => this.handleClickUp()}>up</button>
       </div>
     )
@@ -45,17 +45,8 @@ class Clicker extends React.Component {
 
 }
 
-class App extends React.Component {
-  render() {
-    return (
-      <div>
-        <Clicker />
-      </div>
-    )
-  }
-}
 
 ReactDOM.render(
-  <App />,
+  <Clicker />,
   document.getElementById('root')
 );

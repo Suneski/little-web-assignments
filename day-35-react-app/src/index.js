@@ -7,7 +7,7 @@ import Clock from './Clock.js'
 import SuperClock from './SuperClock.js'
 
 
-class App extends Component {
+class App extends React.Component {
   render() {
     return (
       <div>

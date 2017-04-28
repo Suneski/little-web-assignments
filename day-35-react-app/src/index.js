@@ -10,22 +10,28 @@ class Toggle extends React.Component {
     }
   }
 
+  // toggler() {
+  //   if (this.state.value === "on") {
+  //     this.setState({
+  //       value: "off"
+  //     })
+  //   }
+  //   if (this.state.value === "off") {
+  //     this.setState({
+  //       value: "on"
+  //     })
+  //   }
+  // }
+
   toggler() {
-    if (this.state.value === "on") {
-      this.setState({
-        value: "off"
-      })
-    }
-    if (this.state.value === "off") {
-      this.setState({
-        value: "on"
-      })
-    }
+    this.setState({
+      value: this.state.value === "on" ? "off" : "on"
+    })
   }
 
   render() {
     return (
-      <div onClick={ () => this.toggler()}>
+      <div className="toggleBoggle" onClick={ () => this.toggler()}>
         {this.state.value}
       </div>
     )

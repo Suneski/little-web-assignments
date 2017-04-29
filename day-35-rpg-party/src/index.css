@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+
 body {
   margin: 10px;
   padding: 0;
-  font-family: sans-serif;
+  background-color: black;
 }
-
-/*.sprite {
-  display: none;
-}*/
 
 img {
   margin-top: 20px;
-  width: 100px;
+  height: 150px;
+}
+
+.player {
+  border: 5px solid grey;
+  border-radius: 5px;
+  color: white;
+  font-family: 'Press Start 2P', cursive;
+  background-color: #0A03FF;
+  text-align: center;
+  width: 45%;
+  margin: 2%;
+  float: left;
 }

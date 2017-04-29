@@ -21,7 +21,3 @@ img {
   margin: 2% 7%;
   float: left;
 }
-
-.jobclass, select {
-  display: inline-block;
-}

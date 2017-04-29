@@ -12,9 +12,9 @@ class Select extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      value: blackbelt,
-      jobClass: 'Black Belt',
-      src: blackbelt,
+      value: fighter,
+      jobClass: 'Fighter',
+      src: fighter,
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -25,6 +25,12 @@ class Select extends React.Component {
     this.setState({
       newName: event.target.value + " the "
     });
+    if (event.target.value.length >= 15) {
+      alert('Exceeded character limit');
+      this.setState({
+        newName: this.state.newName
+      });
+    }
   }
 
   handleChange(event) {
@@ -84,12 +90,12 @@ class Select extends React.Component {
         <p>Character Name: <input type="text" onChange={(e) => this.handleChangeName(e)}/></p>
         <form>
           <p>Job Class: <select value={this.state.value} onChange={this.handleChange}>
-            <option value="blackbelt">Black Belt</option>
-            <option value="blackmage">Black Mage</option>
             <option value="fighter">Fighter</option>
-            <option value="redmage">Red Mage</option>
+            <option value="blackbelt">Black Belt</option>
             <option value="thief">Thief</option>
+            <option value="blackmage">Black Mage</option>
             <option value="whitemage">White Mage</option>
+            <option value="redmage">Red Mage</option>
           </select></p>
         </form>
         <img src={this.state.src} alt={this.state.value} className="sprite"/>

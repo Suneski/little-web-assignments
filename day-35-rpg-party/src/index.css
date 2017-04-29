@@ -1,0 +1,14 @@
+body {
+  margin: 10px;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/*.sprite {
+  display: none;
+}*/
+
+img {
+  margin-top: 20px;
+  width: 100px;
+}

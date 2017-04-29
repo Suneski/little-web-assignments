@@ -38,6 +38,9 @@ class RepoSearch extends React.Component {
     let repos = this.state.repos.map((x) => <Takoyaki key={x.url} name={x.name} login={x.owner.login}/>);
     return (
       <div>
+        <div className="input-line">
+          <input /> <button>SEARCH</button>
+        </div>
         <ul>
           {repos}
         </ul>

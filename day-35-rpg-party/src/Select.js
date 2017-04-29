@@ -15,29 +15,20 @@ class Select extends React.Component {
       value: blackbelt,
       jobClass: 'Black Belt',
       src: blackbelt,
-      name: ''
     };
 
     this.handleChange = this.handleChange.bind(this);
-    this.handleSubmit = this.handleSubmit.bind(this);
-  }
-
-  handleChange(event) {
-    this.setState(
-      {value: event.target.value}
-    );
   }
 
   handleChangeName = (event) => {
     console.log('change name');
     this.setState({
-      newName: event.target.value,
+      newName: event.target.value + " the "
     });
   }
 
-  handleSubmit(event) {
-    event.preventDefault();
-    if (this.state.value === "blackbelt") {
+  handleChange(event) {
+    if (event.target.value === "blackbelt") {
       this.setState(
         {
           src: blackbelt,
@@ -45,7 +36,7 @@ class Select extends React.Component {
         }
       );
     }
-    if (this.state.value === "blackmage") {
+    if (event.target.value === "blackmage") {
       this.setState(
         {
           src: blackmage,
@@ -53,7 +44,7 @@ class Select extends React.Component {
         }
       );
     }
-    if (this.state.value === "fighter") {
+    if (event.target.value === "fighter") {
       this.setState(
         {
           src: fighter,
@@ -61,7 +52,7 @@ class Select extends React.Component {
         }
       );
     }
-    if (this.state.value === "redmage") {
+    if (event.target.value === "redmage") {
       this.setState(
         {
           src: redmage,
@@ -69,7 +60,7 @@ class Select extends React.Component {
         }
       );
     }
-    if (this.state.value === "thief") {
+    if (event.target.value === "thief") {
       this.setState(
         {
           src: thief,
@@ -77,7 +68,7 @@ class Select extends React.Component {
         }
       );
     }
-    if (this.state.value === "whitemage") {
+    if (event.target.value === "whitemage") {
       this.setState(
         {
           src: whitemage,
@@ -91,7 +82,7 @@ class Select extends React.Component {
     return (
       <div className="player">
         <p>Character Name: <input type="text" onChange={(e) => this.handleChangeName(e)}/></p>
-        <form onSubmit={this.handleSubmit}>
+        <form>
           <p>Job Class: <select value={this.state.value} onChange={this.handleChange}>
             <option value="blackbelt">Black Belt</option>
             <option value="blackmage">Black Mage</option>
@@ -100,10 +91,9 @@ class Select extends React.Component {
             <option value="thief">Thief</option>
             <option value="whitemage">White Mage</option>
           </select></p>
-          <button type="submit" value="Submit">Submit</button>
         </form>
         <img src={this.state.src} alt={this.state.value} className="sprite"/>
-        <p>{this.state.newName || this.props.name} the {this.state.jobClass}</p>
+        <p>{this.state.newName}{this.state.jobClass}</p>
       </div>
     );
   }

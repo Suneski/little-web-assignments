@@ -7,7 +7,6 @@ body {
 }
 
 img {
-  margin-top: 20px;
   height: 150px;
 }
 
@@ -18,7 +17,11 @@ img {
   font-family: 'Press Start 2P', cursive;
   background-color: #0A03FF;
   text-align: center;
-  width: 45%;
-  margin: 2%;
+  width: 35%;
+  margin: 2% 7%;
   float: left;
+}
+
+.jobclass, select {
+  display: inline-block;
 }

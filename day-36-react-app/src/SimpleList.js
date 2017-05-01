@@ -13,7 +13,7 @@ class SimpleList extends React.Component {
   }
 
   handleKeyUp(evt) {
-    console.log(evt.keyCode);
+    // console.log(evt.keyCode);
     if (evt.keyCode === 13) {
       var copy = this.state.items.slice();
       copy.push(evt.target.value);

@@ -25,12 +25,25 @@ class SimpleList extends React.Component {
     }
   }
 
+  removeFromList(index) {
+    console.log('You clicked on', index);
+    var copy = this.state.items.slice();
+    copy.splice(index, 1);
+    this.setState({
+      items: copy
+    })
+  }
+
   render() {
+    let items = this.state.items.map((x, i) => {
+      return <li onClick={() => this.removeFromList(i)} key={i}>{x}</li>
+    });
+
     return (
       <div className="simple-list">
         <input onKeyUp={this.handleKeyUp}/>
         <ol>
-          {this.state.items.map((x, i) => <li key={i}>{x}</li>)}
+          {items}
         </ol>
       </div>
     )

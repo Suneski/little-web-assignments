@@ -47,9 +47,11 @@ table {
 	border-spacing: 0;
 }
 
+
+
 li {
   margin: 5px;
   border: 1px solid black;
   padding: 5px;
-  width: 100px;
+  width: 200px;
 }

@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import SimpleList from './SimpleList';
+import MovingListItems from './MovingListItems'
 import './index.css';
 
 class App extends React.Component {
@@ -8,6 +9,7 @@ class App extends React.Component {
     return (
       <div className="app-div">
         <SimpleList />
+        <MovingListItems />
       </div>
     )
   }

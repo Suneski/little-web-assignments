@@ -1,7 +1,6 @@
 import React from 'react';
-import './simplelist.css';
 
-class SimpleList extends React.Component {
+class MovingListItems extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -13,7 +12,6 @@ class SimpleList extends React.Component {
   }
 
   handleKeyUp(evt) {
-    // console.log(evt.keyCode);
     if (evt.keyCode === 13) {
       var copy = this.state.items.slice();
       copy.push(evt.target.value);
@@ -25,9 +23,10 @@ class SimpleList extends React.Component {
     }
   }
 
-  removeFromList(index) {
+  upToTop(index) {
     console.log('You clicked on', index);
     var copy = this.state.items.slice();
+    copy.push(copy[index]);
     copy.splice(index, 1);
     this.setState({
       items: copy
@@ -35,13 +34,13 @@ class SimpleList extends React.Component {
   }
 
   render() {
-    let items = this.state.items.map((x, i) => {
-      return <li onClick={() => this.removeFromList(i)} key={i}>{x}</li>
+    let items = this.state.items.map((x,i) => {
+      return <li onClick={() => this.upToTop(i)} key={i}>{x}</li>
     });
 
     return (
-      <div className="simple-list">
-        <input onKeyUp={this.handleKeyUp}/> (Remove items from list on click)
+      <div>
+        <input onKeyUp={this.handleKeyUp} /> (Throw item to end of list input)
         <ol>
           {items}
         </ol>
@@ -50,4 +49,4 @@ class SimpleList extends React.Component {
   }
 }
 
-module.exports = SimpleList;
+module.exports = MovingListItems;

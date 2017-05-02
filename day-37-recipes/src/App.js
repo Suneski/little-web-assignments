@@ -5,6 +5,7 @@ import RecipeList from './RecipeList';
 import Filter from './Filter';
 import Footer from './Footer';
 import './App.css';
+import $ from 'jquery';
 
 let appContainerStyle = {
   width: "55%",
@@ -21,28 +22,39 @@ class App extends Component {
     super();
 
     this.state={
-      recipes: [
-        {
-          thumbnail: 'images/biscuit-topped-steak-pie.jpg',
-          href: 'http://www.food.com/recipe/biscuit-topped-steak-pie-82443',
-          title: 'Biscuit Topped Steak Pie',
-          ingredients: 'potato, beef gravy, black pepper, vegetable, biscuit, sirloin steak, thyme'
-        },
-        {
-          thumbnail: 'images/german-restaurant-steak.jpg',
-          href: 'http://www.food.com/recipe/german-restaurant-steak-229367',
-          title: 'German Restaurant Steak',
-          ingredients: 'butter, onions, black pepper, rib eye steak, salt, salt, sour cream'
-        },
-        {
-          thumbnail: 'images/barbaras-flank-steak.jpg',
-          href: 'http://www.food.com/recipe/barbaras-flank-steak-dinner-218830',
-          title: 'Barbara\'s Flank Steak Dinner',
-          ingredients: 'black pepper, butter, rice, beef, corn, red pepper, salt, green onion, mushroom, water'
-        }
-      ],
+      recipes: [],
       filters: ['potatoes', 'ketchup', 'molasses']
     }
+  }
+
+  makeAjaxCall() {
+    $.ajax({
+      url: "/api/?i=onions,ketchup&q=steak"
+    })
+    .done((data) => {
+      data = JSON.parse(data);
+      console.log("do I have data", data);
+
+      let mappedArray = data.results.map((x) => {
+
+        return {
+          thumbnail: x.thumbnail,
+          href: x.href,
+          title: x.title,
+          ingredients: x.ingredients
+        };
+      })
+
+      this.setState ({
+        recipes: mappedArray
+      });
+    });
+  }
+
+  componentDidMount() {
+    console.log("ajax here");
+
+    this.makeAjaxCall();
   }
 
   render() {

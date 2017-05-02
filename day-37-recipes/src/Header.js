@@ -18,6 +18,7 @@ class Header extends React.Component {
   render() {
     return (
       <div style={headerStyle}>
+        <img src="images/chef.png" className="chefPic"/>
         <h1 style={headerTitleStyle}>My Recipe App</h1>
       </div>
     )

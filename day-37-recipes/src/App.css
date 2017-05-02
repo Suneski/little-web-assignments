@@ -50,3 +50,8 @@ table {
 .App {
 	min-height: 1200px;
 }
+
+.chefPic {
+	width: 30px;
+	float: right;
+}

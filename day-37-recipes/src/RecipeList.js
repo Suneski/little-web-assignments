@@ -1,7 +1,7 @@
 import React from 'react';
 
 let recipeListStyle = {
-  width: "48%",
+  width: "47%",
   minHeight: "700px",
   padding: "10px",
   float: "left",

@@ -1,7 +1,7 @@
 import React from 'react';
 
 let filterStyle = {
-  width: "49%",
+  width: "47%",
   minHeight: "700px",
   float: "left",
   padding: "20px 5px"

@@ -13,7 +13,7 @@ class Footer extends React.Component {
     return (
       <div style={footerStyle}>
         This app is built with
-        <img style={{width: "300px"}} src="images/recipepuppy.png" />
+        <img style={{width: "300px"}} src="images/recipepuppy.png" alt="recipe puppy logo"/>
       </div>
     )
   }

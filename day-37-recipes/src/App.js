@@ -12,6 +12,7 @@ let appContainerStyle = {
   padding: "0 15px",
   borderLeft: "1px solid black",
   borderRight: "1px solid black",
+  borderBottom: "1px solid black",
   overflow: "auto"
 }
 

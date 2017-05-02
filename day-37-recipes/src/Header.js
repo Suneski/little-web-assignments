@@ -4,7 +4,8 @@ let headerStyle = {
   backgroundColor: "black",
   color: "white",
   fontSize: "40px",
-  height: "100px"
+  padding: "10px 15px",
+  height: "50px"
 }
 
 class Header extends React.Component {
@@ -12,7 +13,7 @@ class Header extends React.Component {
   render() {
     return (
       <div style={headerStyle}>
-        <p>header</p>
+        My Recipe App
       </div>
     )
   }

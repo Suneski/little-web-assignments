@@ -1,18 +1,18 @@
 import React from 'react';
 
 let queryStyle = {
-  backgroundColor: "grey",
   fontSize: "20px",
-  padding: "5px"
+  padding: "30px 0 10px 0",
+  borderBottom: "2px solid black"
 }
 
 class Query extends React.Component {
   render() {
     return (
       <div style={queryStyle}>
-        <input />
+        <input placeholder="search"/>
       </div>
-    )
+    );
   }
 }
 

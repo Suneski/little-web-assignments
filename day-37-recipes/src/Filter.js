@@ -1,19 +1,37 @@
 import React from 'react';
 
 let filterStyle = {
-  backgroundColor: "purple",
-  width: "50%",
+  width: "49%",
   minHeight: "700px",
-  float: "left"
+  float: "left",
+  padding: "20px 5px"
+}
+
+let inputStyle = {
+  margin: "10px"
+}
+
+let filterListItem = {
+  margin: "10px",
+  border: "1px solid grey"
 }
 
 class Filter extends React.Component {
   render() {
+    console.log('Where are my filters?', this.props);
+
+    const filterItems = this.props.filters.map((x, i) => <li style={filterListItem} key={i + x}>{x}</li>)
+
     return (
       <div style={filterStyle}>
-        <p>filter</p>
+        <p>Would you also like to filter by ingredients?</p>
+        <input placeholder="ingredient" style={inputStyle}/>
+        <ol>
+          {filterItems}
+        </ol>
       </div>
-    )
+
+    );
   }
 }
 

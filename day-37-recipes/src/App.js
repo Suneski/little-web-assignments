@@ -36,13 +36,22 @@ class App extends Component {
       console.log("do I have data", data);
 
       let mappedArray = data.results.map((x) => {
-
-        return {
-          thumbnail: x.thumbnail,
-          href: x.href,
-          title: x.title,
-          ingredients: x.ingredients
-        };
+        if (x.thumbnail === '') {
+          return {
+            thumbnail: "images/no-image.png",
+            href: x.href,
+            title: x.title,
+            ingredients: x.ingredients
+          };
+        }
+        else {
+          return {
+            thumbnail: x.thumbnail,
+            href: x.href,
+            title: x.title,
+            ingredients: x.ingredients
+          };
+        }
       })
 
       this.setState ({

@@ -12,7 +12,7 @@ let appContainerStyle = {
   padding: "0 15px",
   borderLeft: "1px solid black",
   borderRight: "1px solid black",
-  borderBottom: "1px solid black"
+  overflow: "auto"
 }
 
 class App extends Component {
@@ -52,8 +52,8 @@ class App extends Component {
           <Query />
           <RecipeList recipes={this.state.recipes} />
           <Filter filters={this.state.filters} />
-          <Footer />
         </div>
+        <Footer />
       </div>
     );
   }

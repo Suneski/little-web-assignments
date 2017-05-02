@@ -1,7 +1,7 @@
 import React from 'react';
 
 let headerStyle = {
-  backgroundColor: "black",
+  backgroundColor: "rgb(34, 34, 34)",
   color: "white",
   fontSize: "40px",
   padding: "10px 15px",
@@ -18,7 +18,7 @@ class Header extends React.Component {
   render() {
     return (
       <div style={headerStyle}>
-        <img src="images/chef.png" className="chefPic"/>
+        <img src="images/chef.png" className="chefPic" alt="chef"/>
         <h1 style={headerTitleStyle}>My Recipe App</h1>
       </div>
     )

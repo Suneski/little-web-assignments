@@ -89,7 +89,7 @@ class Select extends React.Component {
       <div className="player">
         <p>Character Name: <input type="text" onChange={(e) => this.handleChangeName(e)}/></p>
         <form>
-          <p>Job Class: <select value={this.state.value} onChange={this.handleChange}>
+          <p>Job Class: <select onChange={this.handleChange}>
             <option value="fighter">Fighter</option>
             <option value="blackbelt">Black Belt</option>
             <option value="thief">Thief</option>

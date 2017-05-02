@@ -18,6 +18,14 @@ let filterListItem = {
 }
 
 class Filter extends React.Component {
+  filterQuery(evt) {
+    if (evt.keyCode === 13) {
+      console.log(evt.target.value);
+      evt.target.value = '';
+    }
+  }
+
+
   render() {
     console.log('Where are my filters?', this.props);
 
@@ -26,7 +34,7 @@ class Filter extends React.Component {
     return (
       <div style={filterStyle}>
         <p>Would you also like to filter by ingredients?</p>
-        <input placeholder="ingredient" style={inputStyle}/>
+        <input placeholder="ingredient" style={inputStyle} onKeyUp={this.filterQuery}/>
         <ol>
           {filterItems}
         </ol>

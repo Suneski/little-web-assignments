@@ -7,7 +7,7 @@ import Footer from './Footer';
 import './App.css';
 
 let appContainerStyle = {
-  width: "70%",
+  width: "55%",
   margin: "0 auto",
   padding: "0 15px",
   borderLeft: "1px solid black",
@@ -52,8 +52,8 @@ class App extends Component {
           <Query />
           <RecipeList recipes={this.state.recipes} />
           <Filter filters={this.state.filters} />
+          <Footer />
         </div>
-        <Footer />
       </div>
     );
   }

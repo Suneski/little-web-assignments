@@ -3,12 +3,12 @@ import React from 'react';
 let recipeListStyle = {
   width: "47%",
   minHeight: "700px",
-  padding: "10px",
-  float: "left",
+  paddingRight: "20px",
+  float: "left"
 }
 
 let listItemStyle = {
-  border: "1px solid grey",
+  border: "1px solid rgba(138, 138, 138, 0.47)",
   padding: "5px",
   overflow: "auto",
   margin: "10px 0"

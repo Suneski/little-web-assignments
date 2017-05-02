@@ -1,18 +1,19 @@
 import React from 'react';
 
 let footerStyle = {
-  backgroundColor: "black",
-  color: "white",
-  fontSize: "40px",
-  height: "50px",
-  clear: "both"
+  fontSize: "15px",
+  height: "120px",
+  clear: "both",
+  padding: "20px 0",
+  borderTop: "2px solid grey"
 }
 
 class Footer extends React.Component {
   render() {
     return (
       <div style={footerStyle}>
-        <p>footer</p>
+        This app is built with
+        <img style={{width: "300px"}} src="images/recipepuppy.png" />
       </div>
     )
   }

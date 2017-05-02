@@ -3,7 +3,7 @@ import React from 'react';
 let queryStyle = {
   fontSize: "20px",
   padding: "30px 0 10px 0",
-  borderBottom: "2px solid black"
+  borderBottom: "2px solid grey"
 }
 
 class Query extends React.Component {

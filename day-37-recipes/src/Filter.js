@@ -8,12 +8,13 @@ let filterStyle = {
 }
 
 let inputStyle = {
-  margin: "10px"
+  margin: "10px 0"
 }
 
 let filterListItem = {
-  margin: "10px",
-  border: "1px solid grey"
+  margin: "10px 0",
+  padding: "10px",
+  border: "1px solid rgba(138, 138, 138, 0.47)"
 }
 
 class Filter extends React.Component {

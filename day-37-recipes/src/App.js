@@ -23,13 +23,22 @@ class App extends Component {
 
     this.state={
       recipes: [],
-      filters: ['potatoes', 'ketchup', 'molasses']
+      filters: [],
+      recipeQueryValue: '',
+      filterQueryValue: '',
+      query: ''
     }
+
+    this.foodQueryValueChange = this.foodQueryValueChange.bind(this);
+    this.foodQueryValueComplete = this.foodQueryValueComplete.bind(this);
+    this.filterQueryValueChange = this.filterQueryValueChange.bind(this);
+    this.filterQueryValueComplete = this.filterQueryValueComplete.bind(this);
+
   }
 
   makeAjaxCall() {
     $.ajax({
-      url: "/api/?i=onions,ketchup&q=steak"
+      url: `/api/?i=${this.state.filters}&q=${this.state.query}`
     })
     .done((data) => {
       data = JSON.parse(data);
@@ -60,6 +69,42 @@ class App extends Component {
     });
   }
 
+  foodQueryValueChange(value) {
+    this.setState({
+      recipeQueryValue: value
+    });
+  }
+
+  foodQueryValueComplete() {
+    this.setState({
+        recipeQueryValue: '',
+        query: this.state.recipeQueryValue
+      },
+      () => this.makeAjaxCall()
+    );
+  }
+
+
+
+  filterQueryValueChange(value) {
+    this.setState({
+      filterQueryValue: value
+    });
+  }
+
+  filterQueryValueComplete() {
+    let copy = this.state.filters.slice();
+    copy.push(this.state.filterQueryValue);
+
+    this.setState({
+        filters: copy,
+        filterQueryValue: ''
+      },
+      () => this.makeAjaxCall()
+    );
+  }
+
+
   componentDidMount() {
     console.log("ajax here");
 
@@ -71,9 +116,18 @@ class App extends Component {
       <div className="App">
         <Header />
         <div className="AppContainer" style={appContainerStyle}>
-          <Query />
+          <Query
+            inputValue={this.state.recipeQueryValue}
+            onInputChange={this.foodQueryValueChange}
+            onInputComplete={this.foodQueryValueComplete}
+          />
           <RecipeList recipes={this.state.recipes} />
-          <Filter filters={this.state.filters} />
+          <Filter
+            filters={this.state.filters}
+            inputValue={this.state.filterQueryValue}
+            onInputChange={this.filterQueryValueChange}
+            onInputComplete={this.filterQueryValueComplete}
+          />
           <Footer />
         </div>
       </div>

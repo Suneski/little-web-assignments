@@ -9,10 +9,9 @@ let queryStyle = {
 
 
 class Query extends React.Component {
-  foodQuery(evt) {
+  foodQueryChange(evt) {
     if (evt.keyCode === 13) {
-      console.log(evt.target.value);
-      evt.target.value = '';
+      this.props.onInputComplete();
     }
   }
 
@@ -21,9 +20,9 @@ class Query extends React.Component {
       <div style={queryStyle}>
         <input
           placeholder="search"
-          onKeyUp={this.foodQuery}
-
-        />
+          value={this.props.inputValue}
+          onChange={(evt) => this.props.onInputChange(evt.target.value)}
+          onKeyUp={(evt) => this.foodQueryChange(evt)} />
       </div>
     );
   }

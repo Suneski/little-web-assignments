@@ -20,21 +20,23 @@ let filterListItem = {
 class Filter extends React.Component {
   filterQuery(evt) {
     if (evt.keyCode === 13) {
-      console.log(evt.target.value);
-      evt.target.value = '';
+      this.props.onInputComplete();
     }
   }
 
 
   render() {
-    console.log('Where are my filters?', this.props);
 
     const filterItems = this.props.filters.map((x, i) => <li style={filterListItem} key={i + x}>{x}</li>)
 
     return (
       <div style={filterStyle}>
         <p>Would you also like to filter by ingredients?</p>
-        <input placeholder="ingredient" style={inputStyle} onKeyUp={this.filterQuery}/>
+        <input
+          placeholder="ingredient"
+          style={inputStyle}
+          onChange={(evt) => this.props.onInputChange(evt.target.value)}
+          onKeyUp={(evt) => this.filterQuery(evt)} />
         <ol>
           {filterItems}
         </ol>

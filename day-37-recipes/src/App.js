@@ -33,7 +33,7 @@ class App extends Component {
     this.foodQueryValueComplete = this.foodQueryValueComplete.bind(this);
     this.filterQueryValueChange = this.filterQueryValueChange.bind(this);
     this.filterQueryValueComplete = this.filterQueryValueComplete.bind(this);
-
+    this.removeFromList = this.removeFromList.bind(this);
   }
 
   makeAjaxCall() {
@@ -104,6 +104,14 @@ class App extends Component {
     );
   }
 
+  removeFromList(index) {
+    let copy = this.state.filters.slice();
+    copy.splice(index, 1);
+    this.setState({
+      filters: copy
+    })
+  }
+
 
   componentDidMount() {
     console.log("ajax here");
@@ -127,6 +135,7 @@ class App extends Component {
             inputValue={this.state.filterQueryValue}
             onInputChange={this.filterQueryValueChange}
             onInputComplete={this.filterQueryValueComplete}
+            onRemove={this.removeFromList}
           />
           <Footer />
         </div>

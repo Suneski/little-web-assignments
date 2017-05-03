@@ -24,16 +24,22 @@ class Filter extends React.Component {
     }
   }
 
+  removeLI(index) {
+    this.props.onRemove(index);
+    console.log(this.props.filters);
+  }
+
 
   render() {
 
-    const filterItems = this.props.filters.map((x, i) => <li style={filterListItem} key={i + x}>{x}</li>)
+    const filterItems = this.props.filters.map((x, i) => <li style={filterListItem} key={i + x} onClick={() => this.removeLI(i)}>{x}</li>)
 
     return (
       <div style={filterStyle}>
         <p>Would you also like to filter by ingredients?</p>
         <input
           placeholder="ingredient"
+          value={this.props.inputValue}
           style={inputStyle}
           onChange={(evt) => this.props.onInputChange(evt.target.value)}
           onKeyUp={(evt) => this.filterQuery(evt)} />

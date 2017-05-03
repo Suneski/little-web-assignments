@@ -18,7 +18,11 @@ class Recipe extends React.Component {
   render() {
     return (
       <li style={listItemStyle}>
-        <img src={this.props.thumbnail} style={{float: "left"}} alt={this.props.title}/>
+        <img
+          src={this.props.thumbnail}
+          style={{float: "left"}}
+          alt={this.props.title}
+        />
         <a href={this.props.href} style={{fontWeight: "bold"}}>{this.props.title}</a>
         <p>Ingredients: {this.props.ingredients}</p>
       </li>

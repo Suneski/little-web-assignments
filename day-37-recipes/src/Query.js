@@ -19,7 +19,11 @@ class Query extends React.Component {
   render() {
     return (
       <div style={queryStyle}>
-        <input placeholder="search" onKeyUp={this.foodQuery} />
+        <input
+          placeholder="search"
+          onKeyUp={this.foodQuery}
+
+        />
       </div>
     );
   }

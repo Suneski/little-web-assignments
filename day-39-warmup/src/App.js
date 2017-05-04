@@ -37,11 +37,12 @@ class App extends Component {
       <Router>
         <div className="App">
           <Navigation />
-          <div className="bufferzone"></div>
           <Switch>
-            <Route path="/" exact component={Home} />
-            <Route path="/secondpage" component={SecondPage} />
-            <Route path="/thirdpage" component={ThirdPage} />
+            <div className="content">
+              <Route path="/" exact component={Home} />
+              <Route path="/secondpage" component={SecondPage} />
+              <Route path="/thirdpage" component={ThirdPage} />
+            </div>
           </Switch>
         </div>
       </Router>

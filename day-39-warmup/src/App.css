@@ -76,6 +76,6 @@ div {
   clear: both;
 }
 
-.bufferzone {
-  height: 10px;
+.content {
+  margin-top: 10px;
 }

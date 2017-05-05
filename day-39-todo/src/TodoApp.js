@@ -75,7 +75,7 @@ class TodoApp extends React.Component {
 
     return (
       <div className="todoapp">
-        <input
+        Add To-Do Item: <input
           onKeyUp={(evt) => this.handleKeyUp(evt)}
           onChange={(evt) => this.handleChange(evt)}
           value={this.state.inputValue}

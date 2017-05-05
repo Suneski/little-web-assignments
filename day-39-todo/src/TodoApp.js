@@ -9,7 +9,8 @@ class TodoApp extends React.Component {
     super();
 
     this.state = {
-      inputValue: ''
+      inputValue: '',
+      items: []
     };
   }
 
@@ -21,7 +22,11 @@ class TodoApp extends React.Component {
     })
     .done((data) => {
       console.log('What data do I have?', data);
+      this.setState({
+        items: data.items
+      })
     });
+
   }
 
 
@@ -35,7 +40,7 @@ class TodoApp extends React.Component {
       }
     })
     .done((data) => {
-      console.log('what do i get back?', data)
+      console.log('what do i get back?', data);
     });
   }
 
@@ -55,6 +60,8 @@ class TodoApp extends React.Component {
   }
 
   render() {
+    let items = this.state.items.map((x, i) => <li key={x.id}>{x.text}</li>)
+
     return (
       <div>
         <input
@@ -62,6 +69,9 @@ class TodoApp extends React.Component {
           onChange={(evt) => this.handleChange(evt)}
           value={this.state.inputValue}
         />
+        <ol>
+          {items}
+        </ol>
       </div>
     );
   }

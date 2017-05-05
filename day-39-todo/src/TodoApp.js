@@ -1,7 +1,10 @@
 import React from 'react';
 import $ from 'jquery';
 
+import Api from './Api.js';
+
 const bucketId = '947daa5b-4ea5-4ca4-a503-fc4a509acbae';
+const baseUrl = 'https://spiffy-todo-api.herokuapp.com/api/';
 
 class TodoApp extends React.Component {
 
@@ -14,48 +17,22 @@ class TodoApp extends React.Component {
     };
   }
 
-  reRunAjax() {
-    $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
-    })
-    .done((data) => {
-      // console.log('What data do I have?', data);
-      this.setState({
-        items: data.items
-      })
-    });
-  }
-
   refreshData() {
-    $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
-    })
-    .done((data) => {
-      // console.log('What data do I have?', data);
+    const cb = (data) => {
       this.setState({
         items: data.items
-      })
-    });
+      });
+    };
+
+    Api.refreshData(cb);
   }
 
   componentDidMount() {
     this.refreshData();
   }
 
-
   createNewItem(inputText) {
-    //ajax call to save data
-    $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/item?bucketId=${bucketId}`,
-      method: 'POST',
-      data: {
-        text: inputText
-      }
-    })
-    .done((data) => {
-      console.log('what do i get back?', data);
-    });
-    this.refreshData();
+    Api.createNewItem(inputText, () => this.refreshData());
   }
 
   handleKeyUp(evt) {
@@ -73,19 +50,14 @@ class TodoApp extends React.Component {
     });
   }
 
-  removeFromList(id) {
-    $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}?bucketId=${bucketId}`,
-      method: 'DELETE'
-    })
-    .done((data) => {
-      this.refreshData();
-    });
+  removeFromList(id, evt) {
+    evt.stopPropagation();
+    Api.removeFromList(id, () => this.refreshData());
   }
 
   markAsComplete(id) {
     $.ajax({
-      url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}/togglestatus?bucketId=${bucketId}`,
+      url: `${baseUrl}item/${id}/togglestatus?bucketId=${bucketId}`,
       method: 'POST'
     })
     .done((data) => {
@@ -97,7 +69,7 @@ class TodoApp extends React.Component {
     const items = this.state.items.map((x, i) => {
       return <li key={x.id} className={x.isComplete} onClick={() => this.markAsComplete(x.id)}>
         {x.text}
-        <button onClick={() => this.removeFromList(x.id)}>Delete</button>
+        <button onClick={(evt) => this.removeFromList(x.id, evt)}>Delete</button>
       </li>
     })
 

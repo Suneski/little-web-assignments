@@ -74,13 +74,13 @@ class TodoApp extends React.Component {
     })
 
     return (
-      <div>
+      <div className="todoapp">
         <input
           onKeyUp={(evt) => this.handleKeyUp(evt)}
           onChange={(evt) => this.handleChange(evt)}
           value={this.state.inputValue}
         />
-        <ol>
+        <ol className="toDoList">
           {items}
         </ol>
       </div>

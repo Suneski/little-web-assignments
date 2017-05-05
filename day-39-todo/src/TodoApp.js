@@ -19,7 +19,7 @@ class TodoApp extends React.Component {
       url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
     })
     .done((data) => {
-      console.log('What data do I have?', data);
+      // console.log('What data do I have?', data);
       this.setState({
         items: data.items
       })
@@ -31,7 +31,7 @@ class TodoApp extends React.Component {
       url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
     })
     .done((data) => {
-      console.log('What data do I have?', data);
+      // console.log('What data do I have?', data);
       this.setState({
         items: data.items
       })
@@ -73,8 +73,33 @@ class TodoApp extends React.Component {
     });
   }
 
+  removeFromList(id) {
+    $.ajax({
+      url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}?bucketId=${bucketId}`,
+      method: 'DELETE'
+    })
+    .done((data) => {
+      this.refreshData();
+    });
+  }
+
+  markAsComplete(id) {
+    $.ajax({
+      url: `https://spiffy-todo-api.herokuapp.com/api/item/${id}/togglestatus?bucketId=${bucketId}`,
+      method: 'POST'
+    })
+    .done((data) => {
+      this.refreshData();
+    });
+  }
+
   render() {
-    let items = this.state.items.map((x, i) => <li key={x.id}>{x.text}</li>)
+    const items = this.state.items.map((x, i) => {
+      return <li key={x.id} className={x.isComplete} onClick={() => this.markAsComplete(x.id)}>
+        {x.text}
+        <button onClick={() => this.removeFromList(x.id)}>Delete</button>
+      </li>
+    })
 
     return (
       <div>

@@ -14,9 +14,7 @@ class TodoApp extends React.Component {
     };
   }
 
-
-
-  componentDidMount() {
+  reRunAjax() {
     $.ajax({
       url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
     })
@@ -26,7 +24,22 @@ class TodoApp extends React.Component {
         items: data.items
       })
     });
+  }
 
+  refreshData() {
+    $.ajax({
+      url: `https://spiffy-todo-api.herokuapp.com/api/items?bucketId=${bucketId}`
+    })
+    .done((data) => {
+      console.log('What data do I have?', data);
+      this.setState({
+        items: data.items
+      })
+    });
+  }
+
+  componentDidMount() {
+    this.refreshData();
   }
 
 
@@ -42,6 +55,7 @@ class TodoApp extends React.Component {
     .done((data) => {
       console.log('what do i get back?', data);
     });
+    this.refreshData();
   }
 
   handleKeyUp(evt) {

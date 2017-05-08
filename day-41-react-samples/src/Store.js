@@ -32,7 +32,9 @@ var store = createStore(counterReducer);
 
 module.exports = {
   store: store,
-  DECREMENT: DECREMENT,
-  INCREMENT: INCREMENT,
-  RESET: RESET
+  actions: {
+    DECREMENT: DECREMENT,
+    INCREMENT: INCREMENT,
+    RESET: RESET
+  }
 };

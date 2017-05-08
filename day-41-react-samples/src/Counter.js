@@ -3,11 +3,13 @@ import { createStore } from 'redux';
 
 var constants = {
   INCREMENT: 'INCREMENT',
-  DECREMENT: 'DECREMENT'
+  DECREMENT: 'DECREMENT',
+  RESET: 'RESET'
 };
 
 const INCREMENT = { type: 'constants.INCREMENT' };
 const DECREMENT = { type: 'constants.DECREMENT' };
+const RESET = { type: 'constants.RESET' };
 
 const counterReducer = (state = { number: 0 }, action) => {
 
@@ -16,6 +18,8 @@ const counterReducer = (state = { number: 0 }, action) => {
       return { number: state.number + 1 };
     case 'constants.DECREMENT':
       return { number: state.number - 1 };
+    case 'constants.RESET':
+      return { number: 0 };
   }
 
   return state;
@@ -57,12 +61,17 @@ class Counter extends React.Component {
     // })
   }
 
+  resetButton() {
+    store.dispatch(RESET);
+  }
+
   render() {
     return (
       <div>
         <button onClick={() => this.goDown()}>-</button>
         <div>{this.state.number}</div>
         <button onClick={() => this.goUp()}>+</button>
+        <button onClick={() => this.resetButton()}>RESET</button>
       </div>
     );
   }

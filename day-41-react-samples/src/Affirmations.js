@@ -6,24 +6,32 @@ var constants = {
   NEXT: 'NEXT'
 };
 
-var affs = [
-  "Term 0",
-  "Term 1",
-  "Term 2",
-  "Term 3",
-  "Term 4",
-  "Term 5",
-]
-
 const PREVIOUS = { type: constants.PREVIOUS };
 const NEXT = { type: constants.NEXT };
 
-const counterReducer = (state = { number: 0 }, action) => {
+const counterReducer = (state = { number: 0, messages: [
+  "Today is Monday",
+  "I'm wearing shorts",
+  "My wife didn't believe the Mexican place down the street had awesome fries, but I proved her wrong on Saturday!",
+  "My cat bit my toes last night, again",
+  "I may wear jeans tomorrow.",
+  "-insert message here-"]
+  }, action) => {
   switch(action.type) {
     case constants.PREVIOUS:
+    if (state.number > 0) {
       return { number: state.number - 1 }
+    }
+    else {
+      return { number: 5 }
+    }
     case constants.NEXT:
-      return { number: state.number + 1 }
+      if (state.number < 5) {
+        return { number: state.number + 1 }
+      }
+      else {
+        return { number: 0 }
+      }
   }
   return state;
 }
@@ -47,7 +55,7 @@ class Affirmations extends React.Component {
   render() {
     return (
       <div>
-        <div>{this.state.number}</div>
+        <div>{this.state.messages[this.state.number]}</div>
         <button onClick={() => store.dispatch(PREVIOUS)}>PREVIOUS</button>
         <button onClick={() => store.dispatch(NEXT)}>NEXT</button>
       </div>

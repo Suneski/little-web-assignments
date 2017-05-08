@@ -7,18 +7,18 @@ var constants = {
   RESET: 'RESET'
 };
 
-const INCREMENT = { type: 'constants.INCREMENT' };
-const DECREMENT = { type: 'constants.DECREMENT' };
-const RESET = { type: 'constants.RESET' };
+const INCREMENT = { type: constants.INCREMENT };
+const DECREMENT = { type: constants.DECREMENT };
+const RESET = { type: constants.RESET };
 
 const counterReducer = (state = { number: 0 }, action) => {
 
   switch(action.type) {
-    case 'constants.INCREMENT':
+    case constants.INCREMENT:
       return { number: state.number + 1 };
-    case 'constants.DECREMENT':
+    case constants.DECREMENT:
       return { number: state.number - 1 };
-    case 'constants.RESET':
+    case constants.RESET:
       return { number: 0 };
   }
 

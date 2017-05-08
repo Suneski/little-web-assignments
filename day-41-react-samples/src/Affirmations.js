@@ -9,28 +9,33 @@ var constants = {
 const PREVIOUS = { type: constants.PREVIOUS };
 const NEXT = { type: constants.NEXT };
 
-const counterReducer = (state = { number: 0, messages: [
-  "Today is Monday",
-  "I'm wearing shorts",
-  "My wife didn't believe the Mexican place down the street had awesome fries, but I proved her wrong on Saturday!",
-  "My cat bit my toes last night, again",
-  "I may wear jeans tomorrow.",
-  "-insert message here-"]
-  }, action) => {
+const myInfo = {
+  number: 0,
+  messages: [
+    "Today is Monday",
+    "I'm wearing shorts",
+    "My wife didn't believe the Mexican place down the street had awesome fries, but I proved her wrong on Saturday!",
+    "My cat bit my toes last night, again",
+    "I may wear jeans tomorrow.",
+    "-insert message here-"
+  ]
+}
+
+const counterReducer = (state = myInfo, action) => {
   switch(action.type) {
     case constants.PREVIOUS:
     if (state.number > 0) {
-      return { number: state.number - 1 }
+      return { number: state.number - 1, messages: state.messages }
     }
     else {
-      return { number: 5 }
+      return { number: state.messages.length - 1, messages: state.messages  }
     }
     case constants.NEXT:
-      if (state.number < 5) {
-        return { number: state.number + 1 }
+      if (state.number < state.messages.length - 1) {
+        return { number: state.number + 1, messages: state.messages }
       }
       else {
-        return { number: 0 }
+        return { number: 0, messages: state.messages }
       }
   }
   return state;

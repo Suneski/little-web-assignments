@@ -24,18 +24,26 @@ const myInfo = {
 const counterReducer = (state = myInfo, action) => {
   switch(action.type) {
     case constants.PREVIOUS:
-    if (state.number > 0) {
-      return { number: state.number - 1, messages: state.messages }
-    }
-    else {
-      return { number: state.messages.length - 1, messages: state.messages  }
-    }
-    case constants.NEXT:
-      if (state.number < state.messages.length - 1) {
-        return { number: state.number + 1, messages: state.messages }
+      if (state.number > 0) {
+        return Object.assign({}, state, {
+          number: state.number - 1
+        });
       }
       else {
-        return { number: 0, messages: state.messages }
+        return Object.assign({}, state, {
+          number: state.messages.length - 1
+        });
+      }
+    case constants.NEXT:
+      if (state.number < state.messages.length - 1) {
+        return Object.assign({}, state, {
+          number: state.number + 1
+        });
+      }
+      else {
+        return Object.assign({}, state, {
+          number: 0
+        });
       }
   }
   return state;

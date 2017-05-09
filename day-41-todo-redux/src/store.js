@@ -6,7 +6,7 @@ var initialState = {
 };
 
 const reducer = (state = initialState, action) => {
-  console.log('reducer running check', action);
+  // console.log('reducer running check', action);
 
   switch (action.type) {
     case 'VALUE_CHANGE':

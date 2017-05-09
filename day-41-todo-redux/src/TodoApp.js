@@ -7,15 +7,10 @@ const bucketId = '5730a3d7-99df-4692-b188-d34689579a20';
 const baseUrl = 'https://spiffy-todo-api.herokuapp.com/api/';
 
 class TodoApp extends React.Component {
-
   constructor() {
     super();
 
     this.state = store.getState();
-  }
-
-  componentDidMount() {
-    store.subscribe(() => this.setState(store.getState()));
   }
 
   refreshData() {
@@ -28,7 +23,10 @@ class TodoApp extends React.Component {
     Api.refreshData(cb);
   }
 
-
+  componentDidMount() {
+    store.subscribe(() => this.setState(store.getState()));
+    Api.refreshData();
+  }
 
   createNewItem(inputText) {
     Api.createNewItem(inputText, () => this.refreshData());

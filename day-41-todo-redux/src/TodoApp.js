@@ -14,22 +14,14 @@ class TodoApp extends React.Component {
     this.state = store.getState();
   }
 
-  refreshData() {
-    Api.refreshData();
-  }
-
   componentDidMount() {
     store.subscribe(() => this.setState(store.getState()));
     Api.refreshData();
   }
 
-  createNewItem(inputText) {
-    Api.createNewItem(inputText, () => this.refreshData());
-  }
-
   handleKeyUp(evt) {
     if (evt.keyCode === 13) {
-      this.createNewItem(this.state.inputValue);
+      Api.createNewItem(this.state.inputValue, () => Api.refreshData());
       const action = { type: 'CLEAR_INPUT' };
       store.dispatch(action);
     }
@@ -42,7 +34,7 @@ class TodoApp extends React.Component {
 
   removeFromList(id, evt) {
     evt.stopPropagation();
-    Api.removeFromList(id, () => this.refreshData());
+    Api.removeFromList(id, () => Api.refreshData());
   }
 
   markAsComplete(id) {
@@ -51,7 +43,7 @@ class TodoApp extends React.Component {
       method: 'POST'
     })
     .done((data) => {
-      this.refreshData();
+      Api.refreshData();
     });
   }
 

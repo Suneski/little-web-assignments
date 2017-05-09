@@ -6,7 +6,7 @@ const baseUrl = 'https://spiffy-todo-api.herokuapp.com/api/';
 
 const Api = {
 
-  refreshData: function(cb) {
+  refreshData: function() {
     $.ajax({
       url: `${baseUrl}items?bucketId=${bucketId}`
     })

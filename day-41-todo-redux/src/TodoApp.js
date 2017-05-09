@@ -1,6 +1,6 @@
 import React from 'react';
 import $ from 'jquery';
-
+import { store } from './store.js';
 import Api from './Api.js';
 
 const bucketId = '5730a3d7-99df-4692-b188-d34689579a20';
@@ -11,10 +11,11 @@ class TodoApp extends React.Component {
   constructor() {
     super();
 
-    this.state = {
-      inputValue: '',
-      items: []
-    };
+    this.state = store.getState();
+  }
+
+  componentDidMount() {
+    store.subscribe(() => this.setState(store.getState()));
   }
 
   refreshData() {
@@ -27,9 +28,7 @@ class TodoApp extends React.Component {
     Api.refreshData(cb);
   }
 
-  componentDidMount() {
-    this.refreshData();
-  }
+
 
   createNewItem(inputText) {
     Api.createNewItem(inputText, () => this.refreshData());
@@ -45,9 +44,8 @@ class TodoApp extends React.Component {
   }
 
   handleChange(evt) {
-    this.setState({
-      inputValue: evt.target.value
-    });
+    const action = { type: 'VALUE_CHANGE', value: evt.target.value };
+    store.dispatch(action);
   }
 
   removeFromList(id, evt) {

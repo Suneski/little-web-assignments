@@ -10,9 +10,11 @@ const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case 'VALUE_CHANGE':
-      return { inputValue: action.value }
+      return Object.assign({}, state, { inputValue: action.value })
     case 'UPDATE_TODO':
-      return { inputValue: '', items: action.items }
+      return Object.assign({}, state, { inputValue: '', items: action.items })
+    case 'CLEAR_INPUT':
+      return Object.assign({}, state, { inputValue: '' })
     default: return state
   }
 }

@@ -36,9 +36,8 @@ class TodoApp extends React.Component {
   handleKeyUp(evt) {
     if (evt.keyCode === 13) {
       this.createNewItem(this.state.inputValue);
-      this.setState({
-        inputValue: ''
-      });
+      const action = { type: 'CLEAR_INPUT' };
+      store.dispatch(action);
     }
   }
 

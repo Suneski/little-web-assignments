@@ -15,13 +15,7 @@ class TodoApp extends React.Component {
   }
 
   refreshData() {
-    const cb = (data) => {
-      this.setState({
-        items: data.items
-      });
-    };
-
-    Api.refreshData(cb);
+    Api.refreshData();
   }
 
   componentDidMount() {

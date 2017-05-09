@@ -10,7 +10,7 @@ const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case 'VALUE_CHANGE':
-      return { inputValue: action.value, items: [] }
+      return { inputValue: action.value }
     case 'UPDATE_TODO':
       return { inputValue: '', items: action.items }
     default: return state

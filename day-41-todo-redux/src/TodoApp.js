@@ -2,6 +2,7 @@ import React from 'react';
 import $ from 'jquery';
 import { store } from './store.js';
 import Api from './Api.js';
+import './TodoApp.css';
 
 const bucketId = '5730a3d7-99df-4692-b188-d34689579a20';
 const baseUrl = 'https://spiffy-todo-api.herokuapp.com/api/';

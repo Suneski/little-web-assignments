@@ -6,6 +6,7 @@ import Filter from './Filter';
 import Footer from './Footer';
 import './App.css';
 import $ from 'jquery';
+import store from './store.js'
 
 let appContainerStyle = {
   width: "55%",
@@ -21,19 +22,17 @@ class App extends Component {
   constructor() {
     super();
 
-    this.state={
-      recipes: [],
-      filters: [],
-      recipeQueryValue: '',
-      filterQueryValue: '',
-      query: ''
-    }
+    this.state = store.getState();
 
     this.foodQueryValueChange = this.foodQueryValueChange.bind(this);
     this.foodQueryValueComplete = this.foodQueryValueComplete.bind(this);
     this.filterQueryValueChange = this.filterQueryValueChange.bind(this);
     this.filterQueryValueComplete = this.filterQueryValueComplete.bind(this);
     this.removeFromList = this.removeFromList.bind(this);
+  }
+
+  componentDidMount() {
+    store.subscribe(() => this.setState(store.getState()));
   }
 
   makeAjaxCall() {
@@ -63,45 +62,50 @@ class App extends Component {
         }
       })
 
-      this.setState ({
-        recipes: mappedArray
-      });
+      const action = { type: 'CHANGE_RECIPE_LIST', list: mappedArray };
+      store.dispatch(action);
     });
   }
 
-  foodQueryValueChange(value) {
-    this.setState({
-      recipeQueryValue: value
-    });
+  foodQueryValueChange(val) {
+    // this.setState({
+    //   recipeQueryValue: value
+    // });
+    const action = { type: 'CHANGE_INPUT', value: val }
+    store.dispatch(action);
   }
 
   foodQueryValueComplete() {
-    this.setState({
-        recipeQueryValue: '',
-        query: this.state.recipeQueryValue
-      },
-      () => this.makeAjaxCall()
-    );
+    store.dispatch({ type: 'SEARCH' });
+    this.makeAjaxCall();
+    // this.setState({
+    //     recipeQueryValue: '',
+    //     query: this.state.recipeQueryValue
+    //   },
+    //   () => this.makeAjaxCall()
+    // );
   }
 
 
 
-  filterQueryValueChange(value) {
-    this.setState({
-      filterQueryValue: value
-    });
+  filterQueryValueChange(val) {
+    // this.setState({
+    //   filterQueryValue: value
+    // });
+    store.dispatch({ type: 'CHANGE_FILTER_INPUT', value: val });
   }
 
   filterQueryValueComplete() {
-    let copy = this.state.filters.slice();
-    copy.push(this.state.filterQueryValue);
-
-    this.setState({
-        filters: copy,
-        filterQueryValue: ''
-      },
-      () => this.makeAjaxCall()
-    );
+    // let copy = this.state.filters.slice();
+    // copy.push(this.state.filterQueryValue);
+    //
+    // this.setState({
+    //     filters: copy,
+    //     filterQueryValue: ''
+    //   },
+    //   () => this.makeAjaxCall()
+    // );
+    store.dispatch({ type: 'ADD_FILTER' });
   }
 
   removeFromList(index) {
@@ -120,6 +124,7 @@ class App extends Component {
   }
 
   render() {
+    console.log(this.state);
     return (
       <div className="App">
         <Header />

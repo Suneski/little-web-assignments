@@ -117,12 +117,6 @@ class App extends Component {
   }
 
 
-  componentDidMount() {
-    console.log("ajax here");
-
-    this.makeAjaxCall();
-  }
-
   render() {
     console.log(this.state);
     return (

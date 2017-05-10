@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import './App.css';
 import { store } from './store.js';
 import api from './Api.js';
+import Mimicker from './Mimicker.js'
+import Mimicker2 from './Mimicker2.js'
 
 console.log('what is in api?', api);
 
@@ -40,9 +42,17 @@ class App extends Component {
           onChange={(evt) => this.handleChange(evt)}
           onKeyUp={(evt) => this.handleKeyUp(evt)}
         />
-      <ol>
-        {items}
-      </ol>
+        <ol>
+          {items}
+        </ol>
+
+        <hr />
+
+        <Mimicker />
+
+        <hr />
+
+        <Mimicker2 />
       </div>
     );
   }

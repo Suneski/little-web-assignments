@@ -21,11 +21,18 @@ class Counter extends React.Component {
     })
   }
 
+  backToZero() {
+    this.setState ({
+      number: 0
+    })
+  }
+
   render() {
     return (
       <div>
+        <div>{this.state.number}</div>
         <button onClick={() => this.subtractOne()}>-</button>
-        {this.state.number}
+        <button onClick={() => this.backToZero()}>RESET</button>
         <button onClick={() => this.addOne()}>+</button>
       </div>
     )

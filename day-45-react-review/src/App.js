@@ -9,9 +9,10 @@ class App extends Component {
       <div className="App">
         <h1>Standard React Counter</h1>
         <Counter />
+        <hr />
         <h1>Redux Counter</h1>
         <ReduxCounter />
-
+        <hr />
       </div>
     );
   }

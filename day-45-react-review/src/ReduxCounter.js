@@ -16,7 +16,7 @@ class ReduxCounter extends React.Component {
       <div>
         <div>{this.state.number}</div>
         <button onClick={() => store.dispatch(actions.DECREMENT)}>-</button>
-        <button onClick={() => store.dispatch(actions.RESET)}>Nuke It</button>
+        <button onClick={() => store.dispatch(actions.RESET)}>NUKE IT</button>
         <button onClick={() => store.dispatch(actions.INCREMENT)}>+</button>
       </div>
     )

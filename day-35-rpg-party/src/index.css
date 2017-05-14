@@ -36,3 +36,27 @@ img {
   float: right;
   font-size: 15px;
 }
+
+@media (max-width: 1200px) {
+	.player {
+    width: 86%;
+  }
+  .character {
+    width: 35%;
+  }
+}
+
+@media (max-width: 840px) {
+  .character {
+    width: 100%;
+  }
+  img {
+    display: block;
+    margin: 0 auto;
+  }
+  .stats {
+    display: block;
+    float: none;
+    text-align: center;
+  }
+}

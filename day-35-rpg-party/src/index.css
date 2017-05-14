@@ -7,7 +7,8 @@ body {
 }
 
 img {
-  height: 150px;
+  height: 190px;
+  padding-bottom: 15px;
 }
 
 .player {
@@ -16,8 +17,22 @@ img {
   color: white;
   font-family: 'Press Start 2P', cursive;
   background-color: #0A03FF;
-  text-align: center;
   width: 35%;
   margin: 2% 7%;
   float: left;
+}
+
+.details {
+  text-align: center;
+}
+
+.character {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.stats {
+  display: inline-block;
+  float: right;
+  font-size: 15px;
 }

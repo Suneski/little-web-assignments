@@ -15,6 +15,14 @@ class Select extends React.Component {
       value: fighter,
       jobClass: 'Fighter',
       src: fighter,
+      stats: {
+        hp: 35,
+        str: 20,
+        agi: 5,
+        int: 1,
+        vit: 10,
+        lck: 5,
+      }
     };
 
     this.handleChange = this.handleChange.bind(this);
@@ -31,54 +39,107 @@ class Select extends React.Component {
         newName: this.state.newName
       });
     }
+    if (event.target.value === "") {
+      this.setState({
+        newName: ''
+      });
+    }
   }
 
   handleChange(event) {
     if (event.target.value === "blackbelt") {
       this.setState(
         {
+          jobClass: "Black Belt",
           src: blackbelt,
-          jobClass: "Black Belt"
+          stats: {
+            hp: 33,
+            str: 5,
+            agi: 5,
+            int: 5,
+            vit: 20,
+            lck: 5,
+          }
         }
       );
     }
     if (event.target.value === "blackmage") {
       this.setState(
         {
+          jobClass: "Black Mage",
           src: blackmage,
-          jobClass: "Black Mage"
+          stats: {
+            hp: 25,
+            str: 1,
+            agi: 10,
+            int: 20,
+            vit: 1,
+            lck: 10,
+          }
         }
       );
     }
     if (event.target.value === "fighter") {
       this.setState(
         {
+          jobClass: 'Fighter',
           src: fighter,
-          jobClass: "Fighter"
+          stats: {
+            hp: 35,
+            str: 20,
+            agi: 5,
+            int: 1,
+            vit: 10,
+            lck: 5,
+          }
         }
       );
     }
     if (event.target.value === "redmage") {
       this.setState(
         {
+          jobClass: "Red Mage",
           src: redmage,
-          jobClass: "Red Mage"
+          stats: {
+            hp: 30,
+            str: 10,
+            agi: 10,
+            int: 10,
+            vit: 5,
+            lck: 5,
+          }
         }
       );
     }
     if (event.target.value === "thief") {
       this.setState(
         {
+          jobClass: "Thief",
           src: thief,
-          jobClass: "Thief"
+          stats: {
+            hp: 30,
+            str: 5,
+            agi: 10,
+            int: 5,
+            vit: 5,
+            lck: 15
+          }
         }
       );
     }
     if (event.target.value === "whitemage") {
       this.setState(
         {
+          jobClass: "White Mage",
           src: whitemage,
-          jobClass: "White Mage"
+          stats: {
+            hp: 28,
+            str: 5,
+            agi: 5,
+            int: 15,
+            vit: 10,
+            lck: 5,
+          }
         }
       );
     }
@@ -87,19 +148,32 @@ class Select extends React.Component {
   render() {
     return (
       <div className="player">
-        <p>Character Name: <input type="text" onChange={(e) => this.handleChangeName(e)}/></p>
-        <form>
-          <p>Job Class: <select onChange={this.handleChange}>
-            <option value="fighter">Fighter</option>
-            <option value="blackbelt">Black Belt</option>
-            <option value="thief">Thief</option>
-            <option value="blackmage">Black Mage</option>
-            <option value="whitemage">White Mage</option>
-            <option value="redmage">Red Mage</option>
-          </select></p>
-        </form>
-        <img src={this.state.src} alt={this.state.value} className="sprite"/>
-        <p>{this.state.newName}{this.state.jobClass}</p>
+        <div className="details">
+          <p>Character Name: <input type="text" onChange={(e) => this.handleChangeName(e)}/></p>
+          <form>
+            <p>Job Class: <select onChange={this.handleChange}>
+              <option value="fighter">Fighter</option>
+              <option value="blackbelt">Black Belt</option>
+              <option value="thief">Thief</option>
+              <option value="blackmage">Black Mage</option>
+              <option value="whitemage">White Mage</option>
+              <option value="redmage">Red Mage</option>
+            </select></p>
+          </form>
+          <p>{this.state.newName}{this.state.jobClass}</p>
+        </div>
+
+        <div className="character">
+          <img src={this.state.src} alt={this.state.value} className="sprite"/>
+          <div className="stats">
+            <p>HP: {this.state.stats.hp}</p>
+            <p>STR: {this.state.stats.str}</p>
+            <p>AGI: {this.state.stats.agi}</p>
+            <p>INT: {this.state.stats.int}</p>
+            <p>VIT: {this.state.stats.vit}</p>
+            <p>LCK: {this.state.stats.lck}</p>
+          </div>
+        </div>
       </div>
     );
   }

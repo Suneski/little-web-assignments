@@ -8,22 +8,49 @@ class RepoSearch extends React.Component {
     super();
 
     this.state = {
-      searchTerm: 'taco',
+      searchTerm: 'takoyaki',
       page: 1,
       repos: []
     };
   }
 
   componentDidMount() {
+    this.refreshData();
+  }
+
+  refreshData() {
+    const cb = (data) => {
+      this.setState({
+        items: data.items
+      });
+    };
     $.ajax({
       url: `https://api.github.com/search/repositories?q=${this.state.searchTerm}&page=${this.state.page}`
     })
     .done((data) => {
-      console.log('Is this working!?', data);
       this.setState({
         repos: data.items
       })
+      console.log('Does this work!?', data);
     });
+  }
+
+
+
+
+
+
+
+
+
+
+  runSearch(evt) {
+    if (evt.keyCode === 13) {
+      console.log(evt.target.value);
+      this.setState({
+        searchTerm: evt.target.value
+      });
+    }
   }
 
   render() {
@@ -32,7 +59,10 @@ class RepoSearch extends React.Component {
       <div>
         <nav>
           <p id='search'>SEARCH: </p>
-          <input id='search-query' placeholder="github repository name"/>
+          <input
+            id='search-query'
+            placeholder="github repository name"
+            onKeyUp={(evt) => this.runSearch(evt)}/>
         </nav>
         <div className="repo-search-container">
           <ul>

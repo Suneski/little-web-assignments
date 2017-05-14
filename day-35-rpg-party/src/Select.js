@@ -1,31 +1,14 @@
 import React from 'react';
-
-import blackbelt from './images/blackbelt.gif';
-import blackmage from './images/blackmage.gif';
-import fighter from './images/fighter.gif';
-import redmage from './images/redmage.gif';
-import thief from './images/thief.gif';
-import whitemage from './images/whitemage.gif';
-
+import { store, actions } from './store.js';
 
 class Select extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {
-      value: fighter,
-      jobClass: 'Fighter',
-      src: fighter,
-      stats: {
-        hp: 35,
-        str: 20,
-        agi: 5,
-        int: 1,
-        vit: 10,
-        lck: 5,
-      }
-    };
+    this.state = store.getState();
+  }
 
-    this.handleChange = this.handleChange.bind(this);
+  componentDidMount() {
+    store.subscribe(() => this.setState(store.getState()));
   }
 
   handleChangeName = (event) => {
@@ -48,100 +31,22 @@ class Select extends React.Component {
 
   handleChange(event) {
     if (event.target.value === "blackbelt") {
-      this.setState(
-        {
-          jobClass: "Black Belt",
-          src: blackbelt,
-          stats: {
-            hp: 33,
-            str: 5,
-            agi: 5,
-            int: 5,
-            vit: 20,
-            lck: 5,
-          }
-        }
-      );
+      store.dispatch(actions.BLACKBELT);
     }
     if (event.target.value === "blackmage") {
-      this.setState(
-        {
-          jobClass: "Black Mage",
-          src: blackmage,
-          stats: {
-            hp: 25,
-            str: 1,
-            agi: 10,
-            int: 20,
-            vit: 1,
-            lck: 10,
-          }
-        }
-      );
+      store.dispatch(actions.BLACKMAGE);
     }
     if (event.target.value === "fighter") {
-      this.setState(
-        {
-          jobClass: 'Fighter',
-          src: fighter,
-          stats: {
-            hp: 35,
-            str: 20,
-            agi: 5,
-            int: 1,
-            vit: 10,
-            lck: 5,
-          }
-        }
-      );
+      store.dispatch(actions.FIGHTER);
     }
     if (event.target.value === "redmage") {
-      this.setState(
-        {
-          jobClass: "Red Mage",
-          src: redmage,
-          stats: {
-            hp: 30,
-            str: 10,
-            agi: 10,
-            int: 10,
-            vit: 5,
-            lck: 5,
-          }
-        }
-      );
+      store.dispatch(actions.REDMAGE);
     }
     if (event.target.value === "thief") {
-      this.setState(
-        {
-          jobClass: "Thief",
-          src: thief,
-          stats: {
-            hp: 30,
-            str: 5,
-            agi: 10,
-            int: 5,
-            vit: 5,
-            lck: 15
-          }
-        }
-      );
+      store.dispatch(actions.THIEF);
     }
     if (event.target.value === "whitemage") {
-      this.setState(
-        {
-          jobClass: "White Mage",
-          src: whitemage,
-          stats: {
-            hp: 28,
-            str: 5,
-            agi: 5,
-            int: 15,
-            vit: 10,
-            lck: 5,
-          }
-        }
-      );
+      store.dispatch(actions.WHITEMAGE);
     }
   }
 

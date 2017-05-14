@@ -72,9 +72,9 @@ li {
 a {
 	color: black;
 	text-decoration: none;
+	font-weight: bold;
 }
 
 a:hover {
-	font-weight: bold;
 	text-decoration: underline;
 }

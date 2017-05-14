@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+
+import RepoSearch from './RepoSearch.js';
+
 import './App.css';
 
 class App extends Component {
@@ -9,8 +12,8 @@ class App extends Component {
           <p id='search'>SEARCH: </p>
           <input id='search-query' placeholder="github repository name"/>
         </nav>
-        <div className="App-header">
-          <h2>Welcome to React</h2>
+        <div className="repo-search-container">
+          <RepoSearch />
         </div>
       </div>
     );
